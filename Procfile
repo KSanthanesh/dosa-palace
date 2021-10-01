@@ -1,1 +1,1 @@
-web: gunicorn dosa-palace.wsgi:application
+web: gunicorn dosaproject.wsgi:application
