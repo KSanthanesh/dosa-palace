@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 html {
     overflow-x: hidden;
 }
@@ -50,6 +52,10 @@ ul, li, a {
     color: #fff;
 }
 
+.head a {
+    color: #fff;
+}
+
 /*-----------------------------------------------Contact section in base  */
 .contact {
     background-color: lightgrey;
@@ -73,3 +79,34 @@ ul, li, a {
 .footer a:hover {
     color: white;
 }
+
+/*-----------------------------------------------Meal Page */
+.table {
+    font-size: 30px;
+}
+
+/*-----------------------------------------------Media Query*/
+
+/* For  medium screens sizes from 950px wide and down */
+
+@media screen and (max-width: 950px) {
+    .logo {
+        margin-top: 25px;
+    }
+}
+
+/* For  medium screens sizes from 700px wide and down */
+
+@media screen and (max-width: 700px) {
+    .logo {
+        margin-top: 20px;
+        width: 40px;
+        height: 40px;
+    }
+    .head {
+        font-size: 15px;
+    }
+}
+
+
+
