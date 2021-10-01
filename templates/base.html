@@ -10,10 +10,45 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Dosa Palace</title>
 </head>
 
 <body>
+    <!--Header and navigation-->
+    <div class="container-fluid bg-info text-dark">
+        <div class="header">
+            <img src="{% static 'images/img-1.jpg' %}" alt="logo"/>
+            <h1>
+                <a href="#">Dosa Palace</a>
+            </h1>
+        </div>
+    <nav class="nav navbar">
+        <ul class="nav navbar-nav navbar-expand-lg">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Meals</a></li>
+            <li><a href="#">Reservation</a></li>
+            <li><a href="#"></a>ContactUs</li>
+        </ul>
+    </nav>
+    </div>
+    <!--Hero Image-->
+    <div class="col-md-12">
+        <img src="{% static 'images/home-img.jpg' %}" class="home-img" alt="Restaurant-image"/>
+        <h2 class="head text-center text-uppercase">Have you tried Our Dosas Yet?<br>
+        <a href="#">Book a table Today</a></h2>
+
+    </div>
+    <!--Main Content-->
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+
+    </div>
+    
+        
+    
     
 </body>
 </html>
