@@ -1,6 +1,8 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Dosa Palace</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +14,7 @@
   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Dosa Palace</title>
+    
 </head>
 
 <body>
@@ -26,7 +28,7 @@
         </div>
     <nav class="nav navbar">
         <ul class="nav navbar-nav navbar-expand-lg">
-            <li><a href="#">Home</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
             <li><a href="#">Meals</a></li>
             <li><a href="#">Reservation</a></li>
             <li><a href="#"></a>ContactUs</li>
