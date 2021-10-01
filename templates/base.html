@@ -21,17 +21,16 @@
     <!--Header and navigation-->
     <div class="container-fluid bg-info text-dark">
         <div class="header">
-            <img src="{% static 'images/img-1.jpg' %}" alt="logo"/>
-            <h1>
-                <a href="#">Dosa Palace</a>
-            </h1>
-        </div>
+          <img src="{% static 'images/img-1.jpg' %}" class="logo" alt="logo">
+        <h1>
+        <a href="{% url 'home'%}">Dosa Palace</a></h1>
+      </div>
     <nav class="nav navbar">
         <ul class="nav navbar-nav navbar-expand-lg">
             <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="#">Meals</a></li>
+            <li><a href="{% url 'get_meal_list' %}">Meals</a></li>
             <li><a href="#">Reservation</a></li>
-            <li><a href="#"></a>ContactUs</li>
+            <li><a href="#">ContactUs</a></li>
         </ul>
     </nav>
     </div>

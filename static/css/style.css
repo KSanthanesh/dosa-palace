@@ -1,0 +1,51 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #fff;
+    font-family: "Open Sans", cursive;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 300;
+    color: #000;
+}
+
+/*-----------------------------------------------Logo  */
+.header {
+    display: flex;
+}
+
+.logo {
+    width: 6%;
+    height: 6%;
+    border-radius: 50%;
+    margin-top: 15px;
+   
+}
+/*-----------------------------------------------Navbar  */
+ul, li, a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    
+}
+
+/*-----------------------------------------------Home page image  */
+.home-img {
+    height: 50%;
+    width: 100%;
+}
+
+.head {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: max-content;
+    height: max-content;
+    background: #000;
+    color: #fff;
+}
