@@ -85,6 +85,13 @@ ul, li, a {
     font-size: 30px;
 }
 
+.meal-img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000;
+    margin-top: 25px;
+}
+
 /*-----------------------------------------------Media Query*/
 
 /* For  medium screens sizes from 950px wide and down */
@@ -105,6 +112,15 @@ ul, li, a {
     }
     .head {
         font-size: 15px;
+    }
+
+    .meal-table {
+        font-size: 16px;
+    }
+
+    .meal-img {
+        width: 120px;
+        height: 120px;
     }
 }
 
