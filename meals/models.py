@@ -17,3 +17,14 @@ class Meals(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Reserve(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+    phone_number = models.IntegerField()
+    no_of_people = models.IntegerField()
+    no_of_tables = models.IntegerField()
+
+    def __str__(self):
+        return self.name
+

@@ -27,10 +27,10 @@
       </div>
     <nav class="nav navbar">
         <ul class="nav navbar-nav navbar-expand-lg">
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'get_meal_list' %}" >Meals</a></li>
-            <li><a href="{% url 'account_signup' %}">Reservation</a></li>
-            <li><a href="{% url 'contact' %}">ContactUs</a></li>
+            <li><a href="{% url 'reserve' %}">Reserve</a></li>
+            <li><a href="#" >View</a></li>
+            <li><a href="#">Edit</a></li>
+            <li><a href="#">Delete</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-expand-lg">
           {% if user.is_authenticated %}
@@ -44,12 +44,12 @@
     </div>
     <!--Hero Image-->
     
-    <div class="col-md-12">
+    <!-- <div class="col-md-12">
         <img src="{% static 'images/home-img.jpg' %}" class="home-img" alt="Restaurant-image"/>
         <h2 class="head text-center text-uppercase">Have you tried Our Dosas Yet?<br>
         <a href="#">Book a table Today</a></h2>
       
-    </div>
+    </div> -->
     <!--Main Content-->
     <div class="container">
         {% block content %}
@@ -57,7 +57,7 @@
 
     </div>
 
-    <div class="container">
+    <!-- <div class="container">
       <div class="row contact">
         <div class="col">
           <h2 class="text-center">Contact</h2>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- Footer -->
 	<footer class="footer bg-info">
     <div class="container text-center">

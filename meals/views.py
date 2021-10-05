@@ -30,3 +30,7 @@ def contact(request):
     return render(request, 'meals/contact.html')
 
 
+def reserve(request):
+    return render(request, 'meals/reserve.html')
+
+
