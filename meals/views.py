@@ -26,3 +26,7 @@ def get_meal_detail(request, m_id):
     return render(request, 'meals/detail.html', context)
 
 
+def contact(request):
+    return render(request, 'meals/contact.html')
+
+
