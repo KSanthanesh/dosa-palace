@@ -92,6 +92,14 @@ ul, li, a {
     margin-top: 25px;
 }
 
+/*-----------------------------------------------Contact Us Page */
+
+.contact-us {
+    margin-bottom: 30px;
+    text-decoration: underline;
+    color: blue;
+    font-weight: bold;
+}
 /*-----------------------------------------------Media Query*/
 
 /* For  medium screens sizes from 950px wide and down */

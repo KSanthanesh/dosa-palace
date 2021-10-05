@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2 class="text-center">Contact Us</h2>
+
+
+    <h2 class="text-center contact-us">Contact Us</h2>
+	
 
     <div class="row">
 		<div class="col-lg-8 col-md-10 mx-auto">
-			<p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
-			<form method="POST" name="sentMessage" id="contactForm" novalidate>
+			<p>Want to get in touch? Fill out the form below to send me a message and We will get back to you as soon as possible!</p>
+			<form method="POST" name="sentMessage" id="contactForm" novalidate action="">
+				{% csrf_token %}
 				<div class="control-group">
 					<div class="form-group floating-label-form-group controls">
 						<label>Name</label>
