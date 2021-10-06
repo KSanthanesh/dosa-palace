@@ -1,0 +1,62 @@
+{% extends "base_user.html" %}
+{% load static %}
+{% block content %}
+
+<div class="text-center">
+<h2 class="contact-us">Reserve a Table</h2>
+
+<form method="POST" action="{% url 'add_reserve' %}">
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+<!-- <div class="row">
+    <div class="input-field col-12">
+        <label for="name">Name:
+        <input id="name" type="text" class="validate" name="name" value="{{ models.name }}" placeholder="name"
+            required></label>
+        
+    </div>
+</div>
+<div class="row">
+    <div class="input-field col-12 m-3">
+<label for="phone">Phone:</label>
+    <input id="phone" type="text" class="validate" name="phone" value="{{ models.phone_number }}" placeholder="phone" required>
+</div>
+</div>
+<div class="row">
+    <div class="input-field col-12 m-3">
+<label for="people">People:</label>
+    <input id="people" type="text" class="validate" name="people" value="{{ models.no_of_people }}" placeholder="No of People" required>
+</div>
+</div>
+<div class="row">
+    <div class="input-field col-12 m-3">
+<label for="table">Table:</label>
+    <input id="table" type="text" class="validate" name="table" value="{{ models.no_of_table }}" placeholder="Table Number" required>
+</div>
+</div> -->
+<!-- <div class="row">
+    <div class="input-field col s12">
+      <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+      <label for="date">Date:</label>
+      <input id="date" name="date" type="text" class="datepicker validate text-input2" required>
+      
+    </div>
+  </div> -->
+  <!-- <div class="row">
+    <div class="input-field col-12 m-3">
+	<label for="datepicker">Date:</label>
+	<input type="text" id="datepicker" class="validate" name="date" placeholder="date" required />
+</div>
+  </div>
+  <div class="row">
+    <div class="input-field col-12 m-3">
+	<label for="timepicker">Time:</label>
+	<input type="text" id="timepicker" class="validate" name="time" placeholder="time" required />
+</div>
+  </div> -->
+  <button class="text-center bg-info" type="submit">Add Table</button>
+</form>
+</div>
+
+{% endblock %}

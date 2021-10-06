@@ -54,7 +54,7 @@ INSTALLED_APPS = [
 ]
 
 SITE_ID = 1
-LOGIN_REDIRECT_URL = '/reserve'
+LOGIN_REDIRECT_URL = '/add_reserve'
 LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [

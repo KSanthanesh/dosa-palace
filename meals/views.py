@@ -44,7 +44,7 @@ def add_reserve(request):
         form = ReserveForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('reserve')
+            return redirect('add_reserve')
     form = ReserveForm()
     context = {
             'form': form

@@ -9,4 +9,5 @@ urlpatterns = [
     path('get_meal_detail/<int:m_id>', views.get_meal_detail, name='get_meal_detail'),  # noqa: E501
     path('contact/', views.contact, name='contact'),
     path('reserve/', views.reserve, name='reserve'),
+    path('add_reserve/', views.add_reserve, name='add_reserve'),
 ]
