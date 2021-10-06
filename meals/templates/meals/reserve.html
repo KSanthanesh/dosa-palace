@@ -1,4 +1,16 @@
 {% extends "base_user.html" %}
 {% load static %}
 {% block content %}
+
+<h2 class="text-center contact-us">Reserve a Table</h2>
+
+<form method="POST" action="add">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div>
+        <p>
+        <button type="submit">Book A Table</button>
+        </p>
+    </div>
+</form>
 {% endblock %}

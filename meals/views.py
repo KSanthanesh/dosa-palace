@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from .models import Meals
+from django.shortcuts import render, redirect
+from .models import Meals, Reserve
+from .forms import ReserveForm
 
 
 def home(request):
@@ -22,7 +23,7 @@ def get_meal_detail(request, m_id):
     context = {
         'meal_detail': meal_detail,
     }
-    
+
     return render(request, 'meals/detail.html', context)
 
 
@@ -31,6 +32,38 @@ def contact(request):
 
 
 def reserve(request):
-    return render(request, 'meals/reserve.html')
+    reserves = Reserve.objects.all()
+    context = {
+        'reserves': reserves
+        }
+    return render(request, 'meals/reserve.html', context)
 
 
+def add_reserve(request):
+    if request.method == "POST":
+        form = ReserveForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('reserve')
+    form = ReserveForm()
+    context = {
+            'form': form
+        }
+
+    return render(request, 'meals/add_reserve.html', context)
+
+
+# def edit_reserve(request, name):
+#     reservation = get_object_or_404(Reserve, name=name)
+#     if request.method == "POST":
+#         form = ReserveForm(request.POST, instance=reservation)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('reserve')
+
+#     form = ReserveForm(instance=reservation)
+#     context = {
+#             'form': form
+#         }
+
+#     return render(request, 'meals/edit_reserve.html', context)
