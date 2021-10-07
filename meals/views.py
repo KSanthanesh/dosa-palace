@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Meals, Reserve
 from .forms import ReserveForm
+from django.contrib import messages
 
 
 def home(request):
@@ -31,19 +32,12 @@ def contact(request):
     return render(request, 'meals/contact.html')
 
 
-def reserve(request):
-    reserves = Reserve.objects.all()
-    context = {
-        'reserves': reserves
-        }
-    return render(request, 'meals/reserve.html', context)
-
-
 def add_reserve(request):
     if request.method == "POST":
         form = ReserveForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Table Booked successfully')
             return redirect('add_reserve')
     form = ReserveForm()
     context = {
@@ -51,6 +45,14 @@ def add_reserve(request):
         }
 
     return render(request, 'meals/add_reserve.html', context)
+
+
+def view_reserve(request):
+    reserves = Reserve.objects.all()
+    context = {
+        'reserves': reserves
+        }
+    return render(request, 'meals/view_reserve.html', context)
 
 
 # def edit_reserve(request, name):
