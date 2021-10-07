@@ -21,7 +21,6 @@ class Meals(models.Model):
 
 
 class Reserve(models.Model):
-    # username = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=50, unique=True)
     phone_number = models.IntegerField()
     no_of_people = models.IntegerField()

@@ -2,6 +2,16 @@ from django.shortcuts import render, redirect
 from .models import Meals, Reserve
 from .forms import ReserveForm
 from django.contrib import messages
+from allauth.account.utils import user_display
+from django import template
+register = template.Library()
+
+
+@register.simple_tag(name="user_display")
+def user_display_tag(user):
+
+    return user_display(user)
+# allauth.account.user
 
 
 def home(request):
@@ -38,7 +48,7 @@ def add_reserve(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Table Booked successfully')
-            return redirect('add_reserve')
+            return redirect('view_reserve')
     form = ReserveForm()
     context = {
             'form': form
@@ -55,8 +65,16 @@ def view_reserve(request):
     return render(request, 'meals/view_reserve.html', context)
 
 
-# def edit_reserve(request, name):
-#     reservation = get_object_or_404(Reserve, name=name)
+def user_list(request):
+    ul = Reserve.objects.all()
+    context = {
+        'ul': ul
+        }
+    return render(request, 'meals/user_list.html', context)
+
+
+# def edit_reserve(request):
+#     reservation = get_object_or_404(Reserve)
 #     if request.method == "POST":
 #         form = ReserveForm(request.POST, instance=reservation)
 #         if form.is_valid():

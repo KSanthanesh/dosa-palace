@@ -1,0 +1,49 @@
+{% extends "base_user.html" %}
+{% load static %}
+{% block content %}
+
+<div class="text-center">
+<h2 class="contact-us">Edit Reservation</h2>
+
+<table class="table table-bordered bg-info table-hover meal-table">
+
+    <thead class="bg-dark text-white">
+        <tr class>
+            <th class="text-center">Name</th>
+            <th class="text-center">Phone Number</th>
+            <th class="text-center">People</th>
+            <th class= "text-center">Tables</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for meal in reserves %}
+        <!-- <tr>
+            <th>
+                <a href="/meals/get_meal_detail/{{meal.id}}">{{ meal.name }}</a></th>
+            <th>{{ meal.price }}€</th>
+            <th><button class="btn bg-light"><a href="/meals/get_meal_detail/{{meal.id}}">Meal Details</a></button></th>
+        </tr> -->
+
+        <tr>
+            <td>
+                {{meal.name}}
+            </td>
+            <td>
+                {{meal.phone_number}}
+            </td>
+            <td>
+                {{meal.no_of_people}}
+            </td>
+            <td>
+                {{meal.no_of_tables }}
+            </td>
+        </tr>
+    </tbody>
+    <button class="text-center bg-info" type="submit">Edit</button>
+        {% endfor %}
+</table>
+
+
+</div>
+
+{% endblock %}
