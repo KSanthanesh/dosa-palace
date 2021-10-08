@@ -4,6 +4,8 @@ from .forms import ReserveForm
 from django.contrib import messages
 from allauth.account.utils import user_display
 from django import template
+from django.contrib.auth.models import User
+
 register = template.Library()
 
 
@@ -57,8 +59,8 @@ def add_reserve(request):
     return render(request, 'meals/add_reserve.html', context)
 
 
-def view_reserve(request):
-    reserves = Reserve.objects.all()
+def view_reserve(request, *args, **kwargs):
+    reserves = Reserve.objects.all(User)
     context = {
         'reserves': reserves
         }
@@ -73,8 +75,30 @@ def user_list(request):
     return render(request, 'meals/user_list.html', context)
 
 
+def edit_reserve(request):
+    reservation = Reserve.objects.get()
+    if request.method == "POST":
+        form = ReserveForm(request.POST, instance=reservation)
+        if form.is_valid():
+            form.save()
+            return redirect('reserve')
+
+    form = ReserveForm(instance=reservation)
+    context = {
+            'form': form
+        }
+
+    return render(request, 'meals/edit_reserve.html', context)
+
+
+def delete_reserve(request):
+    reservation = Reserve.objects.get()
+    reservation.delete()
+    return redirect("reserve")
+
+
 # def edit_reserve(request):
-#     reservation = get_object_or_404(Reserve)
+#     reservation = Reserve.objects.get(Reserve)
 #     if request.method == "POST":
 #         form = ReserveForm(request.POST, instance=reservation)
 #         if form.is_valid():
