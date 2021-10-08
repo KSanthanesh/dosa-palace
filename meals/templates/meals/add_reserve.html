@@ -6,22 +6,23 @@
 <h2 class="contact-us">Reserve a Table</h2>
 
 {% if user.is_authenticated %}
+
 <form method="POST" action="{% url 'add_reserve' %}">
     {% csrf_token %}
-    
     {{ form.as_p }}
 
+    <!-- <div class="row">
+      <div class="input-field col s12">
+        <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+        <label for="date">Username:</label>
+        <input id="date" name="name" type="text" value="{{ user.username }}" class="validate text-input2" required>
+        
+      </div>
+    </div> -->
+    
+    
 
 
-
-<!-- <div class="row">
-    <div class="input-field col s12">
-      <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
-      <label for="date">Date:</label>
-      <input id="date" name="date" type="text" class="datepicker validate text-input2" required>
-      
-    </div>
-  </div> -->
   <!-- <div class="row"> -->
     <!-- <div class="input-field col-12 m-3">
 	<label for="datepicker">Date:</label>

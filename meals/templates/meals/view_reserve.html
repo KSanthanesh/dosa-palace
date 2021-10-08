@@ -10,6 +10,7 @@
 
     <thead class="bg-dark text-white">
         <tr class>
+            <th class="text-center">Username</th>
             <th class="text-center">Name</th>
             <th class="text-center">Phone Number</th>
             <th class="text-center">People</th>
@@ -19,6 +20,7 @@
     <tbody>
         {% for meal in reserves %}
         {% if user.is_authenticated %}
+            {% if meal.name == user.username %}
         <!-- <tr>
             <th>
                 <a href="/meals/get_meal_detail/{{meal.id}}">{{ meal.name }}</a></th>
@@ -27,6 +29,9 @@
         </tr> -->
 
         <tr>
+            <td>
+                {{user.username}}
+            </td>
             <td>
                 {{meal.name}}
             </td>
@@ -41,6 +46,7 @@
             </td>
         </tr>
     </tbody>
+    {% endif %}
     {% endif %}
         {% endfor %}
         

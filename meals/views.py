@@ -60,7 +60,7 @@ def add_reserve(request):
 
 
 def view_reserve(request, *args, **kwargs):
-    reserves = Reserve.objects.all(User)
+    reserves = Reserve.objects.all()
     context = {
         'reserves': reserves
         }
