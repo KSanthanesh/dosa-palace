@@ -4,7 +4,7 @@ from .forms import ReserveForm
 from django.contrib import messages
 from allauth.account.utils import user_display
 from django import template
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 
 register = template.Library()
 
@@ -76,12 +76,13 @@ def user_list(request):
 
 
 def edit_reserve(request):
-    reservation = Reserve.objects.get()
+    reservation = Reserve.objects.all(Reserve)
+    
     if request.method == "POST":
         form = ReserveForm(request.POST, instance=reservation)
         if form.is_valid():
             form.save()
-            return redirect('reserve')
+            return redirect('view_reserve')
 
     form = ReserveForm(instance=reservation)
     context = {
