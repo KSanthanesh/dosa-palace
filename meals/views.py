@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect
-from .models import Meals, Reserve
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Meals, Reserve, MasterTable
 from .forms import ReserveForm
 from django.contrib import messages
 from allauth.account.utils import user_display
@@ -59,6 +59,17 @@ def add_reserve(request):
     return render(request, 'meals/add_reserve.html', context)
 
 
+
+def get_total_tables(request):
+    total_table = MasterTable.objects.all()
+
+    context = {
+        'total_table': total_table,
+    }
+
+    return render(request, 'meals/add_reserve.html', context)
+
+
 def view_reserve(request, *args, **kwargs):
     reserves = Reserve.objects.all()
     context = {
@@ -75,8 +86,8 @@ def user_list(request):
     return render(request, 'meals/user_list.html', context)
 
 
-def edit_reserve(request):
-    reservation = Reserve.objects.all(Reserve)
+def edit_reserve(request, meal_id):
+    reservation = get_object_or_404(Reserve, id=meal_id)
     
     if request.method == "POST":
         form = ReserveForm(request.POST, instance=reservation)
@@ -92,10 +103,10 @@ def edit_reserve(request):
     return render(request, 'meals/edit_reserve.html', context)
 
 
-def delete_reserve(request):
-    reservation = Reserve.objects.get()
+def delete_reserve(request, meal_id):
+    reservation = Reserve.objects.get(id=meal_id)
     reservation.delete()
-    return redirect("reserve")
+    return redirect("view_reserve")
 
 
 # def edit_reserve(request):

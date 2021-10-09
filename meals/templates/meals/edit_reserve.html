@@ -7,31 +7,7 @@
 <form method="POST">
   {% csrf_token %}
   {{ form.as_p }}
-  <!-- <div class="form-group">
-      <label for="name">Name: </label>
-      <input id="name" name="name" type="text" placeholder="Name" required />
-      <!-- {{ form.name }} -->
-  </div>
-  <div class="form-group">
-    <label for="user_name"></label>
-    <input id="user_name" name="username" type="hidden" placeholder="UserName" value="{{ user.username }}" readonly required />
-    <!-- {{ form.name }} -->
-</div>
-  <div class="form-group">
-      <label for="phone">Phone Number: </label>
-      <input id="phone" name="phone_number" type="number" placeholder="Phone Number" required />
-      <!-- {{ form.phone_number }} -->
-  </div>
-  <div class="form-group">
-      <label for=people>No.of People:</label>
-      <input id="people" name="people" type="no_of_people" placeholder="People" required />
-      <!-- {{ form.no_of_people }} -->
-  </div>
-  <div class="form-group">
-      <label for="table">Table Number</label>
-      <input id="table" name="no_of_tables" type="text" placeholder="Table Number" required />
-      <!-- {{ form.no_of_tables }} -->
-  </div> -->
+ 
   <button type="submit" class="btn btn-info">Update</button>
 </form>
 

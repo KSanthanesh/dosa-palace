@@ -15,12 +15,16 @@
             <th class="text-center">Phone Number</th>
             <th class="text-center">People</th>
             <th class= "text-center">Tables</th>
+            <th class= "text-center">Date</th>
+            <th class= "text-center">Time</th>
+            <th class= "text-center">Edit</th>
+            <th class= "text-center">Delete</th>
         </tr>
     </thead>
     <tbody>
         {% for meal in reserves %}
         {% if user.is_authenticated %}
-            {% if meal.name == user.username %}
+            {% if meal.username == user.username %}
         <!-- <tr>
             <th>
                 <a href="/meals/get_meal_detail/{{meal.id}}">{{ meal.name }}</a></th>
@@ -43,6 +47,22 @@
             </td>
             <td>
                 {{meal.no_of_tables}}
+            </td>
+            <td>
+                {{meal.date}}
+            </td>
+            <td>
+                {{meal.time}}
+            </td>
+            <td>
+                <a href="/edit/{{ meal.id }}">
+                <button>Edit</button>
+                </a>
+            </td>
+            <td>
+                <a href="/delete/{{ meal.id }}">
+                <button>Delete</button>
+                </a>
             </td>
         </tr>
     </tbody>

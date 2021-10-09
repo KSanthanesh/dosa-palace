@@ -45,3 +45,9 @@ class Reserve(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class MasterTable(models.Model):
+    total_tables = models.IntegerField()
+
+
