@@ -32,9 +32,9 @@ class Meals(models.Model):
         return self.name
 
 
-class Reserve(models.Model):
-    name = models.CharField(max_length=50)
-    username = models.CharField(max_length=50, default="")
+class Booking(models.Model):
+    vistor_name = models.CharField(max_length=50)
+    user_name = models.CharField(max_length=50)
     # name = models.ForeignKey(User, on_delete=models.CASCADE)
     # name = CurrentUserField()
     phone_number = models.IntegerField()
@@ -43,8 +43,9 @@ class Reserve(models.Model):
     date = models.DateField(null=True)
     time = models.TimeField(null=True)
 
+
     def __str__(self):
-        return self.name
+        return self.vistor_name
 
 
 class MasterTable(models.Model):

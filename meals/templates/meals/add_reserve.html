@@ -11,43 +11,43 @@
   {% csrf_token %}
  
   <div class="form-group">
-    <label for="username">Username</label>
-    <input id="username" name="username" type="text" placeholder="UserName" value="{{ user.username }}" readonly required />
-    <!-- {{ form.username }} -->
+    <label for="user_name">Username</label>
+    <input id="user_name" name="user_name" type="text" class="form-control" placeholder="UserName" value="{{ user.username }}" readonly required />
+    <!-- {{ form.user_name }} -->
 </div>
   <div class="form-group">
-      <label for="name">Name  : </label>
-      <input id="name" name="name" type="text" placeholder="Name" required />
-      <!-- {{ form.name }} -->
+      <label for="vistor_name">Name  : </label>
+      <input id="vistor_name" name="vistor_name" class="form-control" type="text" placeholder="Name" required />
+      <!-- {{ form.visitor_name }} -->
   </div>
   
   <div class="form-group">
     <label for="phone_number">Phone : </label>
-    <input id="phone_number" name="phone_number" type="number" placeholder="Phone Number" required />
+    <input id="phone_number" name="phone_number" class="form-control" type="number" placeholder="Phone Number" required />
     <!-- {{ form.phone_number }} -->
 </div>
 <div class="form-group">
     <label for=no_of_people>People:</label>
-    <input id="no_of_people" name="no_of_people" type="number" placeholder="People" required />
+    <input id="no_of_people" name="no_of_people" class="form-control" type="number" placeholder="People" required />
     <!-- {{ form.no_of_people }} -->
 </div>
 
 <div class="form-group">
-  {% for table in total_table %}
-{{ table.total_tables }}
-{% endfor %}
+  
     <label for="no_of_tables">Table:</label>
-    <input id="no_of_tables" name="no_of_tables" type="number" placeholder="Table Number" required />[Tables Available: ]
+    <input id="no_of_tables" name="no_of_tables" class="form-control" type="text" maxlength="{% for meal in table_count %}{{meal.total_tables}}{% endfor %}" minlength="1" placeholder="Table Number" required />
+    [Tables Available: {% for meal in table_count %} {{meal.total_tables}} {% endfor %}]
+
     <!-- {{ form.no_of_tables }} -->
 </div>
 <div class="form-group">
   <label for="date">Date  :</label>
-  <input id="date" name="date" type="calender" placeholder="ex. 2000-01-25" required />
+  <input id="date" name="date" type="calender" class="form-control" placeholder="ex. 2000-01-25" required />
   <!-- {{ form.date }} -->
 </div>
 <div class="form-group">
 <label for="time">Time  :</label>
-<input id="time" name="time" type="text" placeholder="ex.18:00:00" required />
+<input id="time" name="time" type="text" class="form-control" placeholder="ex.18:00:00" required />
   <!-- {{ form.time }} -->
 </div>
 

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Meals, Reserve, MasterTable
+from .models import Meals, Booking, MasterTable
 from .forms import ReserveForm
 from django.contrib import messages
 from allauth.account.utils import user_display
@@ -48,6 +48,7 @@ def contact_reply(request):
 
 
 def add_reserve(request):
+    table_count = MasterTable.objects.all()
     if request.method == "POST":
         form = ReserveForm(request.POST)
         if form.is_valid():
@@ -55,8 +56,10 @@ def add_reserve(request):
             messages.success(request, 'Table Booked successfully')
             return redirect('view_reserve')
     form = ReserveForm()
+    
     context = {
-            'form': form
+            'form': form,
+            'table_count': table_count,
         }
 
     return render(request, 'meals/add_reserve.html', context)
@@ -64,17 +67,17 @@ def add_reserve(request):
 
 
 def get_total_tables(request):
-    total_table = MasterTable.objects.all()
+    table_count = MasterTable.objects.all()
 
     context = {
-        'total_table': total_table,
+        'table_count': table_count,
     }
 
-    return render(request, 'meals/add_reserve.html', context)
+    return render(request, 'meals/table_count.html', context)
 
 
 def view_reserve(request, *args, **kwargs):
-    reserves = Reserve.objects.all()
+    reserves = Booking.objects.all()
     context = {
         'reserves': reserves
         }
@@ -82,7 +85,7 @@ def view_reserve(request, *args, **kwargs):
 
 
 def user_list(request):
-    ul = Reserve.objects.all()
+    ul = Booking.objects.all()
     context = {
         'ul': ul
         }
@@ -90,7 +93,7 @@ def user_list(request):
 
 
 def edit_reserve(request, meal_id):
-    reservation = get_object_or_404(Reserve, id=meal_id)
+    reservation = get_object_or_404(Booking, id=meal_id)
     
     if request.method == "POST":
         form = ReserveForm(request.POST, instance=reservation)
@@ -107,7 +110,7 @@ def edit_reserve(request, meal_id):
 
 
 def delete_reserve(request, meal_id):
-    reservation = Reserve.objects.get(id=meal_id)
+    reservation = Booking.objects.get(id=meal_id)
     reservation.delete()
     return redirect("view_reserve")
 

@@ -26,7 +26,7 @@
     <tbody>
         {% for meal in reserves %}
         {% if user.is_authenticated %}
-            {% if meal.username == user.username %}
+            {% if meal.user_name == user.username %}
         <!-- <tr>
             <th>
                 <a href="/meals/get_meal_detail/{{meal.id}}">{{ meal.name }}</a></th>
@@ -39,7 +39,7 @@
                 {{user.username}}
             </td> -->
             <td class="col-8 small">
-                {{meal.name}}
+                {{meal.vistor_name}}
             </td>
             <td class="col-8 small">
                 {{meal.phone_number}}
@@ -67,12 +67,12 @@
                 </a>
             </td>
         </tr>
-    </tbody>
+    
     {% endif %}
     {% endif %}
         {% endfor %}
         
-        
+    </tbody>     
 </table>
 </div>
 </div>
