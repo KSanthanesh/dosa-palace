@@ -4,7 +4,7 @@
 
 
 {% if user.is_authenticated %}
-
+<div class="container_fluid">
 <div class="text-center ">
 <h2 class="contact-us">Reserve a Table</h2>
 <form method="POST" name="ReserveForm" action="{% url 'add_reserve' %}">
@@ -54,6 +54,7 @@
 <button type="submit" class="btn btn-info">Reserve a Table</button>
 </form>
 </div> 
+</div>
 {% endif %}
 
 
