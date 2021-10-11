@@ -43,6 +43,9 @@ def get_meal_detail(request, m_id):
 def contact(request):
     return render(request, 'meals/contact.html')
 
+def contact_reply(request):
+    return render(request, 'meals/contact_reply.html')
+
 
 def add_reserve(request):
     if request.method == "POST":
