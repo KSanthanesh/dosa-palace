@@ -134,6 +134,12 @@ ul, li, a {
     color: blue;
     font-weight: bold;
 }
+
+/*-----------------------------------------------View reserve page*/
+
+.col-8{
+    width: 15%;
+    }
 /*-----------------------------------------------Media Query*/
 
 /* For  medium screens sizes from 950px wide and down */
@@ -163,6 +169,17 @@ ul, li, a {
     .meal-img {
         width: 120px;
         height: 120px;
+    }
+
+  
+}
+/* For  medium screens sizes from 500px wide and down */
+
+@media screen and (max-width: 500px) {
+     /*-----------------------------------------------View reserve page*/
+
+     .col-8{
+        width: 5%;
     }
 }
 
