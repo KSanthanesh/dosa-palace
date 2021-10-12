@@ -2,84 +2,84 @@
 {% load static %}
 {% block content %}
 
-
 <div class="container-fluid">
-<div class="text-center">
-<h2 class="contact-us">Reservation View</h2>
-
-<div class="row">
-<table class="table table-bordered bg-info table-hover meal-table">
-
-    <thead class="bg-dark text-white">
-        <tr>
-            <!-- <th class="text-center">Username</th> -->
-            <th class="col-8 small text-center">Name</th>
-            <th class="col-8 small text-center">Phone</th>
-            <th class="col-8 small text-center">People</th>
-            <th class="col-8 small text-center">Tables</th>
-            <th class="col-8 small text-center">Date</th>
-            <th class="col-8 small text-center">Time</th>
-            <th class="col-8 small text-center">Edit</th>
-            <th class="col-8 small text-center">Delete</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for meal in reserves %}
-        {% if user.is_authenticated %}
-            {% if meal.user_name == user.username %}
-        <!-- <tr>
-            <th>
-                <a href="/meals/get_meal_detail/{{meal.id}}">{{ meal.name }}</a></th>
-            <th>{{ meal.price }}€</th>
-            <th><button class="btn bg-light"><a href="/meals/get_meal_detail/{{meal.id}}">Meal Details</a></button></th>
-        </tr> -->
-
-        <tr class="col-8 small">
-            <!-- <td>
-                {{user.username}}
-            </td> -->
-            <td class="col-8 small">
-                {{meal.vistor_name}}
-            </td>
-            <td class="col-8 small">
-                {{meal.phone_number}}
-            </td>
-            <td class="col-8 small">
-                {{meal.no_of_people}}
-            </td>
-            <td class="col-8 small">
-                {{meal.no_of_tables}}
-            </td>
-            <td class="col-8 small">
-                {{meal.date}}
-            </td>
-            <td class="col-8 small">
-                {{meal.time}}
-            </td>
-            <td class="col-8 small">
-                <a href="/edit/{{ meal.id }}">
-                <button class="btn btn-dark text-light small">Edit</button>
-                </a>
-            </td>
-            <td class="col-8 small">
-                <a href="/delete/{{ meal.id }}">
-                <button class="btn btn-dark text-light small">Delete</button>
-                </a>
-            </td>
-        </tr>
+    <div class="text-center">
+    <h2 class="contact-us">Reservation View</h2>
     
-    {% endif %}
-    {% endif %}
-        {% endfor %}
+    <div class="row">
+    <table class="table table-bordered bg-info table-hover meal-table">
+    
+        <thead class="bg-dark text-white">
+            <tr>
+                <!-- <th class="text-center">Username</th> -->
+                <th class="col-8 small text-center">Name</th>
+                <th class="col-8 small text-center">Phone</th>
+                <th class="col-8 small text-center">People</th>
+                <th class="col-8 small text-center">Tables</th>
+                <th class="col-8 small text-center">Date</th>
+                <th class="col-8 small text-center">Time</th>
+                <th class="col-8 small text-center">Edit</th>
+                <th class="col-8 small text-center">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for meal in reserves %}
+            {% if user.is_authenticated %}
+                {% if meal.user_name == user.username %}
+            <!-- <tr>
+                <th>
+                    <a href="/meals/get_meal_detail/{{meal.id}}">{{ meal.name }}</a></th>
+                <th>{{ meal.price }}€</th>
+                <th><button class="btn bg-light"><a href="/meals/get_meal_detail/{{meal.id}}">Meal Details</a></button></th>
+            </tr> -->
+    
+            <tr class="col-8 small">
+                <!-- <td>
+                    {{user.username}}
+                </td> -->
+                <td class="col-8 small">
+                    {{meal.vistor_name}}
+                </td>
+                <td class="col-8 small">
+                    {{meal.phone_number}}
+                </td>
+                <td class="col-8 small">
+                    {{meal.no_of_people}}
+                </td>
+                <td class="col-8 small">
+                    {{meal.no_of_tables}}
+                </td>
+                <td class="col-8 small">
+                    {{meal.date}}
+                </td>
+                <td class="col-8 small">
+                    {{meal.time}}
+                </td>
+                <td class="col-8 small">
+                    <a href="/edit/{{ meal.id }}">
+                    <button class="btn btn-dark text-light small">Edit</button>
+                    </a>
+                </td>
+                <td class="col-8 small">
+                    <a href="/delete/{{ meal.id }}">
+                    <button class="btn btn-dark text-light small">Delete</button>
+                    </a>
+                </td>
+            </tr>
         
-    </tbody>     
-</table>
-</div>
-</div>
+        {% endif %}
+        {% endif %}
+            {% endfor %}
+            
+        </tbody>     
+    </table>
+    </div>
+    </div>
+    
+    
+    </div>
+    </div>
 
-
-</div>
-</div>
 
 
 {% endblock %}

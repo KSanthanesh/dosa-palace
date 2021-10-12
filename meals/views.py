@@ -1,19 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from .models import Meals, Booking, MasterTable
 from .forms import ReserveForm
-from django.contrib import messages
-# from allauth.account.utils import user_display
-# from django import template
-# from django.contrib.auth.models import User
-
-# register = template.Library()
-
-
-# @register.simple_tag(name="user_display")
-# def user_display_tag(user):
-
-#     return user_display(user)
-# allauth.account.user
 
 
 def home(request):
@@ -76,11 +64,12 @@ def get_total_tables(request):
     return render(request, 'meals/table_count.html', context)
 
 
-def view_reserve(request, *args, **kwargs):
+def view_reserve(request):
     reserves = Booking.objects.all()
     context = {
         'reserves': reserves
         }
+    print("reserves", reserves)
     return render(request, 'meals/view_reserve.html', context)
 
 

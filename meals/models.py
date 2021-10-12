@@ -1,8 +1,4 @@
 from django.db import models
-# from allauth.account.utils import user_display
-# from django.conf import settings
-from django.contrib.auth.models import User
-
 
 
 class Meals(models.Model):
@@ -24,14 +20,11 @@ class Meals(models.Model):
 class Booking(models.Model):
     vistor_name = models.CharField(max_length=50)
     user_name = models.CharField(max_length=50)
-    # name = models.ForeignKey(User, on_delete=models.CASCADE)
-    # name = CurrentUserField()
     phone_number = models.IntegerField()
     no_of_people = models.IntegerField()
     no_of_tables = models.IntegerField()
     date = models.DateField(null=True)
     time = models.TimeField(null=True)
-
 
     def __str__(self):
         return self.vistor_name
@@ -39,5 +32,3 @@ class Booking(models.Model):
 
 class MasterTable(models.Model):
     total_tables = models.IntegerField()
-
-
