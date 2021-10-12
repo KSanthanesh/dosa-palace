@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Meals, Booking, MasterTable
-from .forms import ReserveForm
+from .forms import ReserveForm, MasterTableForm
 
 
 def home(request):
@@ -40,9 +40,12 @@ def add_reserve(request):
     table_count = MasterTable.objects.all()
     if request.method == "POST":
         form = ReserveForm(request.POST)
-        if form.is_valid():
+        tt = request.POST["no_of_tables"]
+        form1 = MasterTableForm(tt)
+        if form.is_valid() and form1.is_valid():
             form.save()
-            messages.success(request, 'Table Booked successfully')
+            form1.save()
+            messages.success(request, tt)
             return redirect('view_reserve')
     form = ReserveForm()
 
