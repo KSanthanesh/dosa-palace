@@ -113,15 +113,13 @@
 <!-- <script type="text/javascript" language="javascript" src="datetimepicker/js/bootstrap-datetimepicker.js"></script> -->
 
 <!-- <script>
-	// Date picker only
-	$('#datepicker').datetimepicker({
-		format: 'DD-MM-YYYY'
-	});
-
-    // Time picker only
-	$('#timepicker').datetimepicker({
-		format: 'LT'
-	});
+	Date picker only
+  let datepicker = document.querySelectorAll('.datepicker');
+     M.Datepicker.init(datepicker, {
+       format: "dd mmmm, yyyy",
+       i18n: {done: "Select"}
+     });
+	
 </script> -->
     
 </body>

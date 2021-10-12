@@ -2,18 +2,7 @@ from django.db import models
 # from allauth.account.utils import user_display
 # from django.conf import settings
 from django.contrib.auth.models import User
-# from django_currentuser.middleware import (get_current_user, get_current_authenticated_user)
-# from django_currentuser.db.models import CurrentUserField
 
-# register = template.Library()
-
-
-# @register.simple_tag(name="user_display")
-# def user_display_tag(user):
-
-#     return user_display(user)
-
-# Create your models here.
 
 
 class Meals(models.Model):
