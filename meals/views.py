@@ -29,6 +29,9 @@ def get_meal_list(request):
 
 
 def get_meal_detail(request, m_id):
+    """
+    for Meal details page.
+    """
     meal_detail = Meals.objects.get(id=m_id)
 
     context = {
@@ -39,14 +42,23 @@ def get_meal_detail(request, m_id):
 
 
 def contact(request):
+    """
+    contact us page used for user's enquiry.
+    """
     return render(request, 'meals/contact.html')
 
 
 def contact_reply(request):
+    """
+    Thanks Message will appear when the user use the contact us form.
+    """
     return render(request, 'meals/contact_reply.html')
 
 
 def add_reserve(request):
+    """
+    User can reserve a Table for dining.
+    """
     table_count = MasterTable.objects.all()
     if request.method == "POST":
         form = ReserveForm(request.POST)
@@ -65,6 +77,9 @@ def add_reserve(request):
 
 
 def get_total_tables(request):
+    """
+    for total tables
+    """
     table_count = MasterTable.objects.all()
 
     context = {
@@ -75,6 +90,9 @@ def get_total_tables(request):
 
 
 def view_reserve(request):
+    """
+    User can view the reservation page, once they reserve a table for dining.
+    """
     reserves = Booking.objects.all()
     context = {
         'reserves': reserves
@@ -83,15 +101,21 @@ def view_reserve(request):
     return render(request, 'meals/view_reserve.html', context)
 
 
-def user_list(request):
-    ul = Booking.objects.all()
-    context = {
-        'ul': ul
-        }
-    return render(request, 'meals/user_list.html', context)
+# def user_list(request):
+#     """
+#     for user list
+#     """
+#     u_l = Booking.objects.all()
+#     context = {
+#         'u_l': u_l
+#         }
+#     return render(request, 'meals/user_list.html', context)
 
 
 def edit_reserve(request, meal_id):
+    """
+    User can update their details like name,phonenumber,persons,date and time
+    """
     reservation = get_object_or_404(Booking, id=meal_id)
 
     if request.method == "POST":
@@ -109,10 +133,16 @@ def edit_reserve(request, meal_id):
 
 
 def delete_reserve(request, meal_id):
+    """
+    User can delete their reservation for dining.
+    """
     reservation = Booking.objects.get(id=meal_id)
     reservation.delete()
     return redirect("view_reserve")
 
 
-def handler404(request, exception):
+def handle404(request, exception):
+    """
+    for 404 error page
+    """
     return render(request, 'meals/404.html', status=404)
