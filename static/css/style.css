@@ -13,7 +13,7 @@ body {
     color: #000;
 }
 
-/*-----------------------------------------------Logo  */
+/*----------------------------------------------- base Logo  */
 .header {
     display: flex;
 }
@@ -25,7 +25,7 @@ body {
     margin-top: 15px;
    
 }
-/*-----------------------------------------------Navbar  */
+/*-----------------------------------------------base Navbar  */
 ul, li, a {
     text-decoration: none;
     color: #000;
@@ -33,7 +33,7 @@ ul, li, a {
     
 }
 
-/*-----------------------------------------------Home page image  */
+/*-----------------------------------------------base image  */
 .home-img {
     height: 50%;
     width: 100%;
@@ -56,13 +56,13 @@ ul, li, a {
     color: #fff;
 }
 
-/*-----------------------------------------------Contact section in base  */
+/*-----------------------------------------------base Contact section  */
 .contact {
     background-color: lightgrey;
     margin: 20px 0;
 }
 
-/*-----------------------------------------------Footer */
+/*-----------------------------------------------base Footer */
 
 .footer {
     background-color: #e0f0f5;
@@ -85,6 +85,14 @@ ul, li, a {
 .card {
     border: 1px solid #000;
     padding: 10px;
+  }
+
+  .testimonial {
+    margin-bottom: 30px;
+    text-decoration: underline;
+    color: blue;
+    font-weight: bold;
+    margin-top: -20%;
   }
 
   /* Three image containers*/
@@ -123,21 +131,6 @@ ul, li, a {
 .text-input2 {
     margin: 5px 0 15px 85px;
 }
-
-/* Bootstrap css
-@import "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
-
-/* Google Material icons */
-/* @import "http://fonts.googleapis.com/icon?family=Material+Icons"; */
-
-/* Propeller css */
-/* @import "dist/css/propeller.min.css"; */
-
-/* Bootstrap datetimepicker */
-/* @import "datetimepicker/css/bootstrap-datetimepicker.css"; */
-
-/* Propeller datetimepicker */
-/* @import "datetimepicker/css/pmd-datetimepicker.css"; */ 
 
 /*-----------------------------------------------Contact Us Page */
 
@@ -183,6 +176,17 @@ label {
 #id_time {
     margin-left: 50px;
 }
+
+/*-----------------------------------------------Sign-up page*/
+
+#id_username {
+   margin-left: 49px; 
+}
+
+#id_password1 {
+    margin-left: 55px; 
+ }
+ 
 /*-----------------------------------------------Media Query*/
 
 /* For  medium screens sizes from 950px wide and down */
@@ -225,4 +229,12 @@ label {
         font-size: 70%;
         margin: 0;
     }
+    #id_username {
+        margin-left: 0; 
+     }
+     
+     #id_password1 {
+         margin-left: 0; 
+      }
+      
 }
