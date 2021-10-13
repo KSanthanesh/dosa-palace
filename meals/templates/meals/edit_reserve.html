@@ -3,12 +3,14 @@
 {% block content %}      
   
 <div class="text-center">
-<h2 class="contact-us">Reserve a Table</h2>
+<h2 class="contact-us">Update a Table</h2>
 <form method="POST" class="form">
+  {% if user.is_authenticated %}
   {% csrf_token %}
   {{ form.as_p }}
  
   <button type="submit" class="btn btn-info text-dark">Update</button>
+  {% endif %}
 </form>
 
 </div>

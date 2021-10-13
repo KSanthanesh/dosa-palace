@@ -1,7 +1,11 @@
-from . import views
+"""
+    meals app urls
+"""
+
 from django.urls import path
-# from django.conf import settings
-# from django.conf.urls.static import static
+from django.conf.urls import handler404
+from . import views
+
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -16,3 +20,5 @@ urlpatterns = [
     path('user_list/', views.user_list, name='user_list'),
     path('get_total_tables/', views.get_total_tables, name='total_tables'),
 ]
+
+handler404 = views.handler404

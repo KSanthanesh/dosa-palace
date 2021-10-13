@@ -6,7 +6,7 @@ from .forms import ReserveForm
 
 class TestReserveForm(TestCase):
 
-    def reserve_form_all_fields_required(self):
+    def test_reserve_form_all_fields_required(self):
         form = ReserveForm({'vistor_name': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('vistor_name', form.errors.keys())

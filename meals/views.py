@@ -1,3 +1,7 @@
+"""
+    meals app views.py
+"""
+
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Meals, Booking, MasterTable
@@ -5,10 +9,16 @@ from .forms import ReserveForm, MasterTableForm
 
 
 def home(request):
+    """
+        for home page
+    """
     return render(request, 'meals/home.html')
 
 
 def get_meal_list(request):
+    """
+    for Meals page
+    """
     meal_list = Meals.objects.all()
 
     context = {
@@ -102,3 +112,7 @@ def delete_reserve(request, meal_id):
     reservation = Booking.objects.get(id=meal_id)
     reservation.delete()
     return redirect("view_reserve")
+
+
+def handler404(request, exception):
+    return render(request, 'meals/404.html', status=404)
