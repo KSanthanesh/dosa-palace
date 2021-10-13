@@ -18,10 +18,13 @@
 </head>
 
 <body>
-  {% if messages %} 
+  {% if messages %}
+  <div class="text-right message">
   <ul class="messages"> {% for message in messages %} 
-    <li {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} 
+    <li {% if message.tags %} class=" {{ message.tags }} " {% endif %}><i class="fa fa-check-square-o" aria-hidden="true">
+      {{ message }} </i> 
     </li> {% endfor %} </ul> {% endif %}
+  </div>
     <!--Header and navigation-->
     <div class="container-fluid bg-info text-dark">
         <div class="header">

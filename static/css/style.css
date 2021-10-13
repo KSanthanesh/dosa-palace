@@ -186,6 +186,15 @@ label {
 #id_password1 {
     margin-left: 55px; 
  }
+
+ /*-----------------------------------------------messages*/
+
+ .message ul li{
+     margin-right: 70px;
+     color: green;
+     list-style-type: none;
+ }
+ 
  
 /*-----------------------------------------------Media Query*/
 
