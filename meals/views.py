@@ -40,12 +40,9 @@ def add_reserve(request):
     table_count = MasterTable.objects.all()
     if request.method == "POST":
         form = ReserveForm(request.POST)
-        tt = request.POST["no_of_tables"]
-        form1 = MasterTableForm(tt)
-        if form.is_valid() and form1.is_valid():
+        if form.is_valid():
             form.save()
-            form1.save()
-            messages.success(request, tt)
+            messages.success(request, "Successfully Booked the Table")
             return redirect('view_reserve')
     form = ReserveForm()
 
@@ -105,19 +102,3 @@ def delete_reserve(request, meal_id):
     reservation = Booking.objects.get(id=meal_id)
     reservation.delete()
     return redirect("view_reserve")
-
-
-# def edit_reserve(request):
-#     reservation = Reserve.objects.get(Reserve)
-#     if request.method == "POST":
-#         form = ReserveForm(request.POST, instance=reservation)
-#         if form.is_valid():
-#             form.save()
-#             return redirect('reserve')
-
-#     form = ReserveForm(instance=reservation)
-#     context = {
-#             'form': form
-#         }
-
-#     return render(request, 'meals/edit_reserve.html', context)
