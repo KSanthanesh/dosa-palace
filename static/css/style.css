@@ -192,8 +192,9 @@ label {
  /*-----------------------------------------------messages*/
 
  .message ul li{
-     margin-right: 70px;
-     color: green;
+     width: 20%;
+     background-color: green;
+     color: #fff;
      list-style-type: none;
  }
  
