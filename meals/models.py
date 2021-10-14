@@ -34,8 +34,8 @@ class Booking(models.Model):
     user_name = models.CharField(max_length=50)
     phone_number = models.IntegerField()
     no_of_people = models.IntegerField()
-    date = models.DateField(null=True)
-    time = models.TimeField(null=True)
+    date = models.DateField()
+    time = models.TimeField()
 
     def __str__(self):
         return self.visitor_name
