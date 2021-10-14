@@ -18,7 +18,7 @@ urlpatterns = [
     path('edit/<meal_id>', views.edit_reserve, name='edit'),
     path('delete/<meal_id>', views.delete_reserve, name='delete'),
     # path('user_list/', views.user_list, name='user_list'),
-    path('get_total_tables/', views.get_total_tables, name='total_tables'),
+    # path('get_total_tables/', views.get_total_tables, name='total_tables'),
 ]
 
 handler404 = views.handle404

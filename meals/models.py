@@ -1,7 +1,13 @@
+"""
+    Models datebase
+"""
 from django.db import models
 
 
 class Meals(models.Model):
+    """
+    Meals details for User
+    """
     name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=50, unique=True)
     description = models.TextField(max_length=200)
@@ -10,6 +16,9 @@ class Meals(models.Model):
     image = models.ImageField(upload_to='media/', default=True)
 
     class Meta:
+        """
+        Class Meta
+        """
         verbose_name = 'meal'
         verbose_name_plural = 'meals'
 
@@ -18,17 +27,15 @@ class Meals(models.Model):
 
 
 class Booking(models.Model):
-    vistor_name = models.CharField(max_length=50)
+    """
+    User can Reserve a table for dining
+"""
+    vistor_name = models.CharField(max_length=50, unique=True)
     user_name = models.CharField(max_length=50)
     phone_number = models.IntegerField()
     no_of_people = models.IntegerField()
-    no_of_tables = models.IntegerField()
     date = models.DateField(null=True)
     time = models.TimeField(null=True)
 
     def __str__(self):
         return self.vistor_name
-
-
-class MasterTable(models.Model):
-    total_tables = models.IntegerField()

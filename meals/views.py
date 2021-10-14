@@ -4,8 +4,8 @@
 
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
-from .models import Meals, Booking, MasterTable
-from .forms import ReserveForm, MasterTableForm
+from .models import Meals, Booking
+from .forms import ReserveForm
 
 
 def home(request):
@@ -59,7 +59,6 @@ def add_reserve(request):
     """
     User can reserve a Table for dining.
     """
-    table_count = MasterTable.objects.all()
     if request.method == "POST":
         form = ReserveForm(request.POST)
         if form.is_valid():
@@ -70,23 +69,22 @@ def add_reserve(request):
 
     context = {
             'form': form,
-            'table_count': table_count,
         }
 
     return render(request, 'meals/add_reserve.html', context)
 
 
-def get_total_tables(request):
-    """
-    for total tables
-    """
-    table_count = MasterTable.objects.all()
+# def get_total_tables(request):
+#     """
+#     for total tables
+#     """
+#     table_count = MasterTable.objects.all()
 
-    context = {
-        'table_count': table_count,
-    }
+#     context = {
+#         'table_count': table_count,
+#     }
 
-    return render(request, 'meals/table_count.html', context)
+#     return render(request, 'meals/table_count.html', context)
 
 
 def view_reserve(request):
