@@ -29,8 +29,8 @@ class Meals(models.Model):
 class Booking(models.Model):
     """
     User can Reserve a table for dining
-"""
-    vistor_name = models.CharField(max_length=50, unique=True)
+    """
+    visitor_name = models.CharField(max_length=50)
     user_name = models.CharField(max_length=50)
     phone_number = models.IntegerField()
     no_of_people = models.IntegerField()
@@ -38,4 +38,4 @@ class Booking(models.Model):
     time = models.TimeField(null=True)
 
     def __str__(self):
-        return self.vistor_name
+        return self.visitor_name

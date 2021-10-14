@@ -158,8 +158,10 @@ ul, li, a {
 
 /*-----------------------------------------------Edit reserve page*/
 
+
+
 label {
-    margin-right: 30px;
+    margin: 10px;
 }
 
 #id_user_name {
@@ -245,5 +247,17 @@ label {
      #id_password1 {
          margin-left: 0; 
       }
+
+/*-----------------------------------------------Edit reserve page*/
+    logo {
+        display: inline-block;
+        max-width: 100%;
+        margin: 10px;
+    }
+    #id_phone_number {
+        margin-right: 0;
+    }
       
 }
+
+

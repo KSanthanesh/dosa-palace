@@ -10,14 +10,15 @@ class TestReserveForm(TestCase):
         form = ReserveForm({'vistor_name': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('vistor_name', form.errors.keys())
-        self.assertEqual(form.errors['vistor_name'][0], 'This field is required.')
+        self.assertEqual(
+            form.errors['vistor_name'][0], 'This field is required.')
 
         form = ReserveForm({'user_name': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('user_name', form.errors.keys())
-        self.assertEqual(form.errors['user_name'][0], 'This field is required.')
+        self.assertEqual(
+            form.errors['user_name'][0], 'This field is required.')
 
-    
     # def test_done_field_is_not_required(self):
     #     form = ReserveForm({'vistor_name': 'Test Todo Item'})
     #     self.assertTrue(form.is_valid())
