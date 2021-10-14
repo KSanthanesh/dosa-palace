@@ -89,11 +89,11 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'meals/view_reserve.html')
 
-    def test_edit_reserve_page(self):
-        """
-        Edit reservation for dining page testing
-        """
-        meal = Booking.objects.create(user_name='dosapalace')
-        response = self.client.get(f'/edit_reserve/{meal.id}')
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'meals/edit_reserve.html')
+    # def test_edit_reserve_page(self):
+    #     """
+    #     Edit reservation for dining page testing
+    #     """
+    #     meal = Booking.objects.create(user_name='dosapalace')
+    #     response = self.client.get(f'/edit_reserve/{meal.id}')
+    #     self.assertEqual(response.status_code, 200)
+    #     self.assertTemplateUsed(response, 'meals/edit_reserve.html')
