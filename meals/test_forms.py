@@ -8,6 +8,9 @@ from .forms import ReserveForm
 
 
 class TestReserveForm(TestCase):
+    """
+    For Reservation Form
+    """
 
     def test_visitor_name_is_required(self):
         """
@@ -18,7 +21,7 @@ class TestReserveForm(TestCase):
         self.assertIn('visitor_name', form.errors.keys())
         self.assertEqual(
             form.errors['visitor_name'][0], 'This field is required.')
-   
+
     def test_user_name_is_required(self):
         """
         User name is required
@@ -49,6 +52,29 @@ class TestReserveForm(TestCase):
         self.assertEqual(
             form.errors['no_of_people'][0], 'This field is required.')
 
+    def test_date_is_required(self):
+        """
+        Date Field is required
+        """
+        form = ReserveForm({'date': ''})
+        self.assertFalse(form.is_valid())
+        self.assertIn('date', form.errors.keys())
+        self.assertEqual(
+            form.errors['date'][0], 'This field is required.')
+
+    def test_time_is_required(self):
+        """
+        Time Field is required
+        """
+        form = ReserveForm({'time': ''})
+        self.assertFalse(form.is_valid())
+        self.assertIn('time', form.errors.keys())
+        self.assertEqual(
+            form.errors['time'][0], 'This field is required.')
+
     def test_fields_are_explicit_in_form_metaclass(self):
+        """
+        For meta fields
+        """
         form = ReserveForm()
-        self.assertEqual(form.Meta.fields, ['vistor_name', 'user_name','phone_number', 'no_of_people', 'date', 'time'])
+        self.assertEqual(form.Meta.fields, '__all__')
