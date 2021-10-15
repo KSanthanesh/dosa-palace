@@ -4,7 +4,7 @@ Testing the views.py
 
 from django.test import TestCase
 # from .models import Meals
-from .models import Booking
+from .models import Meals, Booking
 
 
 
@@ -33,18 +33,27 @@ class TestViews(TestCase):
     #     """
     #     Meals page Testing
     #     """
-    #     # m = Meals.objects.create(name='Atta Dosa')
-    #     response = self.client.get('/get_meal_detail/{int:(m.id)}')
+    #     m = Meals.objects.create(name='Atta Dosa', slug='atta-dosa', description= 'This is atta dosa', price='4.00', preparation_time='10')
+    #     response = self.client.get('/get_meal_detail/{m.id}')
     #     self.assertEqual(response.status_code, 200)
     #     self.assertTemplateUsed(response, 'meals/detail.html')
 
-    # def test_reservation_page(self):
+    # def test_can_get_meal_detail_page(self):
     #     """
-    #     Reservation page Testing
+    #     Meals page Testing
     #     """
-    #     response = self.client.get('accounts/')
-    #     self.assertEqual(response.status_code, 200)
-    #     self.assertTemplateUsed(response, 'templates/account/signup.html')
+    #     # m = Meals.objects.create(name='Atta Dosa')
+    #     m = Meals.objects.create(name='Atta Dosa', slug='atta-dosa', description= 'This is atta dosa', price='4.00', preparation_time='10')
+    #     response = self.client.get(f'/get_meal_detail/{m.id}')
+    #     self.assertTemplateUsed(response, 'meals/detail.html')
+
+    def test_reservation_page(self):
+        """
+        Reservation page Testing
+        """
+        response = self.client.get('/accounts/signup/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'account/signup.html')
 
     def test_contact_page(self):
         """
@@ -70,16 +79,15 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'meals/add_reserve.html')
 
-    # def test_can_add_reserve(self):
-    #     """
-    #     User enter their details in the add reserve form, it will redirect
-    #     to Reservation view page
-    #     """
-    #     response = self.client.post('/add_reserve/', {
-    #         'Username': 'dosapalace', 'Name': 'Priya', 'Phone': '67890',
-    #         'People': '5', 'Date': '2021-10-20', 'time': '20:00:00'})
-    #     self.assertEqual(response.status_code, 200)
-    #     self.assertRedirects(response, '/view_reserve/')
+    def test_can_add_reserve(self):
+        """
+        User enter their details in the add reserve form, it will redirect
+        to Reservation view page
+        """
+        response = self.client.post('/add_reserve/', {
+            'visitor_name': 'Priya', 'user_name': 'dosapalace', 'phone_number': '67890',
+            'no_of_people': '5', 'date': '2021-10-20', 'time': '20:00:00'})
+        self.assertRedirects(response, '/meals/view_reserve/')
 
     def test_view_reserve_page(self):
         """
@@ -89,11 +97,11 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'meals/view_reserve.html')
 
-    # def test_edit_reserve_page(self):
-    #     """
-    #     Edit reservation for dining page testing
-    #     """
-    #     meal = Booking.objects.create(user_name='dosapalace')
-    #     response = self.client.get(f'/edit_reserve/{meal.id}')
-    #     self.assertEqual(response.status_code, 200)
-    #     self.assertTemplateUsed(response, 'meals/edit_reserve.html')
+    def test_edit_reserve_page(self):
+        """
+        Edit reservation for dining page testing
+        """
+        meal = Booking.objects.create(visitor_name='Priya', user_name='dosapalace', phone_number='12345', no_of_people='2', date='2021-10-20', time='20:00:00')
+        response = self.client.get(f'/edit/{meal.id}')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'meals/edit_reserve.html')

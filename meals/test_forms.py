@@ -39,6 +39,16 @@ class TestReserveForm(TestCase):
         self.assertEqual(
             form.errors['phone_number'][0], 'This field is required.')
 
-    # def test_fields_are_explicit_in_form_metaclass(self):
-    #     form = ReserveForm()
-    #     self.assertEqual(form.Meta.fields, ['vistor_name', 'user_name'])
+    def test_no_of_people_is_required(self):
+        """
+        Number of People Field is required
+        """
+        form = ReserveForm({'no_of_people': ''})
+        self.assertFalse(form.is_valid())
+        self.assertIn('no_of_people', form.errors.keys())
+        self.assertEqual(
+            form.errors['no_of_people'][0], 'This field is required.')
+
+    def test_fields_are_explicit_in_form_metaclass(self):
+        form = ReserveForm()
+        self.assertEqual(form.Meta.fields, ['vistor_name', 'user_name','phone_number', 'no_of_people', 'date', 'time'])
