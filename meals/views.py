@@ -42,8 +42,6 @@ def get_meal_detail(request, m_id):
     else:
         return render(request, 'meals/detail.html', context)
 
-    
-
 
 def contact(request):
     """

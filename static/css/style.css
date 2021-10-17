@@ -179,6 +179,7 @@ label {
     margin-left: 50px;
 }
 
+
 /*-----------------------------------------------Sign-up page*/
 
 #id_username {
@@ -249,8 +250,14 @@ label {
          margin-left: 0; 
       }
 
+/*-----------------------------------------------opening hour line in header*/
+.open-hour {
+    font-size: 12px;
+}
+
+
 /*-----------------------------------------------Edit reserve page*/
-    logo {
+    label {
         display: inline-block;
         max-width: 100%;
         margin: 10px;
