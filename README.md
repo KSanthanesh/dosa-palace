@@ -15,7 +15,7 @@
     - [Thanks-Msg](#thanks-msg "Goto Thanks-Msg")
 - [Strategy](#strategy "Goto Strategy")   
   - [UX](#ux "Goto UX")
-    - [Play Instruction](#play-instruction)
+    
   - [Business Vision](#business-vision "Goto Business Vision")
   - [Purpose of Website](#purpose-of-website)
 - [Scope](#scope "Goto Scope")
