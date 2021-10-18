@@ -3,8 +3,8 @@
 """
 
 from django.urls import path
-from django.conf.urls import handler404
 from . import views
+# from django.conf.urls import handler404
 
 
 urlpatterns = [
@@ -21,4 +21,4 @@ urlpatterns = [
     # path('get_total_tables/', views.get_total_tables, name='total_tables'),
 ]
 
-handler404 = views.handle404
+

@@ -6,21 +6,15 @@
 <h1>Meal Details</h1>
   
 <table class="table">
-    <tr>
-        <td align="right"><img src="{{meal_detail.image.url}}" class="meal-img" alt="Dosa"></td>
-        <td align="left">
+    <tr class ="row">
+        <td class="col-12 col-md-6"><img src="{{meal_detail.image.url}}" class="meal-img" alt="Dosa"></td>
+        <td class="col-12 col-md-6 text-left">
             <h3><b>{{meal_detail.name}}</b></h3>
             <h4 class="meal-table">{{meal_detail.description}}</h4>
             <h4 class="meal-table">Price: {{meal_detail.price}} €</h4>
             <h4 class="meal-table">Preparation Time: {{meal_detail.preparation_time}}mins</h4></td>
     </tr>
 </table>
-
-<!-- <img src="{{meal_detail.image.url}}" class="img-responsive m-auto meal" alt="Dosa">
-<h3>{{meal_detail.description}}</h3>
-<h3>Price: {{meal_detail.price}} €</h3>
-<h3>Preparation Time: {{meal_detail.preparation_time}}</h3> -->
-
 
 <button class="bg-info"><a href="{% url 'get_meal_list' %}">Back to Meals</a></button>
 </div>

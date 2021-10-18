@@ -141,8 +141,8 @@ def delete_reserve(request, meal_id):
     return redirect("view_reserve")
 
 
-def handle404(request, exception):
-    """
-    for 404 error page
-    """
-    return render(request, 'meals/404.html', status=404)
+# def page_not_found_view(request, exception):
+#     """
+#     for 404 error page
+#     """
+#     return render(request, '404.html', status=404)
