@@ -15,6 +15,9 @@ class Meals(models.Model):
     preparation_time = models.IntegerField()
     image = models.ImageField(upload_to='media/', default=True)
 
+    def __str__(self):
+        return self.name
+
     class Meta:
         """
         Class Meta
@@ -22,8 +25,7 @@ class Meals(models.Model):
         verbose_name = 'meal'
         verbose_name_plural = 'meals'
 
-    def __str__(self):
-        return self.name
+    
 
 
 class Booking(models.Model):

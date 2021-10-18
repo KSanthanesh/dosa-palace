@@ -63,11 +63,21 @@
                 </td>
                 <td class="col-8 small">
                     <a href="/delete/{{ meal.id }}">
-                    <button class="btn btn-dark text-light small">Delete</button>
+                    <button class="btn btn-dark text-light small" onclick="return check()">Delete</button>
                     </a>
                 </td>
             </tr>
-        
+        <script>
+            function check() {
+                let isExecuted = confirm("Are you sure to Delete");
+
+            if (isExecuted)
+                return true;
+            else
+                return false;
+            }
+
+        </script>
         {% endif %}
         
             {% endfor %}
