@@ -38,14 +38,29 @@
 - The website covers all the screen types, such as Pc,Laptop,Tablet and Mobile.
 
 ### Home
-
+The Home Page covers the foloowing sections:
+- Header, Logo and Navigation Menu.
+- Hero-image
+- About us
+- Gallery
+- Contact details - Address, Email and Phone Number.
+- Footer
 
 ### Meals
-
-#### Meal-details
-
+Meals Page covers the following sections:
+- Header, footer, contact details and Hero image same like Home page.
+- Meal list 
+- Meal details button.
+### Meal details
+Meal details page covers the following sections:
+- Image of the Meal
+- Meal Name
+- Meal description
+- Meal price in Euros
+- Preparation time in Minutes.
 
 ### Reservation
+
 
 
 #### Reserve
