@@ -66,5 +66,34 @@
 
 #### Thanks-Msg
 
+## Technologies Used
+### Language
+- HTML - used for to create the website.
+
+- CSS - used for style the website.
+
+- Python - used for Reserve a table. and allows users to interact with web pages.
+
+### Libraries & Frameworks
+- Django Web Application Framework
+- Bootstrap
+- Font Awesome - icons used throughout the site. Responsive design - To generate the mockup image.
+- Google font -used for the website looks more beautiful,fast and great typography
+
+####
+- Gitpod - is an open source platform for automated and ready-to-code.
+- Github - to save the project code and host the live project.
+- Python Tutor - to check how the Java Script code behaves in each line.
+Dev tools -For inspecting and editing the web code.
+- Heroku - To Deploy the Project.
+- allauth - for site user Signup, login and logout of account.
+- Cloudinary - To save images from admin page.
+- favicon - for generating 32x32 favicon.
+- Am I responsive - to check  the responsive pages.
+- Balsamiq - to create wireframes.
+
+
+
+
 
 
