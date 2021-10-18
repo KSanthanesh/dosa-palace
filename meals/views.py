@@ -139,10 +139,3 @@ def delete_reserve(request, meal_id):
     reservation = Booking.objects.get(id=meal_id)
     reservation.delete()
     return redirect("view_reserve")
-
-
-# def page_not_found_view(request, exception):
-#     """
-#     for 404 error page
-#     """
-#     return render(request, '404.html', status=404)

@@ -12,6 +12,7 @@ class TestViews(TestCase):
     TestViews
     """
 
+
     def test_home(self):
         """
     Home page Testing
