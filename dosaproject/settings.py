@@ -17,7 +17,7 @@ import dj_database_url
 if os.path.isfile("env.py"):
     import env
 
-development = os.environ.get('DEVELOPMENT', False)
+# development = os.environ.get('DEVELOPMENT', False)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -35,12 +35,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # DEBUG = True
 DEBUG = False
 
-# ALLOWED_HOSTS = ['dosa-palace.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['dosa-palace.herokuapp.com', 'localhost']
 
-if development:
-    ALLOWED_HOSTS = ['localhost']
-else:
-    ALLOWED_HOSTS = ['dosa-palace.herokuapp.com']
+# if development:
+#     ALLOWED_HOSTS = ['localhost']
+# else:
+#     ALLOWED_HOSTS = ['dosa-palace.herokuapp.com']
 
 
 # Application definition
@@ -103,17 +103,17 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
-if development:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
-else:
-    DATABASES = {
-            'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
+# if development:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
+# else:
+#     DATABASES = {
+#             'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+#     }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
