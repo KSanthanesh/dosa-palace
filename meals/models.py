@@ -16,7 +16,7 @@ class Meals(models.Model):
     image = models.ImageField(upload_to='media/', default=True)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
     class Meta:
         """
@@ -24,8 +24,6 @@ class Meals(models.Model):
         """
         verbose_name = 'meal'
         verbose_name_plural = 'meals'
-
-    
 
 
 class Booking(models.Model):
@@ -40,4 +38,4 @@ class Booking(models.Model):
     time = models.TimeField()
 
     def __str__(self):
-        return self.visitor_name
+        return str(self.visitor_name)

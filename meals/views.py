@@ -76,19 +76,6 @@ def add_reserve(request):
     return render(request, 'meals/add_reserve.html', context)
 
 
-# def get_total_tables(request):
-#     """
-#     for total tables
-#     """
-#     table_count = MasterTable.objects.all()
-
-#     context = {
-#         'table_count': table_count,
-#     }
-
-#     return render(request, 'meals/table_count.html', context)
-
-
 def view_reserve(request):
     """
     User can view the reservation page, once they reserve a table for dining.
@@ -99,17 +86,6 @@ def view_reserve(request):
         }
     print("reserves", reserves)
     return render(request, 'meals/view_reserve.html', context)
-
-
-# def user_list(request):
-#     """
-#     for user list
-#     """
-#     u_l = Booking.objects.all()
-#     context = {
-#         'u_l': u_l
-#         }
-#     return render(request, 'meals/user_list.html', context)
 
 
 def edit_reserve(request, meal_id):

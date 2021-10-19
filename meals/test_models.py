@@ -13,9 +13,9 @@ class TestModels(TestCase):
 
     def test_meals_method_returns(self):
         """
-        Check the Name field is string in Meals class in models.
+        Check the meals method returns in Meals class in models.
         """
-        meal = Meals.objects.create(name='Rava Dosa', slug='rava-dosa', description='This is rava dosa', price=4.00, preparation_time=10, image='egg-dosa.jpg')
+        meal = Meals.objects.create(name='Rava Dosa', slug='rava-dosa', description='This is rava dosa', price=4.00, preparation_time=10, image='egg-dosa.jpg')  # noqa: E501
         self.assertEqual(str(meal.name), 'Rava Dosa')
         self.assertEqual(str(meal.slug), 'rava-dosa')
         self.assertEqual(str(meal.description), 'This is rava dosa')
@@ -23,17 +23,18 @@ class TestModels(TestCase):
         self.assertEqual(meal.preparation_time, 10)
         self.assertEqual(str(meal.image), 'egg-dosa.jpg')
 
-
     def test_meals_str_method_name_returns(self):
         """
         Check the Name field is string in Meals class in models.
         """
-        meal = Meals.objects.create(name='Rava Dosa', slug='rava-dosa', description='This is rava dosa', price=4.00, preparation_time=10, image='egg-dosa.jpg')
+        meal = Meals.objects.create(name='Rava Dosa', slug='rava-dosa', description='This is rava dosa', price=4.00, preparation_time=10, image='egg-dosa.jpg')  # noqa: E501
         self.assertEqual(str(meal.name), 'Rava Dosa')
 
-
     def test_booking_method_returns(self):
-        booking = Booking.objects.create(visitor_name='Priya', user_name='dosapalace', phone_number=12345, no_of_people=2, date='2021-10-20', time='20:00:00')
+        """
+        Check the bookings method returns in Booking class in models.
+        """
+        booking = Booking.objects.create(visitor_name='Priya', user_name='dosapalace', phone_number=12345, no_of_people=2, date='2021-10-20', time='20:00:00')  # noqa: E501
         self.assertEqual(str(booking.visitor_name), 'Priya')
         self.assertEqual(str(booking.user_name), 'dosapalace')
         self.assertEqual(booking.phone_number, 12345)

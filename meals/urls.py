@@ -20,5 +20,3 @@ urlpatterns = [
     # path('user_list/', views.user_list, name='user_list'),
     # path('get_total_tables/', views.get_total_tables, name='total_tables'),
 ]
-
-

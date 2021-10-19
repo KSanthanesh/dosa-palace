@@ -4,14 +4,13 @@ Testing the views.py
 
 from django.test import TestCase
 # from .models import Meals
-from .models import Booking
+from .models import Meals, Booking
 
 
 class TestViews(TestCase):
     """
     TestViews
     """
-
 
     def test_home(self):
         """
@@ -31,10 +30,12 @@ class TestViews(TestCase):
 
     # def test_get_meal_detail_page(self):
     #     """
-    #     Meals page Testing
+    #     Meals detail page Testing
     #     """
-    #     m = Meals.objects.create(name='Atta Dosa', slug='atta-dosa', description= 'This is atta dosa', price='4.00', preparation_time='10')  # noqa: E501
-    #     response = self.client.get('/get_meal_detail/{m.id}')
+    #     # m = Meals.objects.create(name='Atta Dosa', slug='atta-dosa', description= 'This is atta dosa', price='4.00', preparation_time='10')  # noqa: E501
+    #     # response = self.client.get(f'/get_meal_detail/{m.id}')
+    #     m = Meals.objects.create(name='Atta Dosa')
+    #     response = self.client.get(f'/get_meal_detail/{m.id}')
     #     self.assertEqual(response.status_code, 200)
     #     self.assertTemplateUsed(response, 'meals/detail.html')
 
@@ -110,12 +111,10 @@ class TestViews(TestCase):
         """
         meal = Booking.objects.create(visitor_name='Priya', user_name='dosapalace', phone_number='12345', no_of_people='2', date='2021-10-20', time='20:00:00')  # noqa: E501
         response = self.client.post(f'/edit/{meal.id}', {'visitor_name': 'Devi', 'user_name': 'dosapalace', 'phone_number': '12345', 'no_of_people': '2', 'date': '2021-10-20', 'time': '20:00:00'})  # noqa: E501
-        
         updated_meal = Booking.objects.get(id=meal.id)
         print(updated_meal.visitor_name)
         self.assertEqual(updated_meal.visitor_name, 'Devi')
         self.assertRedirects(response, '/meals/view_reserve/')
-        
 
     def test_can_delete_reservation(self):
         """
