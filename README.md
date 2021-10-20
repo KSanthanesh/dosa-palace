@@ -81,6 +81,25 @@ Meal details page covers the following sections:
 
 #### Thanks-Msg
 
+## Strategy
+The website covers all the screen types, such as Pc, Laptop, Tablet and Mobile. The website is easily navigate to all the sections.
+
+## UX
+- As a Site User I can view the service options available in the Restaurant's Home page so that I can select the service that is required.
+- As a Site User I can click the Contact option so that I can view the Contact information of the restaurant.
+- As a Site User I can view all the meals provided in the Restaurant so that I know what the meals are available in the Restaurant.
+- As a Site User I can click the Meal option so that I can view the details of the meal.
+- As a Site User I can click the Back to Meals option so that i can return back to the Meals list.
+- As a Site User I can click the Reservation option so that I can reserve the Table for dining.
+- As a Site User I can register my details so that I can Login.
+- As a Site User I can select the Login option so that i can reserve the table for dining.
+- As a Site User I can select the Logout the option so that I can logout safely from the website.
+- As a Site User I can click the view Reservation option so that I can view the reservation for dining.
+- As a Site User I can select the Edit option so that i can edit information provided earlier.
+- As a Site User I can select the Delete option so that I can Delete the Reservation.
+- As a Site User I can use the contact option so that I can make enquiries regarding my dining requirements.
+- 
+
 ## Technologies Used
 ### Language
 - HTML - used for to create the website.
