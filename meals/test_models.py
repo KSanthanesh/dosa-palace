@@ -34,7 +34,7 @@ class TestModels(TestCase):
         # image='onion-dosa.jpg')
         # self.assertEqual(str(meal.name), 'Onion Dosa')
 
-        meal = Meals.objects.get(
+        meal = Meals.objects.create(
             name='Rava Dosa', slug='rava-dosa', description='This is ravadosa',
             price=4.00, preparation_time=10, image='egg-dosa.jpg')
         expected_string = str(meal.name)
