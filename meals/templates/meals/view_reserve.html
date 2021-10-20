@@ -62,22 +62,33 @@
                     </a>
                 </td>
                 <td class="col-8 small">
-                    <a href="/delete/{{ meal.id }}">
-                    <button class="btn btn-dark text-light small" onclick="return check()">Delete</button>
-                    </a>
+                    
+                    <button class="btn btn-dark text-light small" data-toggle="modal" data-target="#myModal" type="button">Delete</button>
+                    
                 </td>
             </tr>
-        <script>
-            function check() {
-                let isExecuted = confirm("Are you sure to Delete");
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+              
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Delete Reservation</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>Are you Sure to Delete?</p>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="/delete/{{ meal.id }}"><button type="button" class="btn btn-default">Yes</button></a>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                    </div>
+                  </div>
+              
+                </div>
+              </div>
 
-            if (isExecuted)
-                return true;
-            else
-                return false;
-            }
-
-        </script>
+            
         {% endif %}
         
             {% endfor %}
@@ -91,6 +102,10 @@
     
     </div>
     </div>
+
+    
+
+      <script src="{% static 'js/script.js' %}"></script>
 
 
 

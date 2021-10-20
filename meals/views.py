@@ -13,6 +13,11 @@ def home(request):
         for home page
     """
     return render(request, 'meals/home.html')
+def test_modal(request):
+    """
+        for home page
+    """
+    return render(request, 'meals/test_modal.html')
 
 
 def get_meal_list(request):
