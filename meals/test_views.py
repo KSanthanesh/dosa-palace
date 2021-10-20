@@ -28,25 +28,14 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'meals/list.html')
 
-    # def test_get_meal_detail_page(self):
-    #     """
-    #     Meals detail page Testing
-    #     """
-    #     # m = Meals.objects.create(name='Atta Dosa', slug='atta-dosa', description= 'This is atta dosa', price='4.00', preparation_time='10')  # noqa: E501
-    #     # response = self.client.get(f'/get_meal_detail/{m.id}')
-    #     m = Meals.objects.create(name='Atta Dosa')
-    #     response = self.client.get(f'/get_meal_detail/{m.id}')
-    #     self.assertEqual(response.status_code, 200)
-    #     self.assertTemplateUsed(response, 'meals/detail.html')
-
-    # def test_can_get_meal_detail_page(self):
-    #     """
-    #     Meals page Testing
-    #     """
-    #     # m = Meals.objects.create(name='Atta Dosa')
-    #     m = Meals.objects.create(name='Atta Dosa', slug='atta-dosa', description= 'This is atta dosa', price='4.00', preparation_time='10')  # noqa: E501
-    #     response = self.client.get(f'/get_meal_detail/{m.id}')
-    #     self.assertTemplateUsed(response, 'meals/detail.html')
+    def test_get_meal_detail_page(self):
+        """
+        Meals detail page Testing
+        """
+        meal = Meals.objects.create(name='Atta Dosa', slug='atta-dosa', description='This is atta dosa', price='4.00', preparation_time='10', image='atta_dosa.jpg')  # noqa: E501
+        response = self.client.get(f'/get_meal_detail/{meal.id}')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'meals/detail.html')
 
     def test_reservation_page(self):
         """

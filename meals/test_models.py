@@ -27,9 +27,13 @@ class TestModels(TestCase):
         """
         Check the Name field is string in Meals class in models.
         """
-        meal = Meals.objects.create(name='Rava Dosa', slug='rava-dosa', description='This is rava dosa', price=4.00, preparation_time=10, image='egg-dosa.jpg')  # noqa: E501
-        self.assertEqual(str(meal.name), 'Rava Dosa')
+        # meal = Meals.objects.create(name='Onion Dosa', slug='onion-dosa', description='This is onion dosa', price=4.00, preparation_time=10, image='onion-dosa.jpg')  # noqa: E501
+        # self.assertEqual(str(meal.name), 'Onion Dosa')
 
+        meal = Meals.objects.get(name='Rava Dosa', slug='rava-dosa', description='This is rava dosa', price=4.00, preparation_time=10, image='egg-dosa.jpg')
+        expected_string = str(meal.name)
+        self.assertEqual(str(meal), expected_string)
+        
     def test_booking_method_returns(self):
         """
         Check the bookings method returns in Booking class in models.

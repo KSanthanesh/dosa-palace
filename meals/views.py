@@ -37,10 +37,10 @@ def get_meal_detail(request, m_id):
     context = {
         'meal_detail': meal_detail,
     }
-    if meal_detail == "":
-        return render(request, 'meals/home.html', context)
-    else:
-        return render(request, 'meals/detail.html', context)
+    # if meal_detail == "":
+    #     return render(request, 'meals/home.html', context)
+    # else:
+    return render(request, 'meals/detail.html', context)
 
 
 def contact(request):
