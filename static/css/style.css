@@ -23,14 +23,15 @@ body {
     height: 6%;
     border-radius: 50%;
     margin-top: 15px;
-   
 }
+
 /*-----------------------------------------------base Navbar  */
-ul, li, a {
+ul,
+li,
+a {
     text-decoration: none;
     color: #000;
     font-weight: bold;
-    
 }
 
 /*-----------------------------------------------base image  */
@@ -63,7 +64,6 @@ ul, li, a {
 }
 
 /*-----------------------------------------------base Footer */
-
 .footer {
     background-color: #e0f0f5;
     padding: 20px 0;
@@ -85,29 +85,30 @@ ul, li, a {
 .card {
     border: 1px solid #000;
     padding: 10px;
-  }
+}
 
-  .testimonial {
+.testimonial {
     margin-bottom: 30px;
     text-decoration: underline;
     color: blue;
     font-weight: bold;
     margin-top: -20%;
-  }
+}
 
-  /* Three image containers*/
+/* Three image containers*/
 .column {
     float: left;
     width: 33.33%;
     padding: 5px;
-  }
-  
-  /* Clear floats after image containers */
-  .gallery::after {
+}
+
+/* Clear floats after image containers */
+.gallery::after {
     content: "";
     clear: both;
     display: table;
-  } 
+}
+
 /*-----------------------------------------------Meal Page */
 .table {
     font-size: 30px;
@@ -121,19 +122,19 @@ ul, li, a {
 }
 
 /*-----------------------------------------------Reserve Page */
-
 .text-input {
     margin: 5px 0 15px 80px;
 }
+
 .text-input1 {
     margin: 5px 0 15px 7px;
 }
+
 .text-input2 {
     margin: 5px 0 15px 85px;
 }
 
 /*-----------------------------------------------Contact Us Page */
-
 .contact-us {
     margin-bottom: 30px;
     text-decoration: underline;
@@ -142,7 +143,6 @@ ul, li, a {
 }
 
 /*-----------------------------------------------Add reserve page*/
-
 .form-control {
     width: 40%;
     margin: auto;
@@ -150,16 +150,11 @@ ul, li, a {
 }
 
 /*-----------------------------------------------View reserve page*/
-
-.col-8{
+.col-8 {
     width: 15%;
-    }
-
+}
 
 /*-----------------------------------------------Edit reserve page*/
-
-
-
 label {
     margin: 10px;
 }
@@ -175,49 +170,53 @@ label {
 #id_date {
     margin-left: 50px;
 }
+
 #id_time {
     margin-left: 50px;
 }
 
-
 /*-----------------------------------------------Sign-up page*/
-
 #id_username {
-   margin-left: 49px; 
+    margin-left: 49px;
 }
 
 #id_password1 {
-    margin-left: 55px; 
- }
+    margin-left: 55px;
+}
 
- /*-----------------------------------------------messages*/
+/*-----------------------------------------------messages*/
+.message ul li {
+    width: 30%;
+    background-color: green;
+    color: #fff;
+    list-style-type: none;
+}
 
- .message ul li{
-     width: 20%;
-     background-color: green;
-     color: #fff;
-     list-style-type: none;
- }
-
- 
 /*-----------------------------------------------Media Query*/
 
 /* For  medium screens sizes from 950px wide and down */
-
 @media screen and (max-width: 950px) {
     .logo {
         margin-top: 25px;
     }
+
+    /*-----------------------------------------------messages*/
+
+    .message ul li {
+        width: 40%;
+    }
+
 }
 
-/* For  medium screens sizes from 700px wide and down */
 
+/* For  medium screens sizes from 700px wide and down */
 @media screen and (max-width: 700px) {
     .logo {
         margin-top: 20px;
         width: 40px;
         height: 40px;
     }
+
     .head {
         font-size: 15px;
     }
@@ -231,41 +230,48 @@ label {
         height: 200px;
     }
 
-  
+    /*-----------------------------------------------messages*/
+    .message ul li {
+        width: 55%;
+    }
 }
+
+
 /* For  medium screens sizes from 500px wide and down */
-
 @media screen and (max-width: 500px) {
-/*-----------------------------------------------View reserve page*/
 
+    /*-----------------------------------------------View reserve page*/
     .small {
         font-size: 70%;
         margin: 0;
     }
+
     #id_username {
-        margin-left: 0; 
-     }
-     
-     #id_password1 {
-         margin-left: 0; 
-      }
+        margin-left: 0;
+    }
 
-/*-----------------------------------------------opening hour line in header*/
-.open-hour {
-    font-size: 12px;
-}
+    #id_password1 {
+        margin-left: 0;
+    }
 
+    /*-----------------------------------------------opening hour line in header*/
+    .open-hour {
+        font-size: 12px;
+    }
 
-/*-----------------------------------------------Edit reserve page*/
+    /*-----------------------------------------------Edit reserve page*/
     label {
         display: inline-block;
         max-width: 100%;
         margin: 10px;
     }
+
     #id_phone_number {
         margin-right: 0;
     }
-      
+
+    /*-----------------------------------------------messages*/
+    .message ul li {
+        width: 85%;
+    }
 }
-
-

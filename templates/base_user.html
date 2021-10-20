@@ -1,139 +1,96 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Dosa Palace</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700"
+  <title>Dosa Palace</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700"
     rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel='shortcut icon' type='image/x-icon' href="{% static 'favicon.ico' %}" />
 
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    
+
 </head>
 
 <body>
-  
-  
-    <!--Header and navigation-->
-    <div class="container-fluid bg-info text-dark">
-        <div class="header">
-          <img src="{% static 'images/img-1.jpg' %}" class="logo" alt="logo">
-        <h1 class="text-uppercase">
+
+
+  <!--Header and navigation-->
+  <div class="container-fluid bg-info text-dark">
+    <div class="header">
+      <img src="{% static 'images/img-1.jpg' %}" class="logo" alt="logo">
+      <h1 class="text-uppercase">
         <a href="{% url 'home'%}">Dosa Palace</a></h1>
-      </div>
+    </div>
     <nav class="nav navbar">
-        <ul class="nav navbar-nav navbar-expand-lg">
-            <li><a href="{% url 'add_reserve' %}">Reserve</a></li>
-            <li><a href="{% url 'view_reserve' %}" >View</a></li>
-            <!-- <li><a href="#">Edit</a></li>
+      <ul class="nav navbar-nav navbar-expand-lg">
+        <li><a href="{% url 'add_reserve' %}">Reserve</a></li>
+        <li><a href="{% url 'view_reserve' %}">View</a></li>
+        <!-- <li><a href="#">Edit</a></li>
             <li><a href="#">Delete</a></li> -->
-        </ul>
-        <ul class="nav navbar-nav navbar-expand-lg">
-          {% if user.is_authenticated %}
-          <li><a href="{% url 'account_logout' %}">LogOut</a></li>
-          {% else %}
-          <li><a href="{% url 'account_signup' %}">SignUp</a></li>
-          <li><a href="{% url 'account_login' %}">LogIn</a></li>
-          {% endif %}
-          </ul>
+      </ul>
+      <ul class="nav navbar-nav navbar-expand-lg">
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'account_logout' %}">LogOut</a></li>
+        {% else %}
+        <li><a href="{% url 'account_signup' %}">SignUp</a></li>
+        <li><a href="{% url 'account_login' %}">LogIn</a></li>
+        {% endif %}
+      </ul>
     </nav>
     <p class="text-white text-right open-hour"><b>Opening Hours: Mon-Sun 5.00pm to 11.00pm</b></p>
-    </div>
-    {% if messages %}
-    <div class="text-left message">
-      <ul class="messages"> {% for message in messages %} 
-        <li {% if message.tags %} class=" {{ message.tags }} " {% endif %}><i class="fa fa-check-square-o" aria-hidden="true">
-          {{ message }} </i> 
-        </li> {% endfor %} </ul> {% endif %}
-      </div>
-    <!--Hero Image-->
-    
-    <!-- <div class="col-md-12">
-        <img src="{% static 'images/home-img.jpg' %}" class="home-img" alt="Restaurant-image"/>
-        <h2 class="head text-center text-uppercase">Have you tried Our Dosas Yet?<br>
-        <a href="#">Book a table Today</a></h2>
-      
-    </div> -->
-    <!--Main Content-->
-    <div class="container">
-        {% block content %}
-        {% endblock %}
+  </div>
+  {% if messages %}
+  <div class="text-left message">
+    <ul class="messages"> {% for message in messages %}
+      <li {% if message.tags %} class=" {{ message.tags }} " {% endif %}><i class="fa fa-check-square-o"
+          aria-hidden="true">
+          {{ message }} </i>
+      </li> {% endfor %} </ul> {% endif %}
+  </div>
+  
+  <!--Main Content-->
+  <div class="container">
+    {% block content %}
+    {% endblock %}
 
-    </div>
-
-    <!-- <div class="container">
-      <div class="row contact">
-        <div class="col">
-          <h2 class="text-center">Contact</h2>
-          <p><b>Opening Times Monday To Sunday 5pm to 11pm.</b></p>
-          <div class="col-md-4">
-            <h5><strong>Address:</strong></h5>
-            Dosa Palace,<br>
-            23 Newtown Meadows,<br>
-            Limerick.<br>
-            Ireland.
-          </div>
-          <div class="col-md-4">
-            <h5><strong>Phone Number:</strong></h5>
-            +123 456 789
-            
-          </div>
-          <div class="col-md-4">
-            <h5><strong>Email:</strong></h5>
-            dosapalace@gmail.com
-            
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- Footer -->
-    <footer class="footer bg-info">
-      <div class="container text-center">
-        <a href="https://facebook.com" target="-blank" rel="noopener"
+  </div>
+                 
+  <!-- Footer -->
+  <footer class="footer bg-info">
+    <div class="container text-center">
+      <a href="https://facebook.com" target="-blank" rel="noopener"
         aria-label="visit our facebook page(open in a new tab"><i class="fa fa-facebook"></i></a>
-        <a href="https://twitter.com" target="-blank" rel="noopener"
+      <a href="https://twitter.com" target="-blank" rel="noopener"
         aria-label="visit our twitter page(open in a new tab"><i class="fa fa-twitter"></i></a>
-        <a href="https://instagram.com" target="-blank" rel="noopener"
+      <a href="https://instagram.com" target="-blank" rel="noopener"
         aria-label="visit our instagram page(open in a new tab"><i class="fa fa-instagram"></i></a>
-        <p> copyright&copy; dosapalace 2021</p>
-        
-        
-      </div>
-    </footer>
-    
+      <p> copyright&copy; dosapalace 2021</p>
+
+
+    </div>
+  </footer>
+
   <!-- jquery JS -->
-<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  
 
-<!-- Popper JS -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
-
-<!-- Bootstrap js -->
-<!-- <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
-
-<!-- Propeller textfield js --> 
-<!-- <script type="text/javascript" src="dist/js/propeller.min.js"></script> -->
-
-<!-- Datepicker moment with locales -->
-<!-- <script type="text/javascript" language="javascript" src="datetimepicker/js/moment-with-locales.js"></script> -->
-
-<!-- Propeller Bootstrap datetimepicker -->
-<!-- <script type="text/javascript" language="javascript" src="datetimepicker/js/bootstrap-datetimepicker.js"></script> -->
-
-<!-- <script>
-	Date picker only
-  let datepicker = document.querySelectorAll('.datepicker');
-     M.Datepicker.init(datepicker, {
-       format: "dd mmmm, yyyy",
-       i18n: {done: "Select"}
-     });
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script> -->
 	
-</script> -->
-    
+
+
 </body>
+
 </html>

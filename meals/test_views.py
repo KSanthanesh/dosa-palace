@@ -32,7 +32,9 @@ class TestViews(TestCase):
         """
         Meals detail page Testing
         """
-        meal = Meals.objects.create(name='Atta Dosa', slug='atta-dosa', description='This is atta dosa', price='4.00', preparation_time='10', image='atta_dosa.jpg')  # noqa: E501
+        meal = Meals.objects.create(
+            name='Atta Dosa', slug='atta-dosa', description='This is attadosa',
+            price='4.00', preparation_time='10', image='atta_dosa.jpg')
         response = self.client.get(f'/get_meal_detail/{meal.id}')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'meals/detail.html')
@@ -89,7 +91,9 @@ class TestViews(TestCase):
         """
         Edit reservation page open testing
         """
-        meal = Booking.objects.create(visitor_name='Priya', user_name='dosapalace', phone_number='12345', no_of_people='2', date='2021-10-20', time='20:00:00')  # noqa: E501
+        meal = Booking.objects.create(
+            visitor_name='Priya', user_name='dosapalace', phone_number='12345',
+            no_of_people='2', date='2021-10-20', time='20:00:00')
         response = self.client.get(f'/edit/{meal.id}')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'meals/edit_reserve.html')
@@ -98,7 +102,9 @@ class TestViews(TestCase):
         """
         Edit reservation page can edit the user details for dining testing
         """
-        meal = Booking.objects.create(visitor_name='Priya', user_name='dosapalace', phone_number='12345', no_of_people='2', date='2021-10-20', time='20:00:00')  # noqa: E501
+        meal = Booking.objects.create(
+            visitor_name='Priya', user_name='dosapalace', phone_number='12345',
+            no_of_people='2', date='2021-10-20', time='20:00:00')
         response = self.client.post(f'/edit/{meal.id}', {'visitor_name': 'Devi', 'user_name': 'dosapalace', 'phone_number': '12345', 'no_of_people': '2', 'date': '2021-10-20', 'time': '20:00:00'})  # noqa: E501
         updated_meal = Booking.objects.get(id=meal.id)
         print(updated_meal.visitor_name)
@@ -109,7 +115,9 @@ class TestViews(TestCase):
         """
         Delete option can delete the user details for dining
         """
-        meal = Booking.objects.create(visitor_name='Priya', user_name='dosapalace', phone_number='12345', no_of_people='2', date='2021-10-20', time='20:00:00')  # noqa: E501
+        meal = Booking.objects.create(
+            visitor_name='Priya', user_name='dosapalace', phone_number='12345',
+            no_of_people='2', date='2021-10-20', time='20:00:00')
         response = self.client.get(f'/delete/{meal.id}')
         self.assertRedirects(response, '/meals/view_reserve/')
         existing_meals = Booking.objects.filter(id=meal.id)
