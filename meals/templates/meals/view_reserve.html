@@ -4,109 +4,101 @@
 
 <div class="container-fluid">
     <div class="text-center">
-    <h2 class="contact-us">Reservation View</h2>
-    
-    <div class="row">
-        {% if user.is_authenticated %}
-    <table class="table table-bordered bg-info table-hover meal-table">
-    
-        <thead class="bg-dark text-white">
-            <tr>
-                <!-- <th class="text-center">Username</th> -->
-                <th class="col-8 small text-center">Name</th>
-                <th class="col-8 small text-center">Phone</th>
-                <th class="col-8 small text-center">People</th>
-                <!-- <th class="col-8 small text-center">Tables</th> -->
-                <th class="col-8 small text-center">Date</th>
-                <th class="col-8 small text-center">Time</th>
-                <th class="col-8 small text-center">Edit</th>
-                <th class="col-8 small text-center">Delete</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for meal in reserves %}
-            
-                {% if meal.user_name == user.username %}
-            <!-- <tr>
-                <th>
-                    <a href="/meals/get_meal_detail/{{meal.id}}">{{ meal.name }}</a></th>
-                <th>{{ meal.price }}€</th>
-                <th><button class="btn bg-light"><a href="/meals/get_meal_detail/{{meal.id}}">Meal Details</a></button></th>
-            </tr> -->
-    
-            <tr class="col-8 small">
-                <!-- <td>
+        <h2 class="contact-us">Reservation View</h2>
+
+        <div class="row">
+            {% if user.is_authenticated %}
+            <table class="table table-bordered bg-info table-hover meal-table">
+
+                <thead class="bg-dark text-white">
+                    <tr>
+                        <!-- <th class="text-center">Username</th> -->
+                        <th class="col-8 small text-center">Name</th>
+                        <th class="col-8 small text-center">Phone</th>
+                        <th class="col-8 small text-center">People</th>
+                        <!-- <th class="col-8 small text-center">Tables</th> -->
+                        <th class="col-8 small text-center">Date</th>
+                        <th class="col-8 small text-center">Time</th>
+                        <th class="col-8 small text-center">Edit</th>
+                        <th class="col-8 small text-center">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for meal in reserves %}
+
+                    {% if meal.user_name == user.username %}
+
+
+                    <tr class="col-8 small">
+                        <!-- <td>
                     {{user.username}}
                 </td> -->
-                <td class="col-8 small">
-                    {{meal.visitor_name}}
-                </td>
-                <td class="col-8 small">
-                    {{meal.phone_number}}
-                </td>
-                <td class="col-8 small">
-                    {{meal.no_of_people}}
-                </td>
-                <!-- <td class="col-8 small">
+                        <td class="col-8 small">
+                            {{meal.visitor_name}}
+                        </td>
+                        <td class="col-8 small">
+                            {{meal.phone_number}}
+                        </td>
+                        <td class="col-8 small">
+                            {{meal.no_of_people}}
+                        </td>
+                        <!-- <td class="col-8 small">
                     {{meal.no_of_tables}}
                 </td> -->
-                <td class="col-8 small">
-                    {{meal.date}}
-                </td>
-                <td class="col-8 small">
-                    {{meal.time}}
-                </td>
-                <td class="col-8 small">
-                    <a href="/edit/{{ meal.id }}">
-                    <button class="btn btn-dark text-light small">Edit</button>
-                    </a>
-                </td>
-                <td class="col-8 small">
-                    
-                    <button class="btn btn-dark text-light small" data-toggle="modal" data-target="#myModal" type="button">Delete</button>
-                    
-                </td>
-            </tr>
-            <!-- Modal -->
-            <div id="myModal" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-              
-                  <!-- Modal content-->
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h4 class="modal-title">Delete Reservation</h4>
+                        <td class="col-8 small">
+                            {{meal.date}}
+                        </td>
+                        <td class="col-8 small">
+                            {{meal.time}}
+                        </td>
+                        <td class="col-8 small">
+                            <a href="/edit/{{ meal.id }}">
+                                <button class="btn btn-dark text-light small">Edit</button>
+                            </a>
+                        </td>
+                        <td class="col-8 small">
+
+                            <button class="btn btn-dark text-light small" data-toggle="modal" data-target="#myModal"
+                                type="button">Delete</button>
+
+                        </td>
+                    </tr>
+                    <!-- Modal -->
+                    <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content bg-light">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Delete Reservation</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you Sure to Delete?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="/delete/{{ meal.id }}"><button type="button"
+                                            class="btn btn-hover bg-info text-light">Yes</button></a>
+                                    <button type="button" class="btn btn-hover bg-info text-light" data-dismiss="modal">No</button>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="modal-body">
-                      <p>Are you Sure to Delete?</p>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="/delete/{{ meal.id }}"><button type="button" class="btn btn-default">Yes</button></a>
-                      <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-                    </div>
-                  </div>
-              
-                </div>
-              </div>
 
-            
-        {% endif %}
-        
-            {% endfor %}
-            
-        </tbody>     
-    </table>
-    {% endif %}
-    </div>
-    </div>
-    
-    
-    </div>
+
+                    {% endif %}
+
+                    {% endfor %}
+
+                </tbody>
+            </table>
+            {% endif %}
+        </div>
     </div>
 
-    
 
-      <script src="{% static 'js/script.js' %}"></script>
-
+</div>
+</div>
 
 
 {% endblock %}

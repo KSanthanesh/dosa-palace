@@ -119,4 +119,5 @@ def delete_reserve(request, meal_id):
     """
     reservation = Booking.objects.get(id=meal_id)
     reservation.delete()
+    messages.success(request, "You Cancelled the Reservation")
     return redirect("view_reserve")
