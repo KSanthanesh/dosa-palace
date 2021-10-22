@@ -176,13 +176,13 @@ label {
 }
 
 /*-----------------------------------------------Sign-up page*/
-#id_username {
+/* #id_username {
     margin-left: 49px;
 }
 
 #id_password1 {
     margin-left: 55px;
-}
+} */
 
 /*-----------------------------------------------messages*/
 .message ul li {

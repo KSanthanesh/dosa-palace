@@ -6,6 +6,7 @@ function sendMail(contactForm) {
     })
     .then(
         function(response) {
+            window.location.href = "https://8000-emerald-louse-dimxccil.ws-eu17.gitpod.io/meals/contact_reply/"
             console.log("Success", response)
         },
         function(error) {
