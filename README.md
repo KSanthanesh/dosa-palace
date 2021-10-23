@@ -22,9 +22,16 @@
    - [Features](#features)
    - [Future Features](#future-features)
 - [Structure](#structure "Goto Structure")
+  - Wireframes
+  - Database Schema
+  - Colours
+  - Typography
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
+  - [Automation Testing](#automation-testing)
+  - [Code Validation](#code-validation)
   - [Features Testing](#features-testing)
+  
 - [Bugs](#bugs)
 - [Deployment](#deployment)
 - [Acknowledgement](#acknowledgement)
@@ -34,6 +41,7 @@
 
 - The webpage is categorised into four main sections, such us Home, Meals, Restaurant and ContactUs.
 - Finally Thanks message is displayed after submitting the Enquiry form.
+- when the user click the reservation navigation the webpage navigation changes to three categaries such us Home, Reserve and View.
 
 - The website covers all the screen types, such as Pc,Laptop,Tablet and Mobile.
 
@@ -172,9 +180,39 @@ The website covers details of the restaurant, list of dosas, dosa details, custo
 
 
 ### Future Features
-
+1. Currently the booking is reset manually in the admin page. In future i like to automate this operation.
+2. Currently the table reservation is done by restaurant people, i like to automate the table booking through online.
+3. I like to bring food delivery in the future.
 
 ## Structure
+This project is divided into four main pages. The website was better organised after my mentoring session with my mentor. The website was structured such a way that the users can navigate to find relevant information according to their need.
+
+### Wireframes
+Balsamiq Wireframes used for this website.
+
+
+### Database Schema
+db diagram used for this website.
+
+### colors
+I have used warm light and dark colours to create pleasant experience for those people to viewing this website. colors used:
+
+Bootstrap colour also used for this website.
+- bg-info
+- bg-light
+- bg-dark
+- bg-success
+- #008000
+- #0000ff
+- #e0f0f5
+- #d3d3d3
+- #fff
+- #000
+- 
+
+### Typography
+I have used Open Sans, cursive and 'Raleway', sans-serif to create this website.
+
 
 ## Technologies Used
 ### Language
@@ -207,16 +245,65 @@ Dev tools -For inspecting and editing the web code.
 ## Testing
 
 ### Automation Testing
+I used automated python Unittest to test models.py, views.py and forms.py.
+I attached the results for Python Unittest.
 
+### Code validation
+- W3 Markup Validation Service- To validate HTML document, i used Validate by direct URL, some errors shown, and then i fixed the errors. W3 HTML Validation Result:
+Document checking completed. No errors or warnings to show.
+- W3 CSS Validation Service- To validate HTML document, i used validate by direct input, no errors shown in the W3 validation page. W3 CSS validation Result: Congratulations! No Error Found.
+- pep8 Online Validator- To validate python document, i used validate by direct input, no errors shown pep8 online validator.
 
-### Manual Testing
 
 ### Features Testing
+1. #### Home Page
+There are 11 testCases in Home Page.
+- There are 7 testcases in  header section  which are Dosapalace, Home, Meals, Reservation, Contact-Us, signup and Login.<br>
+Dosa Palace heading and Home Navigation are designed to bring the user back to the home page.Testing also proves that these options worked as per design. The other navigations are designed to bring the user to the website.Testing proves that these options worked as per designs.
+- There is 1 Testcase in middle of the Hero image. If the user click the Book a table Today option it will navigate to Reservation page.
+- There are three Social media links attached in all other pages.These social media navigators worked as per design requirements.For example, when click the Facebook button it brings to the Facebook main page.
+
+2. #### Meals Page
+There are 8 menus are available. If they click on each menu meal details button it will navigate to that particular meal details.
+
+#### Meal details
+
+3. #### Reservation Page
+Header Navigation bar changes when the user click Reservation Page. There are 2 new navigation bar and 1 signup button testcases in reservation Page.
+
+4. #### Login page
+There is 1 testcase in Login Page such as Sign In Button.
+
+5. #### Logout Page
+There is 1 testcase in Logout Page such as Sign Out button.
+
+6. #### Reserve Page
+There is 1 testcase in Reserve page such as Reserve a Table button.
+
+7. #### View Page
+There is 2 testcases for each reservation option in view page such as Edit and Delete Button
+
+8. #### Edit Page
+There is 1 testcase in Edit button such as Update button.
+
+9. #### Delete Modal confirm box
+There is 2 testcases in Delete Modal confirm box such as yes or no for delete option.
+- Yes to Delete 
+- No to navigate to view page
+
+10. #### Contact-Us Page
+There is one testcase in contact us page such as Send button.
+
+
+
 
 ### Bugs
+1. I have alot of difficulties to change sqlite to postgres in Heroku. With the help of tutor support i manage to resolve the problem.
+2. When i updated the model, the change did not update in the Heroku, With the help of tutor support i manage to resolve the problem by resetting postgres in Heroku.
+3. I have difficulties in understanding  how to render the templates. Manage to resolve the problem by reviewing the walkthroughs multiple times.
 
 ## Deployment
-First we need to go to github website the create a new repositary using code Institute Template. Followed by giving a new name of the website.Then need to click the create repositary button. After click the button it will bring us to go to another page, which contains the green button labelled as Gitpod.Click the Gitpod button will bring us to the Gitpod Workspace for coding screen.
+First we need to go to github website to create a new repositary using code Institute Template. Followed by giving a new name of the website.Then need to click the create repositary button. After click the button it will bring us to go to another page, which contains the green button labelled as Gitpod.Click the Gitpod button will bring us to the Gitpod Workspace for coding screen.
 
 ### gitpod
 Used Gitpod Workspace for coding. To preview the browser window need to type "python3 manage.py runserver" in the terminal window at the bottom.Afterthat, have to do git add for add files or remove files and do git commit for reasoning and do the git push for git hub repositary website.
@@ -277,6 +364,16 @@ DATABASES = {
 - git commit -m "Deploy Commit"
 - git push
 9. Then Go heroku app select deploy tab connect the Github and then select Manual deploy. it will create the app run successfully.
+
+## Acknowledgement
+
+- I would like to thank my mentor Rohit Sharma and my tutors Kasia for their helpfulness, constructive feedback and guidance when needed.
+- I would like to thank the staff,students and my peers of Code Institute for their help.
+- I also like to thank Slack Community for sharing the open discussion from various students.
+- I search lots of information from Google, W3 School and Youtube for this project.
+    
+- Thanks for reading my README.md file
+
 
 
 
