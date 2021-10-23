@@ -30,59 +30,102 @@
 - [Acknowledgement](#acknowledgement)
 
 ## Introduction
-- This project will cover about the Restaurant,Meal list,Meal details, Reserve the table,Edit and delete the reservation options and contact the restaurant.
+- This project will cover about the Restaurant,Meal list,Meal details, Reserve the table,Edit and delete the reservation options and contact information of the restaurant.
 
-- The webpage is categorised into four main section, such us Home, Meals, Restaurant and ContactUs.
+- The webpage is categorised into four main sections, such us Home, Meals, Restaurant and ContactUs.
 - Finally Thanks message is displayed after submitting the Enquiry form.
 
 - The website covers all the screen types, such as Pc,Laptop,Tablet and Mobile.
 
 ### Home
 The Home Page covers the foloowing sections:
-- Header, Logo and Navigation Menu.
+- Header, Logo Navigation Menu and operationg time of the restaurant.
 - Hero-image
-- About us
+- About the restaurant
 - Gallery
 - Contact details - Address, Email and Phone Number.
 - Footer
 
 ### Meals
 Meals Page covers the following sections:
-- Header, footer, contact details and Hero image same like Home page.
+- Header, footer, contact details and Hero image similar like Home page.
 - Meal list 
-- Meal details button.
+- Meal details click button.
 ### Meal details
 Meal details page covers the following sections:
+- Header, footer and contact details
 - Image of the Meal
 - Meal Name
 - Meal description
 - Meal price in Euros
 - Preparation time in Minutes.
+- Back to Meals button
 
 ### Reservation
-
-
+Reservation page allows two options.
+- Header and Footer
+- New user to register their details before login.
+- old customer can login with their username and password.
 
 #### Reserve
-
+Reservation table contains the following informations:
+- Header and Footer for reserve, view and Edit pages.
+- Username(username is default to login username)
+- Name (Can be used for themself or others)
+- Phone Number(must be 10digit)
+- People (Number of people to reserve the table)
+- Date (can pick in the calender)
+- Time (24 hours clock time)
 
 #### View
+In the view page, the customer details are displayed as per the reservation. Two other additional buttons are available in the view page. The two buttons are Edit and Delete.
+##### Edit button
+Allowing the customer to update their name, phone number,no of people, date and time.
+##### Delete button
+Allowing the customer to delete their reservation. when the customer choose the delete button, the confirmation popup message will appear to confirm the delete option.
 
 
 #### Signup
+Registration page contains:
+- Header and Footer
+- Username (It is not case sensitive)
+- Email (optional)
+- Password (It is not case sensitive)
+- Confirm password
+- Signup button
 
 #### Login
+Login Page contains:
+- Username
+- Password
+- Remember me with checkbox
+- Sign in button
+
 
 #### Logout
+- Header and Footer
+- Sign out button
 
 
 ### Contact-Us
+Contact us page contains the Following details:
+- Header and Footer
+- Name to enter
+- Email address to Enter
+- Message box for brief comments or enquiries
+- send button
 
 
 #### Thanks-Msg
+Once click on the send button in the contact page, it will navigate in to Thank you message page.<br>
+It contains:
+- Header and Footer
+- Image of the dosa
+- Thanks message
 
 ## Strategy
 The website covers all the screen types, such as Pc, Laptop, Tablet and Mobile. The website is easily navigate to all the sections.
+Attract the local community to taste South Indian Cuisine. Variety of dosas are available in the restaurant.
 
 ### UX
 
@@ -112,10 +155,26 @@ These are the steps for UX<br>
 
 
 ### Business Vision
-
-
+There is no Indian restaurant around this area at 10km radius. Dosa is suitable for all age groups. This cuisine is not spicy which is suitable for local community. The ingredients are available locally to prepare this cuisine. We could easily compete with other local restaurants and stalls.
 
 ### Purpose of Website
+To promote the dosa cuisine to the local community. The website describes various types of dosa available.It also provides the option to reserve table or walk in Dining.
+
+## Scope
+The website covers details of the restaurant, list of dosas, dosa details, customer reservation and contact option.
+### Features
+- Meal list - User can view the variety of Dosa
+- Meal details - List of detailed information of the meal
+- Reservation - Customer to make reservation for dining in the restaurant.
+- Register,login and logout - Customer can register or login to reserve the table. Customer can logout after reserving the table.
+- edit and delete button - user can use edit button to update their details if they want. Delete button can used if they want to delete the reservation.
+- contact form - its used for the customer  to contact the restaurant.
+
+
+### Future Features
+
+
+## Structure
 
 ## Technologies Used
 ### Language
@@ -124,10 +183,11 @@ These are the steps for UX<br>
 - CSS - used for style the website.
 
 - Python - used for Reserve a table. and allows users to interact with web pages.
+- Java Script -used for emailjs.
 
 ### Libraries & Frameworks
 - Django Web Application Framework
-- Bootstrap
+- Bootstrap - for responsive website
 - Font Awesome - icons used throughout the site. Responsive design - To generate the mockup image.
 - Google font -used for the website looks more beautiful,fast and great typography
 
@@ -142,6 +202,18 @@ Dev tools -For inspecting and editing the web code.
 - favicon - for generating 32x32 favicon.
 - Am I responsive - to check  the responsive pages.
 - Balsamiq - to create wireframes.
+- dbdiagram.io - to create database schema
+
+## Testing
+
+### Automation Testing
+
+
+### Manual Testing
+
+### Features Testing
+
+### Bugs
 
 ## Deployment
 First we need to go to github website the create a new repositary using code Institute Template. Followed by giving a new name of the website.Then need to click the create repositary button. After click the button it will bring us to go to another page, which contains the green button labelled as Gitpod.Click the Gitpod button will bring us to the Gitpod Workspace for coding screen.
