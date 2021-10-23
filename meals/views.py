@@ -84,7 +84,7 @@ def view_reserve(request):
     context = {
         'reserves': reserves
         }
-    print("reserves", reserves)
+    # print("reserves", reserves)
     return render(request, 'meals/view_reserve.html', context)
 
 

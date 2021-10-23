@@ -59,7 +59,7 @@ a {
 
 /*-----------------------------------------------base Contact section  */
 .contact {
-    background-color: lightgrey;
+    background-color: #d3d3d3;
     margin: 20px 0;
 }
 
@@ -90,7 +90,7 @@ a {
 .testimonial {
     margin-bottom: 30px;
     text-decoration: underline;
-    color: blue;
+    color: #0000ff;
     font-weight: bold;
     margin-top: -20%;
 }
@@ -187,7 +187,7 @@ label {
 /*-----------------------------------------------messages*/
 .message ul li {
     width: 30%;
-    background-color: green;
+    background-color: #008000;
     color: #fff;
     list-style-type: none;
 }
