@@ -243,6 +243,8 @@ Dev tools -For inspecting and editing the web code.
 - dbdiagram.io - to create database schema
 
 ## Testing
+### Emailjs
+The Javascript code for emailjs is referred from Emailjs and Rosie's Resume Walkthrough. Therefore, donot need Jest test for this portion. I have referred with my tutor and she agreed that testing is not required for this portion.
 
 ### Automation Testing
 I used automated python Unittest to test models.py, views.py and forms.py.
@@ -325,6 +327,7 @@ Used Gitpod Workspace for coding. To preview the browser window need to type "py
 8. Then run the server:
 - python3 manage.py runserver (we can see the installation work successfully in the browser).
 
+
 ### Heroku
 1. Create new app name and select europe.
 2. Then Click => Resources Tab => Addons  enter=> Postgres, then select => Heroku postgres => Hobby dev.
@@ -365,14 +368,23 @@ DATABASES = {
 - git push
 9. Then Go heroku app select deploy tab connect the Github and then select Manual deploy. it will create the app run successfully.
 
+### Final deployment:
+After finish the project then need to do the following steps:
+1. Debug= False in settings.py
+2. git add .
+git commit -m "deployment commit"
+git push
+3. heroku setting remove DISABLE_COLLECTSTATIC
+
+4. Then Deploy and can view the App in Heroku.
+
 ## Acknowledgement
 
 - I would like to thank my mentor Rohit Sharma and my tutors Kasia for their helpfulness, constructive feedback and guidance when needed.
 - I would like to thank the staff,students and my peers of Code Institute for their help.
 - I also like to thank Slack Community for sharing the open discussion from various students.
-- I search lots of information from Google, W3 School and Youtube for this project.
-    
-- Thanks for reading my README.md file
+- I search lots of information from Google, W3 School and Youtube for this project.  
+- Thanks for reading my README.md file.
 
 
 
