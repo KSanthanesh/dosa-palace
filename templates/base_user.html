@@ -7,12 +7,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800%7COpen+Sans:300,400,700"/>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800%7COpen+Sans:300,400,700" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel='shortcut icon' type='image/x-icon' href="{% static 'favicon.ico' %}"/>
+  <link rel='shortcut icon' type='image/x-icon' href="{% static 'favicon.ico' %}" />
 
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
@@ -47,22 +49,27 @@
     </nav>
     <p class="text-white text-right open-hour"><b>Opening Hours: Mon-Sun 5.00pm to 11.00pm</b></p>
   </div>
-  {% if messages %}
+
+
   <div class="text-left message">
+    {% if messages %}
     <ul class="messages"> {% for message in messages %}
       <li {% if message.tags %} class=" {{ message.tags }} " {% endif %}><i class="fa fa-check-square-o"
           aria-hidden="true">
           {{ message }} </i>
-      </li> {% endfor %} </ul> {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
   </div>
-  
+
   <!--Main Content-->
   <div class="container">
     {% block content %}
     {% endblock %}
 
   </div>
-                 
+
   <!-- Footer -->
   <footer class="footer bg-info">
     <div class="container text-center">
@@ -78,8 +85,8 @@
     </div>
   </footer>
 
-  
-  
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
