@@ -82,6 +82,11 @@ a {
 }
 
 /*-----------------------------------------------Home Page */
+.gallery img {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+}
 
 /* Three image containers*/
 /* .column {
@@ -103,6 +108,7 @@ a {
 .card {
     border: 1px solid #000;
     padding: 10px;
+    margin-bottom: 2px;
 }
   
 
@@ -111,7 +117,6 @@ a {
     text-decoration: underline;
     color: #0000ff;
     font-weight: bold;
-    margin-top: -25px;
 }
 
 /*-----------------------------------------------Meal Page */
@@ -215,6 +220,13 @@ label {
 
 
 /* For  medium screens sizes from 700px wide and down */
+@media screen and (max-width: 950px) {
+    .gallery img {
+        width: 250px;
+        height: 250px;
+        margin: 10px;
+}
+}
 @media screen and (max-width: 700px) {
     .logo {
         margin-top: 20px;
