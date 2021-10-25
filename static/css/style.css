@@ -8,7 +8,7 @@ body {
     background-color: #fff;
     font-family: "Open Sans", cursive;
     font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.9;
     font-weight: 300;
     color: #000;
 }
@@ -82,18 +82,10 @@ a {
 }
 
 /*-----------------------------------------------Home Page */
-.card {
-    border: 1px solid #000;
-    padding: 10px;
-}
-
-.testimonial {
-    margin-bottom: 30px;
-    text-decoration: underline;
-    color: #0000ff;
-    font-weight: bold;
-    margin-top: -20%;
-}
+.gallery-section {
+    margin-bottom: 200px;
+    margin-top: 200px
+} 
 
 /* Three image containers*/
 .column {
@@ -107,7 +99,28 @@ a {
     content: "";
     clear: both;
     display: table;
+} 
+
+
+
+.testimonial-section {
+    margin: auto;
 }
+.card {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.testimonial {
+    margin-bottom: 30px;
+    text-decoration: underline;
+    color: #0000ff;
+    font-weight: bold;
+    margin-top: -20%;
+}
+
+
+
 
 /*-----------------------------------------------Meal Page */
 .table {

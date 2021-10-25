@@ -2,64 +2,76 @@
 {% load static %}
 {% block content %}
 
-
-<h2 class="text-center contact-us">About Us</h2>
-<p><strong>Dosa Palace</strong> is an authentic Indian pure Vegetarian restaurant specialised in South Indian dosa varieties. It is located in Limerick since 2015.</p>
-<p>A dosa is a thin pancake or crepe originating from South India, made from a fermented batter predominantly consisting of lentils and rice. It is somewhat similar to a crepe in appearance, although savoury flavours are generally emphasized. Its main ingredients are rice and black gram, ground together in a fine, smooth batter with a dash of salt, then fermented. Dosas are a common dish in South Indian cuisine, but now have become popular all over the Indian subcontinent. 
-    Dosas are served hot along with chutnies.</p>
-    <p><b>The Restaurant provides dining service either by reservation or Walkin Dining. </b></p>
 <div>
+  <h2 class="text-center contact-us">About Us</h2>
+  <p><strong>Dosa Palace</strong> is an authentic Indian pure Vegetarian restaurant specialised in South Indian dosa
+    varieties. It is located in Limerick since 2015.</p>
+  <p>A dosa is a thin pancake or crepe originating from South India, made from a fermented batter predominantly
+    consisting of lentils and rice. It is somewhat similar to a crepe in appearance, although savoury flavours are
+    generally emphasized. Its main ingredients are rice and black gram, ground together in a fine, smooth batter with a
+    dash of salt, then fermented. Dosas are a common dish in South Indian cuisine, but now have become popular all over
+    the Indian subcontinent.
+    Dosas are served hot along with chutnies.</p>
+  <p><b>The Restaurant provides dining service either by reservation or Walkin Dining. </b></p>
+</div>
+
+<section class="gallery-section">
   <h2 class="text-center contact-us"> Gallery</h2>
-    <div class="row gallery">
-      <div class="column">
-        <img src="{% static 'images/ghee-roast.jpg' %}" alt="Ghee-roast" width="100%" height="50%">
-      </div>
-      <div class="column">
-        <img src="{% static 'images/masala-dosa.jpg' %}" alt="Masala-Dosa" width="100%" height="50%">
-      </div>
-      <div class="column">
-        <img src="{% static 'images/paper-roast.jpg' %}" alt="Paper-Roast" width="100%" height="50%">
-      </div>
-      </div>
-
-
-    <br>
-    <h2 class="text-center testimonial">Testimonial</h2>
-    <div class="row">
-        <div class="col-12">
-          <div class="card bg-info">
-            <p>Visited the restaurant on a Thursday night and it was the nicest Indian Dosa I’ve ever had. The restaurant is 
-              spacious and modern and the staff were welcoming and incredibly friendly. It was a fantastic meal and I couldn’t 
-              recommend it any higher.</p>
-            <p> <b>David, Limerick</b></p>
-          </div>
-        </div>
-        
-      
-        <div class="col-12">
-          <div class="card bg-info">
-            
-            <p>My wife and me, vacationing in Limerick from Dublin, had Dinner in Dosa Palace. We were both absolutely
-                          pleased with everything at your place. Your staff was so pleasant and helpful. So many variety of Dosas,
-                          Your menu is classic authentically. The taste is very good. <p>
-             <p> <b>- Mohan, Dublin</b></p>
-                          
-          </div>
-        </div>
-        
-        
-        <div class="col-12">
-          <div class="card bg-info">
-            
-            <p>The food was awesome!The staff were the friendliest you can imagine. Great choices of Indian dosas with variety of Chutnies.Will definitely come back:) Can highly recommend it:)</p>
-            <p> <b>- Yashika, Limerick</b></p>
-          </div>
-        </div>
-        
-        
+  <div class="row gallery">
+    <div class="col-sm-12 col-md-4 m-auto">
+      <img src="{% static 'images/ghee-roast.jpg' %}" alt="Ghee-roast" width="350" height="200">
     </div>
-    
-        
-       
+    <div class="col-sm-12 col-md-4 m-auto">
+      <img src="{% static 'images/masala-dosa.jpg' %}" alt="Masala-Dosa" width="350" height="200">
+    </div>
+    <div class="col-sm-12 col-md-4 m-auto">
+      <img src="{% static 'images/paper-roast.jpg' %}" alt="Paper-Roast" width="350" height="200">
+    </div>
+  </div>
+</section>
+<br><br><br><br><br><br>
+
+<section class="testimonial-section">
+  <h2 class="text-center testimonial">Testimonial</h2>
+  <div class="row">
+    <div class="col-12">
+      <div class="card bg-info">
+        <p>Visited the restaurant on a Thursday night and it was the nicest Indian Dosa I’ve ever had. The restaurant is
+          spacious and modern and the staff were welcoming and incredibly friendly. It was a fantastic meal and I couldn’t
+          recommend it any higher.</p>
+        <p> <b>David, Limerick</b></p>
       </div>
+    </div>
+  </div>
+  
+    <div class="row">
+    <div class="col-12">
+      <div class="card bg-info">
+  
+        <p>My wife and me, vacationing in Limerick from Dublin, had Dinner in Dosa Palace. We were both absolutely
+          pleased with everything at your place. Your staff was so pleasant and helpful. So many variety of Dosas,
+          Your menu is classic authentically. The taste is very good. <p>
+            <p> <b>- Mohan, Dublin</b></p>
+  
+      </div>
+    </div>
+  </div>
+  
+    <div class="row">
+    <div class="col-12">
+      <div class="card bg-info">
+  
+        <p>The food was awesome!The staff were the friendliest you can imagine. Great choices of Indian dosas with variety
+          of Chutnies.Will definitely come back:) Can highly recommend it:)</p>
+        <p> <b>- Yashika, Limerick</b></p>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+  </section>
+
+
+
+
 {% endblock %}
