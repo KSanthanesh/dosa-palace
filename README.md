@@ -22,10 +22,10 @@
    - [Features](#features)
    - [Future Features](#future-features)
 - [Structure](#structure "Goto Structure")
-  - Wireframes
-  - Database Schema
-  - Colours
-  - Typography
+  - [Wireframes](#wireframes)
+  - [Database Schema](#database-schema)
+  - [Colours](#colours)
+  - [Typography](#typography)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
   - [Automation Testing](#automation-testing)
@@ -189,6 +189,10 @@ This project is divided into four main pages. The website was better organised a
 
 ### Wireframes
 Balsamiq Wireframes used for this website.
+<details>
+<summary>Home</summary>
+<img src="assets/docs/home.png" width="500">
+</details>
 
 
 ### Database Schema
