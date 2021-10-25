@@ -2,36 +2,37 @@
 {% load static %}
 {% block content%}
 
-<section class="meals-list" id="meals">
-    <div class="container text-center">
-        <h1>Meal List</h1>
 
-        <table class="table bg-info table-hover meal-table">
+<div class="container text-center">
+    <h1>Meal List</h1>
 
-            <thead class="bg-dark text-white">
-                <tr>
-                    <th>Food Name</th>
-                    <th>Price</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for meal in meal_list %}
-                <tr>
-                    <th>
-                        <a href="/meals/get_meal_detail/{{meal.id}}">{{ meal.name }}</a></th>
-                    <th>{{ meal.price }}€</th>
-                    <!-- <th><a href="/meals/get_meal_detail/{{meal.id}}"></a><button class="btn bg-light">Meal
+    <table class="table bg-info table-hover meal-table">
+
+        <thead class="bg-dark text-white">
+            <tr>
+                <th>Food Name</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for meal in meal_list %}
+            <tr>
+                <th>
+                    <a href="/meals/get_meal_detail/{{meal.id}}">{{ meal.name }}</a></th>
+                <th>{{ meal.price }}€</th>
+                <!-- <th><a href="/meals/get_meal_detail/{{meal.id}}"></a><button class="btn bg-light">Meal
                                 Details</button></a></th> -->
-                                <th><form style="display: inline" action="/meals/get_meal_detail/{{meal.id}}" method="get">
-                                    <button class="btn bg-dark text-light">Meal Details</button>
-                                  </form>
-                                  </th>
-                </tr>
-            </tbody>
-            {% endfor %}
-        </table>
-    </div>
-</section>
+                <th>
+                    <form style="display: inline" action="/meals/get_meal_detail/{{meal.id}}" method="get">
+                        <button class="btn bg-dark text-light">Meal Details</button>
+                    </form>
+                </th>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</div>
+
 
 {% endblock %}
