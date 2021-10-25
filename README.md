@@ -53,12 +53,20 @@ The Home Page covers the foloowing sections:
 - Gallery
 - Contact details - Address, Email and Phone Number.
 - Footer
+- [Home-Ipad-1](assets/images/home-ipad-1.PNG)
+- [Home-Ipad-2](assets/images/home-ipad-2.PNG)
+- [Home-Ipad-3](assets/images/home-ipad-3.PNG)
+- [Home-Ipad-4](assets/images/home-ipad-4.PNG)
 
 ### Meals
 Meals Page covers the following sections:
 - Header, footer, contact details and Hero image similar like Home page.
 - Meal list 
 - Meal details click button.
+- [Meals-Ipad-1](assets/images/home-ipad-1.PNG)
+- [Meals-2](assets/images/meals-1.PNG)
+- [Meals-Ipad-3](assets/images/home-ipad-4.PNG)
+
 ### Meal details
 Meal details page covers the following sections:
 - Header, footer and contact details
@@ -68,12 +76,16 @@ Meal details page covers the following sections:
 - Meal price in Euros
 - Preparation time in Minutes.
 - Back to Meals button
+- [Meals-Details-1](assets/images/meal-details-ipod-1.PNG)
+- [Meals-Details-2](assets/images/home-ipad-4.PNG)
+
 
 ### Reservation
 Reservation page allows two options.
 - Header and Footer
 - New user to register their details before login.
 - old customer can login with their username and password.
+- [Reservation / SignUp-1](assets/images/reservation-1.PNG)
 
 #### Reserve
 Reservation table contains the following informations:
@@ -84,13 +96,19 @@ Reservation table contains the following informations:
 - People (Number of people to reserve the table)
 - Date (can pick in the calender)
 - Time (24 hours clock time)
+- [Reserve-Mobile page-1](assets/images/reserve-mobile-1.PNG)
+- [Reserve-Mobile-page-2](assets/images/reserve-mobile-2.PNG)
 
 #### View
 In the view page, the customer details are displayed as per the reservation. Two other additional buttons are available in the view page. The two buttons are Edit and Delete.
+- [View-Mobile](assets/images/view-mobile-1.PNG)
+
 ##### Edit button
 Allowing the customer to update their name, phone number,no of people, date and time.
+- [Edit Page](assets/images/edit-1.PNG)
 ##### Delete button
 Allowing the customer to delete their reservation. when the customer choose the delete button, the confirmation popup message will appear to confirm the delete option.
+- [Delete- Modal-Ipod](assets/images/delete-modal-1.PNG)
 
 
 #### Signup
@@ -101,6 +119,7 @@ Registration page contains:
 - Password (It is not case sensitive)
 - Confirm password
 - Signup button
+- [Reservation / SignUp-1](assets/images/reservation-1.PNG)
 
 #### Login
 Login Page contains:
@@ -108,11 +127,13 @@ Login Page contains:
 - Password
 - Remember me with checkbox
 - Sign in button
+- [Login](assets/images/login-mobile.PNG)
 
 
 #### Logout
 - Header and Footer
 - Sign out button
+- [Logout](assets/images/logout-mobile.PNG)
 
 
 ### Contact-Us
@@ -122,6 +143,9 @@ Contact us page contains the Following details:
 - Email address to Enter
 - Message box for brief comments or enquiries
 - send button
+- [Contact Us- Desktop-1](assets/images/contact-us-desktop.PNG)
+- [contact Us-Ipad-2](assets/images/home-ipad-4.PNG)
+
 
 
 #### Thanks-Msg
@@ -130,6 +154,7 @@ It contains:
 - Header and Footer
 - Image of the dosa
 - Thanks message
+- [Thanks Message-Desktop](assets/images/thanks-msg-desktop.PNG)
 
 ## Strategy
 The website covers all the screen types, such as Pc, Laptop, Tablet and Mobile. The website is easily navigate to all the sections.
@@ -193,10 +218,106 @@ Balsamiq Wireframes used for this website.
 <summary>Home</summary>
 <img src="assets/docs/home.png" width="500">
 </details>
+<details>
+<summary>Meals</summary>
+<img src="assets/docs/meals.png" width="500">
+</details>
+<details>
+<summary>Meal-Details</summary>
+<img src="assets/docs/meals-details.png" width="500">
+</details>
+<details>
+<summary>Reservation / SignUp</summary>
+<img src="assets/docs/reservation.png" width="500">
+</details>
+<details>
+<summary>Reserve</summary>
+<img src="assets/docs/reserve.png" width="500">
+</details>
+<details>
+<summary>View</summary>
+<img src="assets/docs/view.png" width="500">
+</details>
+<details>
+<summary>Edit</summary>
+<img src="assets/docs/edit.png" width="500">
+</details>
+<details>
+<summary>Delete-Modal box</summary>
+<img src="assets/docs/delete-modal.png" width="500">
+</details>
+<details>
+<summary>Login</summary>
+<img src="assets/docs/login.png" width="500">
+</details>
+<details>
+<summary>Logout</summary>
+<img src="assets/docs/logout.png" width="500">
+</details>
+<details>
+<summary>Contact Us</summary>
+<img src="assets/docs/contact-us.png" width="500">
+</details>
+<details>
+<summary>Thanks Message</summary>
+<img src="assets/docs/thanks-message.png" width="500">
+</details>
+Balasamiq wireFrames for Mobile Phones:
+<details>
+<summary>Home Mobile</summary>
+<img src="assets/docs/home-mobile.png" width="500">
+</details>
+<details>
+<summary>Meals Mobile</summary>
+<img src="assets/docs/meals-mobile.png" width="500">
+</details>
+<details>
+<summary>Meal-Details Mobile</summary>
+<img src="assets/docs/meals-details-mobile.png" width="500">
+</details>
+<details>
+<summary>Reservation / Signup Mobile</summary>
+<img src="assets/docs/reservation-mobile.png" width="500">
+</details>
+<details>
+<summary>Reserve Mobile</summary>
+<img src="assets/docs/reserve-mobile.png" width="500">
+</details>
+<details>
+<summary>View Mobile</summary>
+<img src="assets/docs/view-mobile.png" width="500">
+</details>
+<details>
+<summary>Edit Mobile</summary>
+<img src="assets/docs/edit-mobile.png" width="500">
+</details>
+<details>
+<summary>Delete-Modal box Mobile</summary>
+<img src="assets/docs/delete-modal-mobile.png" width="500">
+</details>
+<details>
+<summary>Login Mobile</summary>
+<img src="assets/docs/login-mobile.png" width="500">
+</details>
+<details>
+<summary>Logout Mobile</summary>
+<img src="assets/docs/logout-mobile.png" width="500">
+</details>
+<details>
+<summary>Contact Us Mobile</summary>
+<img src="assets/docs/contact-us-mobile.png" width="500">
+</details>
+<details>
+<summary>Thanks Message Mobile</summary>
+<img src="assets/docs/thanks-message-mobile.png" width="500">
+</details>
 
 
 ### Database Schema
 db diagram used for this website.
+<p align= "left">
+<img width= "500" src= "assets/images/database-schema.png">
+</p>
 
 ### colors
 I have used warm light and dark colours to create pleasant experience for those people to viewing this website. colors used:
@@ -248,11 +369,14 @@ Dev tools -For inspecting and editing the web code.
 
 ## Testing
 ### Emailjs
-The Javascript code for emailjs is referred from Emailjs and Rosie's Resume Walkthrough. Therefore, donot need Jest test for this portion. I have referred with my tutor and she agreed that testing is not required for this portion.
+The Javascript code for emailjs is referred from Emailjs and Rosie's Resume Walkthrough. Therefore, donot need Jest test for this portion.
 
 ### Automation Testing
 I used automated python Unittest to test models.py, views.py and forms.py.
 I attached the results for Python Unittest.
+<p align= "left">
+<img width= "500" src= "assets/images/python-test-result.png">
+</p>
 
 ### Code validation
 - W3 Markup Validation Service- To validate HTML document, i used Validate by direct URL, some errors shown, and then i fixed the errors. W3 HTML Validation Result:
