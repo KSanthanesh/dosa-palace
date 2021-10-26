@@ -9,7 +9,6 @@
         <div class="row">
             {% if user.is_authenticated %}
             <table class="table table-bordered bg-info table-hover meal-table">
-
                 <thead class="bg-dark text-white">
                     <tr>
                         <th class="col-8 small text-center">Name</th>
@@ -23,12 +22,8 @@
                 </thead>
                 <tbody>
                     {% for meal in reserves %}
-
                     {% if meal.user_name == user.username %}
-
-
                     <tr class="col-8 small">
-                        
                         <td class="col-8 small">
                             {{meal.visitor_name}}
                         </td>
@@ -40,7 +35,7 @@
                         </td>
                         <td class="col-8 small">
                             {{meal.date}}
-                        </td>                        
+                        </td>
                         <td class="col-8 small">
                             {{meal.time}}
                         </td>

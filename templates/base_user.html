@@ -30,14 +30,15 @@
       <h1 class="text-uppercase">
         <a href="{% url 'home'%}">Dosa Palace</a></h1>
     </div>
+
     <nav class="nav navbar">
+
       <ul class="nav navbar-nav navbar-expand-lg">
         <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'add_reserve' %}">Reserve</a></li>
         <li><a href="{% url 'view_reserve' %}">View</a></li>
-        <!-- <li><a href="#">Edit</a></li>
-            <li><a href="#">Delete</a></li> -->
       </ul>
+
       <ul class="nav navbar-nav navbar-expand-lg">
         {% if user.is_authenticated %}
         <li><a href="{% url 'account_logout' %}">LogOut</a></li>
@@ -46,10 +47,10 @@
         <li><a href="{% url 'account_login' %}">LogIn</a></li>
         {% endif %}
       </ul>
+
     </nav>
     <p class="text-white text-right open-hour"><b>Opening Hours: Mon-Sun 5.00pm to 11.00pm</b></p>
   </div>
-
 
   <div class="text-left message">
     {% if messages %}
@@ -67,7 +68,6 @@
   <div class="container">
     {% block content %}
     {% endblock %}
-
   </div>
 
   <!-- Footer -->
@@ -80,12 +80,8 @@
       <a href="https://instagram.com" target="_blank" rel="noopener"
         aria-label="visit our instagram page(open in a new tab"><i class="fa fa-instagram"></i></a>
       <p> copyright&copy; dosapalace 2021</p>
-
-
     </div>
   </footer>
-
-
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

@@ -7,7 +7,6 @@
     <h1>Meal List</h1>
 
     <table class="table bg-info table-hover meal-table">
-
         <thead class="bg-dark text-white">
             <tr>
                 <th>Food Name</th>
@@ -21,8 +20,6 @@
                 <th>
                     <a href="/meals/get_meal_detail/{{meal.id}}">{{ meal.name }}</a></th>
                 <th>{{ meal.price }}€</th>
-                <!-- <th><a href="/meals/get_meal_detail/{{meal.id}}"></a><button class="btn bg-light">Meal
-                                Details</button></a></th> -->
                 <th>
                     <form style="display: inline" action="/meals/get_meal_detail/{{meal.id}}" method="get">
                         <button class="btn bg-dark text-light">Meal Details</button>
@@ -32,7 +29,7 @@
         </tbody>
         {% endfor %}
     </table>
-</div>
 
+</div>
 
 {% endblock %}

@@ -8,14 +8,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800%7COpen+Sans:300,400,700"/>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800%7COpen+Sans:300,400,700" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel='shortcut icon' type='image/x-icon' href="{% static 'favicon.ico' %}"/>
+  <link rel='shortcut icon' type='image/x-icon' href="{% static 'favicon.ico' %}" />
 
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  
+
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
   </script>
   <script>
@@ -23,7 +25,6 @@
       emailjs.init("user_OTE3aVNOeX1glz8n2gwZ0");
     })();
   </script>
-
 
 </head>
 
@@ -35,13 +36,16 @@
       <h1 class="text-uppercase">
         <a href="{% url 'home'%}">Dosa Palace</a></h1>
     </div>
+
     <nav class="nav navbar">
+
       <ul class="nav navbar-nav navbar-expand-lg">
         <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'get_meal_list' %}">Meals</a></li>
         <li><a href="{% url 'account_signup' %}">Reservation</a></li>
         <li><a href="{% url 'contact' %}">ContactUs</a></li>
       </ul>
+
       <ul class="nav navbar-nav navbar-expand-lg">
         {% if user.is_authenticated %}
         <li><a href="{% url 'account_logout' %}">LogOut</a></li>
@@ -50,6 +54,7 @@
         <li><a href="{% url 'account_login' %}">LogIn</a></li>
         {% endif %}
       </ul>
+
     </nav>
     <p class="text-white text-right open-hour"><b>Opening Hours: Mon-Sun 5.00pm to 11.00pm</b></p>
   </div>
@@ -59,7 +64,6 @@
   <div class="container">
     {% block content %}
     {% endblock %}
-
   </div>
 
   <div class="container">
@@ -67,7 +71,6 @@
       <div class="col">
         <h2 class="text-center">Contact</h2>
         <p><b>Opening Times Monday To Sunday 5pm to 11pm.</b></p>
-
         <div class="col-md-4">
           <h5><strong>Address:</strong></h5>
           Dosa Palace,<br>
@@ -83,7 +86,6 @@
           <h5><strong>Email:</strong></h5>
           dosapalace@gmail.com
         </div>
-
       </div>
     </div>
   </div>
@@ -98,12 +100,10 @@
       <a href="https://instagram.com" target="_blank" rel="noopener"
         aria-label="visit our instagram page(open in a new tab"><i class="fa fa-instagram"></i></a>
       <p> copyright&copy; dosapalace 2021</p>
-
     </div>
   </footer>
 
   <script src="{% static 'js/sendEmail.js' %}"></script>
-
 
 </body>
 

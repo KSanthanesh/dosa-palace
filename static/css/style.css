@@ -103,14 +103,11 @@ a {
     display: table;
 }  */
 
-
-
 .card {
     border: 1px solid #000;
     padding: 10px;
     margin-bottom: 2px;
 }
-  
 
 .testimonial {
     margin-bottom: 30px;
@@ -215,7 +212,6 @@ label {
     .message ul li {
         width: 40%;
     }
-
 }
 
 
@@ -225,8 +221,9 @@ label {
         width: 250px;
         height: 250px;
         margin: 10px;
+    }
 }
-}
+
 @media screen and (max-width: 700px) {
     .logo {
         margin-top: 20px;
@@ -252,7 +249,6 @@ label {
         width: 55%;
     }
 }
-
 
 /* For  medium screens sizes from 500px wide and down */
 @media screen and (max-width: 500px) {
