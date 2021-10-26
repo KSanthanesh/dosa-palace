@@ -2,20 +2,22 @@
 {% load static %}
 {% block content %}
 
+{% if user.is_authenticated %}
 <div class="text-center">
   <h2 class="contact-us">Update a Table</h2>
   <form method="POST" class="form">
 
-    {% if user.is_authenticated %}
+    
     {% csrf_token %}
     {{ form.as_p }}
 
     <button type="submit" class="btn btn-info text-dark">Update</button>
-    {% endif %}
+    
 
   </form>
 
 
 </div>
+{% endif %}
 
 {% endblock %}

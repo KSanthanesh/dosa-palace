@@ -2,12 +2,13 @@
 {% load static %}
 {% block content %}
 
+{% if user.is_authenticated %}
 <div class="container-fluid">
     <div class="text-center">
         <h2 class="contact-us">Reservation View</h2>
 
         <div class="row">
-            {% if user.is_authenticated %}
+            
             <table class="table table-bordered bg-info table-hover meal-table">
                 <thead class="bg-dark text-white">
                     <tr>
@@ -45,16 +46,16 @@
                             </a>
                         </td>
                         <td class="col-8 small">
-                            <button class="btn btn-dark text-light small" data-toggle="modal" data-target="#myModal"
-                                type="button">Delete</button>
+                            <a href="/delete/{{ meal.id }}">
+                            <button class="btn btn-dark text-light small" type="button">Delete</button>
+                        </a>
                         </td>
-
                     </tr>
                     <!-- Modal -->
-                    <div id="myModal" class="modal fade" role="dialog">
+                    <!-- <div id="myModal" class="modal fade" role="dialog">
                         <div class="modal-dialog">
 
-                            <!-- Modal content-->
+                            
                             <div class="modal-content bg-light">
                                 <div class="modal-header">
                                     <h4 class="modal-title">Delete Reservation</h4>
@@ -71,7 +72,7 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div> -->
 
                     {% endif %}
 
@@ -79,9 +80,10 @@
 
                 </tbody>
             </table>
-            {% endif %}
+            
         </div>
     </div>
 </div>
+{% endif %}
 
 {% endblock %}

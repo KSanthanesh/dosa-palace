@@ -29,10 +29,6 @@ class TestModels(TestCase):
         """
         Check the Name field is string in Meals class in models.
         """
-        # meal = Meals.objects.create(name='Onion Dosa', slug='onion-dosa',
-        # description='This is onion dosa', price=4.00, preparation_time=10,
-        # image='onion-dosa.jpg')
-        # self.assertEqual(str(meal.name), 'Onion Dosa')
 
         meal = Meals.objects.create(
             name='Rava Dosa', slug='rava-dosa', description='This is ravadosa',
