@@ -389,43 +389,56 @@ Document checking completed. No errors or warnings to show.
 1. #### Home Page
 There are 11 testCases in Home Page.
 - There are 7 testcases in  header section  which are Dosapalace, Home, Meals, Reservation, Contact-Us, signup and Login.<br>
-Dosa Palace heading and Home Navigation are designed to bring the user back to the home page.Testing also proves that these options worked as per design. The other navigations are designed to bring the user to the website.Testing proves that these options worked as per designs.
-- There is 1 Testcase in middle of the Hero image. If the user click the Book a table Today option it will navigate to Reservation page.
-- There are three Social media links attached in all other pages.These social media navigators worked as per design requirements.For example, when click the Facebook button it brings to the Facebook main page.
+Dosa Palace heading and Home Navigation are designed to bring the user back to the home page.Testing also proves that these options worked as per design. The other navigations are designed to bring the user to the website.Testing proves that these options worked as per designs.<br>
+- [Header-Testing](assets/images/header.PNG)
+- There is 1 Testcase in middle of the Hero image. If the user click the Book a table Today option it will navigate to Reservation page.<br>
+- [Hero-image-Testing](assets/images/hero-image.PNG)
+- There are three Social media links attached in all other pages.These social media navigators worked as per design requirements.For example, when click the Facebook button it brings to the Facebook main page.<br>
+- [Footer-Testing](assets/images/home-ipad-4.PNG)
 
 2. #### Meals Page
-There are 8 menus are available. If they click on each menu meal details button it will navigate to that particular meal details.
+There are 8 menus are available. If they click on each menu meal details button it will navigate to that particular meal details.<br>
+- [Meals-Testing](assets/images/meals-1.PNG)
 
 #### Meal details
+There are 1 button is available. If they click the back to meals button it will go back to Meals list section.<br>
+- [Meals-Details](assets/images/meal-details-ipod-1.PNG)
 
 3. #### Reservation Page
-Header Navigation bar changes when the user click Reservation Page. There are 2 new navigation bar and 1 signup button testcases in reservation Page.
+Header Navigation bar changes when the user click Reservation Page. There are 2 new navigation bar and 1 signup button testcases in reservation Page.<br>
+- [Reservation / SignUp-Testing](assets/images/reservation-1.PNG)
+
 
 4. #### Login page
-There is 1 testcase in Login Page such as Sign In Button.
+There is 1 testcase in Login Page such as Sign In Button.<br>
+- [Login-Testing](assets/images/login-mobile.PNG)
 
 5. #### Logout Page
-There is 1 testcase in Logout Page such as Sign Out button.
+There is 1 testcase in Logout Page such as Sign Out button.<br>
+- [Logout-Testing](assets/images/logout-mobile.PNG)
 
 6. #### Reserve Page
-There is 1 testcase in Reserve page such as Reserve a Table button.
+There is 1 testcase in Reserve page such as Reserve a Table button.<br>
+- [Reserve-Testing](assets/images/reserve-mobile-2.PNG)
+
 
 7. #### View Page
-There is 2 testcases for each reservation option in view page such as Edit and Delete Button
+There is 2 testcases for each reservation option in view page such as Edit and Delete Button.<br>
+- [View-Testing](assets/images/view-mobile-1.PNG)
 
 8. #### Edit Page
-There is 1 testcase in Edit button such as Update button.
+There is 1 testcase in Edit button such as Update button.<br>
+- [Edit-Testing](assets/images/edit-1.PNG)
 
 9. #### Delete Modal confirm box
 There is 2 testcases in Delete Modal confirm box such as yes or no for delete option.
 - Yes to Delete 
 - No to navigate to view page
+- [Delete-Testing](assets/images/delete-modal-1.PNG)
 
 10. #### Contact-Us Page
-There is one testcase in contact us page such as Send button.
-
-
-
+There is one testcase in contact us page such as Send button.<br>
+- [Contact Us-Testing](assets/images/contact-us-desktop.PNG)
 
 ### Bugs
 1. I have alot of difficulties to change sqlite to postgres in Heroku. With the help of tutor support i manage to resolve the problem.
