@@ -262,7 +262,7 @@ Balsamiq Wireframes used for this website.
 <summary>Thanks Message</summary>
 <img src="assets/docs/thanks-message.png" width="500">
 </details>
-Balasamiq wireFrames for Mobile Phones:
+Balsamiq wireFrames for Mobile Phones:
 <details>
 <summary>Home Mobile</summary>
 <img src="assets/docs/home-mobile.png" width="500">
