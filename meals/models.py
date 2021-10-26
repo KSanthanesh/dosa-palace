@@ -5,8 +5,6 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-
-
 class Meals(models.Model):
     """
     Meals details for User
@@ -29,7 +27,6 @@ class Meals(models.Model):
         verbose_name_plural = 'meals'
 
 
-
 class Booking(models.Model):
     """
     User can Reserve a table for dining
@@ -40,6 +37,12 @@ class Booking(models.Model):
     no_of_people = models.IntegerField()
     date = models.DateField()
     time = models.TimeField()
+
+    class Meta:
+        """
+        Class Meta
+        """
+        unique_together = [['visitor_name', 'date']]
 
     def __str__(self):
         return str(self.visitor_name)

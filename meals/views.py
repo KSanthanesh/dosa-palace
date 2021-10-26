@@ -83,7 +83,7 @@ def view_reserve(request):
     reserves = Booking.objects.all()
     context = {
         'reserves': reserves
-        }
+    }
     # print("reserves", reserves)
     return render(request, 'meals/view_reserve.html', context)
 
