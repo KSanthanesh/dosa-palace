@@ -108,7 +108,7 @@ a {
     padding: 10px;
     margin-bottom: 2px;
 }
-
+  
 .testimonial {
     margin-bottom: 30px;
     text-decoration: underline;
@@ -221,7 +221,7 @@ label {
         width: 250px;
         height: 250px;
         margin: 10px;
-    }
+}
 }
 
 @media screen and (max-width: 700px) {
