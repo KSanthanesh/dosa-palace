@@ -7,12 +7,13 @@
 <div class="container_fluid">
   <div class="text-center ">
     <h2 class="contact-us">Reserve a Table</h2>
-    <form method="POST" name="ReserveForm" action="{% url 'add_reserve' %}">
+    <form method="POST" class="form">
       {% csrf_token %}
 
       <div class="form-group">
         <label for="user_name">Username</label>
-        <input id="user_name" name="user_name" type="text" class="form-control" placeholder="UserName" value="{{ user.username }}" readonly required />
+        <input id="user_name1" name="user_name1" type="text" class="form-control" placeholder="UserName" value="{{ user.username }}" readonly required />
+        <input id="user_name" name="user_name" type="hidden" class="form-control" placeholder="UserName" value="{{ user.id }}" readonly required />
         
       </div>
       <div class="form-group">
@@ -52,7 +53,19 @@
 
     {% if user.is_authenticated %}
     {% csrf_token %}
-    {{ form.as_p }}
+    <tr><th><label for="id_visitor_name">Visitor name:</label></th><td><input type="text" name="visitor_name" maxlength="50" required id="id_visitor_name"></td></tr>
+<tr><th><label for="id_user_name">User name:</label></th><td><select name="user_name" required id="id_user_name">
+  <option value="{{ user.id }}" selected>{{ user.username }}</option>
+
+  <option value="1">dosapalace</option>
+
+  <option value="2">kavi</option>
+
+</select></td></tr>
+<tr><th><label for="id_phone_number">Phone number:</label></th><td><input type="number" name="phone_number" required id="id_phone_number"></td></tr>
+<tr><th><label for="id_no_of_people">No of people:</label></th><td><input type="number" name="no_of_people" required id="id_no_of_people"></td></tr>
+<tr><th><label for="id_date">Date:</label></th><td><input type="text" name="date" required id="id_date"></td></tr>
+<tr><th><label for="id_time">Time:</label></th><td><input type="text" name="time" required id="id_time"></td></tr>
 
     <button type="submit" class="btn btn-info text-dark">submit</button>
     {% endif %}

@@ -15,13 +15,6 @@ def home(request):
     return render(request, 'meals/home.html')
 
 
-def user(request):
-    """
-        for home page
-    """
-    return render(request, 'meals/user.html')
-
-
 def get_meal_list(request):
     """
     for Meals page
@@ -74,11 +67,14 @@ def add_reserve(request):
             form.save()
             messages.success(request, "Successfully Booked the Table")
             return redirect('view_reserve')
+        else:
+            messages.success(request, "Booking already exist")
     form = ReserveForm()
 
     context = {
             'form': form,
         }
+    # print('form', form)
 
     return render(request, 'meals/add_reserve.html', context)
 
