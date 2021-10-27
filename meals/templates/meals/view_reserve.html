@@ -8,7 +8,7 @@
         <h2 class="contact-us">Reservation View</h2>
 
         <div class="row">
-            
+
             <table class="table table-bordered bg-info table-hover meal-table">
                 <thead class="bg-dark text-white">
                     <tr>
@@ -22,8 +22,10 @@
                     </tr>
                 </thead>
                 <tbody>
+
                     {% for meal in reserves %}
-                    {% if meal.user_name == user.username %}
+                    
+                    {% if user == meal.user_name %}
                     <tr class="col-8 small">
                         <td class="col-8 small">
                             {{meal.visitor_name}}
@@ -47,8 +49,8 @@
                         </td>
                         <td class="col-8 small">
                             <a href="/delete/{{ meal.id }}">
-                            <button class="btn btn-dark text-light small" type="button">Delete</button>
-                        </a>
+                                <button class="btn btn-dark text-light small" type="button">Delete</button>
+                            </a>
                         </td>
                     </tr>
                     <!-- Modal -->
@@ -80,7 +82,7 @@
 
                 </tbody>
             </table>
-            
+
         </div>
     </div>
 </div>

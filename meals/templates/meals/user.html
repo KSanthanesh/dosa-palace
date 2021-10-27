@@ -1,0 +1,8 @@
+{% for meal in reserves %}
+{% if meal.user_name == user.username %}
+<tr class="col-8 small">
+    <td class="col-8 small">
+        {{meal.visitor_name}}
+    </td>
+{% endif %}
+{% endfor%}

@@ -17,4 +17,5 @@ urlpatterns = [
     path('view_reserve/', views.view_reserve, name='view_reserve'),
     path('edit/<meal_id>', views.edit_reserve, name='edit'),
     path('delete/<meal_id>', views.delete_reserve, name='delete'),
+    path('user/', views.user, name='user'),
 ]

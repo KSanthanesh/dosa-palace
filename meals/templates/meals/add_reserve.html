@@ -3,6 +3,7 @@
 {% block content %}
 
 {% if user.is_authenticated %}
+
 <div class="container_fluid">
   <div class="text-center ">
     <h2 class="contact-us">Reserve a Table</h2>
@@ -11,8 +12,7 @@
 
       <div class="form-group">
         <label for="user_name">Username</label>
-        <input id="user_name" name="user_name" type="text" class="form-control" placeholder="UserName"
-          value="{{ user.username }}" readonly required />
+        <input id="user_name" name="user_name" type="text" class="form-control" placeholder="UserName" value="{{ user.username }}" readonly required />
         
       </div>
       <div class="form-group">
@@ -22,8 +22,7 @@
       </div>
       <div class="form-group">
         <label for="phone_number">Phone : </label>
-        <input id="phone_number" name="phone_number" class="form-control" type="tel" placeholder="0899640000"
-          minlength="10" maxlength="10" pattern="[08]{2}[6-9]{1}[0-9]{7}"required />
+        <input id="phone_number" name="phone_number" class="form-control" type="tel" placeholder="0899640000" minlength="10" maxlength="10" required />
        
       </div>
       <div class="form-group">
@@ -39,13 +38,13 @@
       <div class="form-group">
         <label for="time">Time:</label>
         <input id="time" name="time" type="time" class="form-control" value="18:00" min="17:00" max="22:30" required />
-        
       </div>
 
       <button type="submit" class="btn btn-info">Reserve a Table</button>
     </form>
   </div>
 </div>
+{% endif %}
 
 <!-- <div class="text-center">
   <h2 class="contact-us">Add a Table</h2>
@@ -61,6 +60,6 @@
   </form> 
 </div>  -->
 
-{% endif %}
+
 
 {% endblock %}

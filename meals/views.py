@@ -15,6 +15,13 @@ def home(request):
     return render(request, 'meals/home.html')
 
 
+def user(request):
+    """
+        for home page
+    """
+    return render(request, 'meals/user.html')
+
+
 def get_meal_list(request):
     """
     for Meals page
@@ -84,7 +91,7 @@ def view_reserve(request):
     context = {
         'reserves': reserves
     }
-    # print("reserves", reserves)
+    print("reserves", reserves)
     return render(request, 'meals/view_reserve.html', context)
 
 
