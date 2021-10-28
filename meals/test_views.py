@@ -3,9 +3,8 @@ Testing the views.py
 """
 
 from django.test import TestCase
-# from .models import Meals
-from .models import Meals, Booking
 from django.contrib.auth.models import User
+from .models import Meals, Booking
 
 
 class TestViews(TestCase):
@@ -89,38 +88,41 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'meals/view_reserve.html')
 
-    # def test_edit_reserve_page(self):
-    #     """
-    #     Edit reservation page open testing
-    #     """
-    #     meal = Booking.objects.create(
-    #         visitor_name='Priya', user_name='dosapalace', phone_number='12345',
-    #         no_of_people='2', date='2021-10-20', time='20:00:00')
-    #     response = self.client.get(f'/edit/{meal.id}')
-    #     self.assertEqual(response.status_code, 200)
-    #     self.assertTemplateUsed(response, 'meals/edit_reserve.html')
+    def test_edit_reserve_page(self):
+        """
+        Edit reservation page open testing
+        """
+        user = User.objects.create(username='dosapalace')
+        meal = Booking.objects.create(
+            visitor_name='Priya', user_name=user, phone_number='12345',
+            no_of_people='2', date='2021-10-20', time='20:00:00')
+        response = self.client.get(f'/edit/{meal.id}')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'meals/edit_reserve.html')
 
-    # def test_can_edit_reserve_page(self):
-    #     """
-    #     Edit reservation page can edit the user details for dining testing
-    #     """
-    #     meal = Booking.objects.create(
-    #         visitor_name='Priya', user_name='dosapalace', phone_number='12345',
-    #         no_of_people='2', date='2021-10-20', time='20:00:00')
-    #     response = self.client.post(f'/edit/{meal.id}', {'visitor_name': 'Devi', 'user_name': 'dosapalace', 'phone_number': '12345', 'no_of_people': '2', 'date': '2021-10-20', 'time': '20:00:00'})  # noqa: E501
-    #     updated_meal = Booking.objects.get(id=meal.id)
-    #     print(updated_meal.visitor_name)
-    #     self.assertEqual(updated_meal.visitor_name, 'Devi')
-    #     self.assertRedirects(response, '/meals/view_reserve/')
+    def test_can_edit_reserve_page(self):
+        """
+        Edit reservation page can edit the user details for dining testing
+        """
+        user = User.objects.create(username='dosapalace')
+        meal = Booking.objects.create(
+            visitor_name='Priya', user_name=user, phone_number='12345',
+            no_of_people='2', date='2021-10-20', time='20:00:00')
+        response = self.client.post(f'/edit/{meal.id}', {'visitor_name': 'Devi', 'user_name': 1, 'phone_number': '12345', 'no_of_people': '2', 'date': '2021-10-20', 'time': '20:00:00'})  # noqa: E501
+        updated_meal = Booking.objects.get(id=meal.id)
+        print(updated_meal.visitor_name)
+        self.assertEqual(updated_meal.visitor_name, 'Devi')
+        self.assertRedirects(response, '/meals/view_reserve/')
 
-    # def test_can_delete_reservation(self):
-    #     """
-    #     Delete option can delete the user details for dining
-    #     """
-    #     meal = Booking.objects.create(
-    #         visitor_name='Priya', user_name='dosapalace', phone_number='12345',
-    #         no_of_people='2', date='2021-10-20', time='20:00:00')
-    #     response = self.client.get(f'/delete/{meal.id}')
-    #     self.assertRedirects(response, '/meals/view_reserve/')
-    #     existing_meals = Booking.objects.filter(id=meal.id)
-    #     self.assertEqual(len(existing_meals), 0)
+    def test_can_delete_reservation(self):
+        """
+        Delete option can delete the user details for dining
+        """
+        user = User.objects.create(username='dosapalace')
+        meal = Booking.objects.create(
+            visitor_name='Priya', user_name=user, phone_number='12345',
+            no_of_people='2', date='2021-10-20', time='20:00:00')
+        response = self.client.get(f'/delete/{meal.id}')
+        self.assertRedirects(response, '/meals/view_reserve/')
+        existing_meals = Booking.objects.filter(id=meal.id)
+        self.assertEqual(len(existing_meals), 0)

@@ -3,8 +3,8 @@ Testing the models.py
 """
 
 from django.test import TestCase
-from .models import Meals, Booking
 from django.contrib.auth.models import User
+from .models import Meals, Booking
 
 
 class TestModels(TestCase):
@@ -43,7 +43,7 @@ class TestModels(TestCase):
         """
         user = User.objects.create(username='dosapalace')
         booking = Booking.objects.create(
-            visitor_name='Priya', user_name=User.objects.get(username='dosapalace'),  phone_number=12345,
+            visitor_name='Priya', user_name=user,  phone_number=12345,
             no_of_people=2, date='2021-10-20', time='20:00:00')
         self.assertEqual(str(booking.visitor_name), 'Priya')
         self.assertEqual(str(booking.user_name), 'dosapalace')
