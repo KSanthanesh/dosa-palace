@@ -5,6 +5,7 @@ Testing the views.py
 from django.test import TestCase
 # from .models import Meals
 from .models import Meals, Booking
+from django.contrib.auth.models import User
 
 
 class TestViews(TestCase):
@@ -71,13 +72,14 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'meals/add_reserve.html')
 
-    # def test_can_add_reserve(self):
-    #     """
-    #     User enter their details in the add reserve form, it will redirect
-    #     to Reservation view page
-    #     """
-    #     response = self.client.post('/add_reserve/', {'visitor_name': 'Priya', 'user_name': 'dosapalace', 'phone_number': '67890', 'no_of_people': '5', 'date': '2021-10-20', 'time': '20:00:00'})  # noqa: E501
-    #     self.assertRedirects(response, '/meals/view_reserve/')
+    def test_can_add_reserve(self):
+        """
+        User enter their details in the add reserve form, it will redirect
+        to Reservation view page
+        """
+        user = User.objects.create(username='dosapalace')
+        response = self.client.post('/add_reserve/', {'visitor_name': 'Priya', 'user_name': 1, 'phone_number': 67890, 'no_of_people': 5, 'date': '2021-10-20', 'time': '20:00:00'})  # noqa: E501
+        self.assertRedirects(response, '/meals/view_reserve/')
 
     def test_view_reserve_page(self):
         """

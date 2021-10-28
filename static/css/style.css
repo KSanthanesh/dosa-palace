@@ -182,15 +182,6 @@ label {
     margin-left: 50px;
 }
 
-/*-----------------------------------------------Sign-up page*/
-/* #id_username {
-    margin-left: 49px;
-}
-
-#id_password1 {
-    margin-left: 55px;
-} */
-
 /*-----------------------------------------------messages*/
 .message ul li {
     width: 30%;
@@ -257,14 +248,6 @@ label {
     .small {
         font-size: 70%;
         margin: 0;
-    }
-
-    #id_username {
-        margin-left: 0;
-    }
-
-    #id_password1 {
-        margin-left: 0;
     }
 
     /*-----------------------------------------------opening hour line in header*/
