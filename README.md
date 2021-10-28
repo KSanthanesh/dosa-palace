@@ -1,4 +1,6 @@
 # Dosa Palace
+<img src="assets/docs/responsive-1.PNG" align="left" width="300" height="200" >   
+<img src="assets/docs/responsive-2.PNG" align="center" width="300" height="200">
 
 ## Types of Content
 - [Introduction](#introduction "Goto Indroduction")
