@@ -48,16 +48,17 @@
                             </a>
                         </td>
                         <td class="col-8 small">
-                            <a href="/delete/{{ meal.id }}">
-                                <button class="btn btn-dark text-light small" type="button">Delete</button>
-                            </a>
+                                <button class="btn btn-dark text-light small" onclick="return myid('{{ meal.id }}')" type="button" data-toggle="modal" data-target="#myModal">Delete</button>
+                                <input type="hidden" name="my_id" id="my_id"/>
                         </td>
                     </tr>
+
+                    
                     <!-- Modal -->
-                    <!-- <div id="myModal" class="modal fade" role="dialog">
+                    <div id="myModal" class="modal fade" role="dialog">
                         <div class="modal-dialog">
 
-                            
+                            <!-- Modal content -->
                             <div class="modal-content bg-light">
                                 <div class="modal-header">
                                     <h4 class="modal-title">Delete Reservation</h4>
@@ -66,7 +67,7 @@
                                     <p>Are you Sure to Delete?</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <a href="/delete/{{ meal.id }}"><button type="submit"
+                                    <a href="#" id="yesBtn"><button type="submit"
                                             class="btn btn-hover bg-info text-light">Yes</button></a>
                                     <button type="button" class="btn btn-hover bg-info text-light"
                                         data-dismiss="modal">No</button>
@@ -74,7 +75,7 @@
                             </div>
 
                         </div>
-                    </div> -->
+                    </div>
 
                     {% endif %}
 
