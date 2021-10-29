@@ -25,7 +25,6 @@ document.getElementById('yesBtn').addEventListener('click', function () {
 })
 
 
-
 //  Contact Page-Send mail
 function sendMail(contactForm) {
     emailjs.send("gmail", "dosa_palace", {
