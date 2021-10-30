@@ -48,7 +48,7 @@
 - The website covers all the screen types, such as Pc,Laptop,Tablet and Mobile.
 - There is Login Page in the website. The customer has to login in to website using username and password before making any Reservation.
 ### Home
-The Home Page covers the foloowing sections:
+  The Home Page covers the foloowing sections:
 - Header, Logo Navigation Menu and operationg time of the restaurant.
 - Hero-image
 - About the restaurant
@@ -61,7 +61,7 @@ The Home Page covers the foloowing sections:
 - [Home-Ipad-4](assets/images/home-ipad-4.PNG)
 
 ### Meals
-Meals Page covers the following sections:
+  Meals Page covers the following sections:
 - Header, footer, contact details and Hero image similar like Home page.
 - Meal list 
 - Meal details click button.
@@ -70,7 +70,7 @@ Meals Page covers the following sections:
 - [Meals-Ipad-3](assets/images/home-ipad-4.PNG)
 
 ### Meal details
-Meal details page covers the following sections:
+  Meal details page covers the following sections:
 - Header, footer and contact details
 - Image of the Meal
 - Meal Name
@@ -81,16 +81,15 @@ Meal details page covers the following sections:
 - [Meals-Details-1](assets/images/meal-details-ipod-1.PNG)
 - [Meals-Details-2](assets/images/home-ipad-4.PNG)
 
-
 ### Reservation
-Reservation page allows two options.
+  Reservation page allows two options.
 - Header and Footer
 - New user to register their details before login.
 - old customer can login with their username and password.
 - [Reservation / SignUp-1](assets/images/reservation-1.PNG)
 
 #### Reserve
-Reservation table contains the following informations:
+  Reservation table contains the following informations:
 - Header and Footer for reserve, view and Edit pages.
 - Username(username is default to login username)
 - Name (Can be used for themself or others)
@@ -102,19 +101,19 @@ Reservation table contains the following informations:
 - [Reserve-Mobile-page-2](assets/images/reserve-mobile-2.PNG)
 
 #### View
-In the view page, the customer details are displayed as per the reservation. Two other additional buttons are available in the view page. The two buttons are Edit and Delete.
+  In the view page, the customer details are displayed as per the reservation. Two other additional buttons are available in the view page. The two buttons are Edit and Delete.
 - [View-Mobile](assets/images/view-mobile-1.PNG)
 
 ##### Edit button
-Allowing the customer to update their name, phone number,no of people, date and time.
+  Allowing the customer to update their name, phone number,no of people, date and time.
 - [Edit Page](assets/images/edit-1.PNG)
+
 ##### Delete button
-Allowing the customer to delete their reservation. when the customer choose the delete button, the confirmation popup message will appear to confirm the delete option.
+  Allowing the customer to delete their reservation. when the customer choose the delete button, the confirmation popup message will appear to confirm the delete option.
 - [Delete- Modal-Ipod](assets/images/delete-modal-1.PNG)
 
-
 #### Signup
-Registration page contains:
+  Registration page contains:
 - Header and Footer
 - Username (It is not case sensitive)
 - Email (optional)
@@ -124,22 +123,20 @@ Registration page contains:
 - [Reservation / SignUp-1](assets/images/reservation-1.PNG)
 
 #### Login
-Login Page contains:
+  Login Page contains:
 - Username
 - Password
 - Remember me with checkbox
 - Sign in button
 - [Login](assets/images/login-mobile.PNG)
 
-
 #### Logout
 - Header and Footer
 - Sign out button
 - [Logout](assets/images/logout-mobile.PNG)
 
-
 ### Contact-Us
-Contact us page contains the Following details:
+  Contact us page contains the Following details:
 - Header and Footer
 - Name to enter
 - Email address to Enter
@@ -148,24 +145,22 @@ Contact us page contains the Following details:
 - [Contact Us- Desktop-1](assets/images/contact-us-desktop.PNG)
 - [contact Us-Ipad-2](assets/images/home-ipad-4.PNG)
 
-
-
 #### Thanks-Msg
-Once click on the send button in the contact page, it will navigate in to Thank you message page.<br>
-It contains:
+  Once click on the send button in the contact page, it will navigate in to Thank you message page.<br>
+  It contains:
 - Header and Footer
 - Image of the dosa
 - Thanks message
 - [Thanks Message-Desktop](assets/images/thanks-msg-desktop.PNG)
 
 ## Strategy
-The website covers all the screen types, such as Pc, Laptop, Tablet and Mobile. The website is easily navigate to all the sections.
-Attract the local community to taste South Indian Cuisine. Variety of dosas are available in the restaurant.
+  The website covers all the screen types, such as Pc, Laptop, Tablet and Mobile. The website is easily navigate to all the sections.
+  Attract the local community to taste South Indian Cuisine. Variety of dosas are available in the restaurant.
 
 ### UX
 
 #### UserStory using Kanban feature in Agile Methodology
-These are the steps for UX<br>
+  These are the steps for UX<br>
 1. Click Projects in the dosa palace repositary and Create a Project name.
 2. Then select, Project Template => Basic Kanban => create Project.
 3. In the ToDo column, there will be three cards, delete those cards.
@@ -187,16 +182,15 @@ These are the steps for UX<br>
 - As a Site User I can select the Delete option so that I can Delete the Reservation.
 - As a Site User I can use the contact option so that I can make enquiries regarding my dining requirements.
 
-
-
 ### Business Vision
-There is no Indian restaurant around this area at 10km radius. Dosa is suitable for all age groups. This cuisine is not spicy which is suitable for local community. The ingredients are available locally to prepare this cuisine. We could easily compete with other local restaurants and stalls.
+  There is no Indian restaurant around this area at 10km radius. Dosa is suitable for all age groups. This cuisine is not spicy which is suitable for local community. The ingredients are available locally to prepare this cuisine. We could easily compete with other local restaurants and stalls.
 
 ### Purpose of Website
-To promote the dosa cuisine to the local community. The website describes various types of dosa available.It also provides the option to reserve table or walk in Dining.
+  To promote the dosa cuisine to the local community. The website describes various types of dosa available.It also provides the option to reserve table or walk in Dining.
 
 ## Scope
-The website covers details of the restaurant, list of dosas, dosa details, customer reservation and contact option.
+  The website covers details of the restaurant, list of dosas, dosa details, customer reservation and contact option.
+
 ### Features
 - Meal list - User can view the variety of Dosa
 - Meal details - List of detailed information of the meal
@@ -205,14 +199,13 @@ The website covers details of the restaurant, list of dosas, dosa details, custo
 - edit and delete button - user can use edit button to update their details if they want. Delete button can used if they want to delete the reservation.
 - contact form - its used for the customer  to contact the restaurant.
 
-
 ### Future Features
 1. Currently the booking is reset manually in the admin page. In future i like to automate this operation.
 2. Currently the table reservation is done by restaurant people, i like to automate the table booking through online.
 3. I like to bring food delivery in the future.
 
 ## Structure
-This project is divided into four main pages. The website was better organised after my mentoring session with my mentor. The website was structured such a way that the users can navigate to find relevant information according to their need.
+  This project is divided into four main pages. The website was better organised after my mentoring session with my mentor. The website was structured such a way that the users can navigate to find relevant information according to their need.
 
 ### Wireframes
 Balsamiq Wireframes used for this website.
@@ -264,7 +257,9 @@ Balsamiq Wireframes used for this website.
 <summary>Thanks Message</summary>
 <img src="assets/docs/thanks-message.png" width="500">
 </details>
-Balsamiq wireFrames for Mobile Phones:
+
+#### Balsamiq wireFrames for Mobile Phones:
+
 <details>
 <summary>Home Mobile</summary>
 <img src="assets/docs/home-mobile.png" width="500">
@@ -335,7 +330,6 @@ Bootstrap colour also used for this website.
 - #d3d3d3
 - #fff
 - #000
-- 
 
 ### Typography
 I have used Open Sans, cursive and 'Raleway', sans-serif to create this website.
@@ -370,8 +364,6 @@ Dev tools -For inspecting and editing the web code.
 - dbdiagram.io - to create database schema
 
 ## Testing
-### Emailjs
-The Javascript code for emailjs is referred from Emailjs and Rosie's Resume Walkthrough. Therefore, donot need Jest test for this portion.
 
 ### Automation Testing
 I used automated python Unittest to test models.py, views.py and forms.py.
@@ -389,7 +381,7 @@ Document checking completed. No errors or warnings to show.
 
 ### Features Testing
 1. #### Home Page
-There are 11 testCases in Home Page.
+    There are 11 testCases in Home Page.
 - There are 7 testcases in  header section  which are Dosapalace, Home, Meals, Reservation, Contact-Us, signup and Login.<br>
 Dosa Palace heading and Home Navigation are designed to bring the user back to the home page.Testing also proves that these options worked as per design. The other navigations are designed to bring the user to the website.Testing proves that these options worked as per designs.<br>
 - [Header-Testing](assets/images/header.PNG)
@@ -399,29 +391,29 @@ Dosa Palace heading and Home Navigation are designed to bring the user back to t
 - [Footer-Testing](assets/images/home-ipad-4.PNG)
 
 2. #### Meals Page
-There are 8 menus are available. If they click on each menu meal details button it will navigate to that particular meal details. The testing proves that each meal option navigates to each meal detail page.<br>
+    There are 8 menus are available. If they click on each menu meal details button it will navigate to that particular meal details. The testing proves that each meal option navigates to each meal detail page.<br>
 - [Meals-Testing](assets/images/meals-1.PNG)
 
 #### Meal details
-There are 1 back button is available. If they click the back to meals button it will go back to Meals list section.The testing proves that the back button works properly.<br>
+    There are 1 back button is available. If they click the back to meals button it will go back to Meals list section.The testing proves that the back button works properly.<br>
 - [Meals-Details](assets/images/meal-details-ipod-1.PNG)
 
 3. #### Reservation Page
-Header Navigation bar changes when the user click Reservation Page. There are 2 new navigation bar and 1 signup button. The testcases prove that the 2 new navigation bar and 1 new signup button are working as per design.<br>
+    Header Navigation bar changes when the user click Reservation Page. There are 2 new navigation bar and 1 signup button. The testcases prove that the 2 new navigation bar and 1 new signup button are working as per design.<br>
 - [Reservation / SignUp-Testing](assets/images/reservation-1.PNG)
 
-
 4. #### Login page
-There is 1 testcase in Login Page such as Sign In Button. The testing proves that this button working as per design.<br>
+    There is 1 testcase in Login Page such as Sign In Button. The testing proves that this button working as per design.<br>
 - [Login-Testing](assets/images/login-mobile.PNG)
 
 5. #### Logout Page
-There is 1 testcase in Logout Page such as Sign Out button. The testing proves that this button working as per design.<br>
+    There is 1 testcase in Logout Page such as Sign Out button. The testing proves that this button working as per design.<br>
 - [Logout-Testing](assets/images/logout-mobile.PNG)
 
 6. #### Reserve Page
-There is 1 testcase in Reserve page such as Reserve a Table button. The button is called the Reserve a Table. I did validation in the Reservtion page.<br>
+    There is 1 testcase in Reserve page such as Reserve a Table button. The button is called the Reserve a Table. I did validation in the Reservtion page.<br>
 - [Reserve-Testing](assets/images/reserve-mobile-2.PNG)
+
 #### Validation:
 1.  Username - The Username is default which is taken from the Login page Username.
 2. Name - The user can reserve the dining table option either for themself or others. The user must enter the name parameter, if the name parameter is not updated an error message will appear to remaind that the user must enter the name.The name parameter is tested and it works as per design.
@@ -439,19 +431,18 @@ There is 1 testcase in Reserve page such as Reserve a Table button. The button i
 7. When the user enters name and the booking date the system will compare these parameters with the existing booking list. if the name and date are same the system will feedback the error message stating "Booking already Exist".
 - [Double Booking-Message](assets/images/double_booking.PNG)
 
-
 7. #### View Page
-There is 2 testcases for each reservation option in view page such as Edit and Delete Button.Both are working as per design.<br>
+    There is 2 testcases for each reservation option in view page such as Edit and Delete Button.Both are working as per design.<br>
 - [View-Testing](assets/images/view-mobile-1.PNG)
 - When the booking is successful the success message will appear in the view page.
 - [Success-Message](assets/images/success_msg.PNG)
 
 8. #### Edit Page
-There is 1 testcase in Edit button such as Update button.User can edit Name, Phone number, number of people, date and time. But they cant edit username. This function proved as per design.<br>
+    There is 1 testcase in Edit button such as Update button.User can edit Name, Phone number, number of people, date and time. But they cant edit username. This function proved as per design.<br>
 - [Edit-Testing](assets/images/edit-1.PNG)
 
 9. #### Delete Modal confirm box
-There is 2 testcases in Delete Modal confirm box such as yes or no for delete option.
+    There is 2 testcases in Delete Modal confirm box such as yes or no for delete option.
 - Yes to Delete - Proved
 - No to navigate to view page -Proved
 - [Delete-Testing](assets/images/delete-modal-1.PNG)
@@ -459,7 +450,7 @@ There is 2 testcases in Delete Modal confirm box such as yes or no for delete op
 - [Cancellation-Message](assets/images/cancel_msg.PNG)
 
 10. #### Contact-Us Page
-There is one testcase in contact us page such as Send button. It is working as per design.<br>
+    There is one testcase in contact us page such as Send button. It is working as per design.<br>
 - [Contact Us-Testing](assets/images/contact-us-desktop.PNG)
 #### Validation:
 1. Name: The user must enter the name parameter, if the name parameter is not updated an error message will appear to remaind that the user must enter the name.The name parameter is tested and it works as per design.
@@ -477,10 +468,10 @@ There is one testcase in contact us page such as Send button. It is working as p
 3. I have difficulties in understanding  how to render the templates. Manage to resolve the problem by reviewing the walkthroughs multiple times.
 
 ## Deployment
-First we need to go to github website to create a new repositary using code Institute Template. Followed by giving a new name of the website.Then need to click the create repositary button. After click the button it will bring us to go to another page, which contains the green button labelled as Gitpod.Click the Gitpod button will bring us to the Gitpod Workspace for coding screen.
+  First we need to go to github website to create a new repositary using code Institute Template. Followed by giving a new name of the website.Then need to click the create repositary button. After click the button it will bring us to go to another page, which contains the green button labelled as Gitpod.Click the Gitpod button will bring us to the Gitpod Workspace for coding screen.
 
 ### gitpod
-Used Gitpod Workspace for coding. To preview the browser window need to type "python3 manage.py runserver" in the terminal window at the bottom.Afterthat, have to do git add for add files or remove files and do git commit for reasoning and do the git push for git hub repositary website.
+  Used Gitpod Workspace for coding. To preview the browser window need to type "python3 manage.py runserver" in the terminal window at the bottom.Afterthat, have to do git add for add files or remove files and do git commit for reasoning and do the git push for git hub repositary website.
 
 ### Procedure for First empty Deployment
 1. First install the Django and gunicorn in the terminal => pip3 install django gunicorn  (Gunicon is the server that we're  going to use to run Django on Heroku.)
@@ -498,7 +489,6 @@ Used Gitpod Workspace for coding. To preview the browser window need to type "py
 - python3 manage.py migrate
 8. Then run the server:
 - python3 manage.py runserver (we can see the installation work successfully in the browser).
-
 
 ### Heroku
 1. Create new app name and select europe.
@@ -541,13 +531,12 @@ DATABASES = {
 9. Then Go heroku app select deploy tab connect the Github and then select Manual deploy. it will create the app run successfully.
 
 ### Final deployment:
-After finish the project then need to do the following steps:
+  After finish the project then need to do the following steps:
 1. Debug= False in settings.py
 2. git add .
 git commit -m "deployment commit"
 git push
 3. heroku setting remove DISABLE_COLLECTSTATIC
-
 4. Then Deploy and can view the App in Heroku.
 
 ## Acknowledgement
