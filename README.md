@@ -348,7 +348,7 @@ I have used Open Sans, cursive and 'Raleway', sans-serif to create this website.
 - CSS - used for style the website.
 
 - Python - used for Reserve a table. and allows users to interact with web pages.
-- Java Script -used for emailjs.
+- Java Script -used for Delete button Modal, Calender for add reservation and emailjs.
 
 ### Libraries & Frameworks
 - Django Web Application Framework
@@ -377,7 +377,7 @@ The Javascript code for emailjs is referred from Emailjs and Rosie's Resume Walk
 I used automated python Unittest to test models.py, views.py and forms.py.
 I attached the results for Python Unittest.
 <p align= "left">
-<img width= "500" src= "assets/images/python-test-result.png">
+<img width= "500" src= "assets/images/coverage_report.PNG">
 </p>
 
 ### Code validation
@@ -425,17 +425,26 @@ There is 1 testcase in Reserve page such as Reserve a Table button. The button i
 #### Validation:
 1.  Username - The Username is default which is taken from the Login page Username.
 2. Name - The user can reserve the dining table option either for themself or others. The user must enter the name parameter, if the name parameter is not updated an error message will appear to remaind that the user must enter the name.The name parameter is tested and it works as per design.
+- [Name-Validation](assets/images/name.PNG)
 3. Phone Number - The user must enter 10digit phone number in the phone field. it works as per design.
+- [Phone Number-Validation](assets/images/phone.PNG)
+- [Phone Number1-Validation](assets/images/phone1.PNG)
 4. People - The user must enter only numbers maximum two digit numbers. The testing proves that it works as per design.
+- [Number of People-Validation](assets/images/people.PNG)
+- [Number of People1-Validation](assets/images/people1.PNG)
 5. Date - The user can choose date in the calender. It only allows current and future Date only. The testing proves that it works as per design.
+- [Date-Validation](assets/images/date.PNG)
 6. Time - The user is allowed to book between 17:00 to 22:30 hours only. The testing proves that it works as per design.
+- [Time-Validation](assets/images/time.PNG)
 7. When the user enters name and the booking date the system will compare these parameters with the existing booking list. if the name and date are same the system will feedback the error message stating "Booking already Exist".
+- [Double Booking-Message](assets/images/double_booking.PNG)
 
 
 7. #### View Page
 There is 2 testcases for each reservation option in view page such as Edit and Delete Button.Both are working as per design.<br>
 - [View-Testing](assets/images/view-mobile-1.PNG)
 - When the booking is successful the success message will appear in the view page.
+- [Success-Message](assets/images/success_msg.PNG)
 
 8. #### Edit Page
 There is 1 testcase in Edit button such as Update button.User can edit Name, Phone number, number of people, date and time. But they cant edit username. This function proved as per design.<br>
@@ -447,14 +456,20 @@ There is 2 testcases in Delete Modal confirm box such as yes or no for delete op
 - No to navigate to view page -Proved
 - [Delete-Testing](assets/images/delete-modal-1.PNG)
 - The user delete the reservation, cancellation message will appear in the view page.
+- [Cancellation-Message](assets/images/cancel_msg.PNG)
 
 10. #### Contact-Us Page
 There is one testcase in contact us page such as Send button. It is working as per design.<br>
 - [Contact Us-Testing](assets/images/contact-us-desktop.PNG)
 #### Validation:
 1. Name: The user must enter the name parameter, if the name parameter is not updated an error message will appear to remaind that the user must enter the name.The name parameter is tested and it works as per design.
+- [Name-Validation](assets/images/name_contact.PNG)
+
 2. Email Address: The user must enter the Email address, if the email parameter is not updated an error message will appear to remaind that the user must enter the email address.The email address parameter is tested and it works as per design.
+- [Email-Validation](assets/images/email_contact.PNG)
+- [Email1-Validation](assets/images/email_contact1.PNG)
 3. Message: Enquiries must enter the message box. If the message box is not updated an error message will appear to remaind that the user must enter the message box.The Message is tested and it works as per design.
+- [Message-Validation](assets/images/message_contact.PNG)
 
 ### Bugs
 1. I have alot of difficulties to change sqlite to postgres in Heroku. With the help of tutor support i manage to resolve the problem.
