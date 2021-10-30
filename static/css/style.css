@@ -175,6 +175,12 @@ label {
     list-style-type: none;
 }
 
+.signup input {
+    display: block;
+    border: 1px solid black;
+    width: 40%;
+}
+
 /*-----------------------------------------------Media Query*/
 
 /* For  medium screens sizes from 950px wide and down */
@@ -187,6 +193,9 @@ label {
 
     .message ul li {
         width: 40%;
+    }
+    .signup input {
+        width: 60%;
     }
 }
 
