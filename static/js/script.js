@@ -20,10 +20,12 @@ function myid(a) {
 
     document.getElementById("my_id").value = a
 }
-document.getElementById('yesBtn').addEventListener('click', function () {
+// document.getElementById('yesBtn').addEventListener('click', function () {
+//     window.location.href = "/delete/" + document.getElementById('my_id').value
+// })
+function deleteBooking() {
     window.location.href = "/delete/" + document.getElementById('my_id').value
-})
-
+}
 
 //  Contact Page-Send mail
 function sendMail(contactForm) {
