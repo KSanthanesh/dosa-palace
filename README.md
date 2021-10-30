@@ -46,7 +46,7 @@
 - when the user click the reservation navigation the webpage navigation changes to three categaries such us Home, Reserve and View.
 
 - The website covers all the screen types, such as Pc,Laptop,Tablet and Mobile.
-
+- There is Login Page in the website. The customer has to login in to website using username and password before making any Reservation.
 ### Home
 The Home Page covers the foloowing sections:
 - Header, Logo Navigation Menu and operationg time of the restaurant.
@@ -393,34 +393,41 @@ There are 11 testCases in Home Page.
 - There are 7 testcases in  header section  which are Dosapalace, Home, Meals, Reservation, Contact-Us, signup and Login.<br>
 Dosa Palace heading and Home Navigation are designed to bring the user back to the home page.Testing also proves that these options worked as per design. The other navigations are designed to bring the user to the website.Testing proves that these options worked as per designs.<br>
 - [Header-Testing](assets/images/header.PNG)
-- There is 1 Testcase in middle of the Hero image. If the user click the Book a table Today option it will navigate to Reservation page.<br>
+- There is 1 Testcase in middle of the Hero image. If the user click the Book a table Today option it will navigate to Reservation page. Testing proves that this option worked as per design.<br>
 - [Hero-image-Testing](assets/images/hero-image.PNG)
 - There are three Social media links attached in all other pages.These social media navigators worked as per design requirements.For example, when click the Facebook button it brings to the Facebook main page.<br>
 - [Footer-Testing](assets/images/home-ipad-4.PNG)
 
 2. #### Meals Page
-There are 8 menus are available. If they click on each menu meal details button it will navigate to that particular meal details.<br>
+There are 8 menus are available. If they click on each menu meal details button it will navigate to that particular meal details. The testing proves that each meal option navigates to each meal detail page.<br>
 - [Meals-Testing](assets/images/meals-1.PNG)
 
 #### Meal details
-There are 1 button is available. If they click the back to meals button it will go back to Meals list section.<br>
+There are 1 back button is available. If they click the back to meals button it will go back to Meals list section.The testing proves that the back button works properly.<br>
 - [Meals-Details](assets/images/meal-details-ipod-1.PNG)
 
 3. #### Reservation Page
-Header Navigation bar changes when the user click Reservation Page. There are 2 new navigation bar and 1 signup button testcases in reservation Page.<br>
+Header Navigation bar changes when the user click Reservation Page. There are 2 new navigation bar and 1 signup button. The testcases prove that the 2 new navigation bar and 1 new signup button are working as per design.<br>
 - [Reservation / SignUp-Testing](assets/images/reservation-1.PNG)
 
 
 4. #### Login page
-There is 1 testcase in Login Page such as Sign In Button.<br>
+There is 1 testcase in Login Page such as Sign In Button. The testing proves that this button working as per design.<br>
 - [Login-Testing](assets/images/login-mobile.PNG)
 
 5. #### Logout Page
-There is 1 testcase in Logout Page such as Sign Out button.<br>
+There is 1 testcase in Logout Page such as Sign Out button. The testing proves that this button working as per design.<br>
 - [Logout-Testing](assets/images/logout-mobile.PNG)
 
 6. #### Reserve Page
-There is 1 testcase in Reserve page such as Reserve a Table button.<br>
+There is 1 testcase in Reserve page such as Reserve a Table button. The button is called the Reserve a Table. I did validation in the Reservtion page.<br>
+1. Username - The Username is default which is taken from the Login page Username.
+2. Name - The user can reserve the dining table option either for themself or others. The user must enter the name parameter, if the name parameter is not updated an error message will appear to remaind that the user must enter the name.The name parameter is tested and it works as per design.
+3. Phone Number - The user must enter 10digit phone number in the phone field. it works as per design.
+4. People - The user must enter only numbers maximum two digit numbers. The testing proves that it works as per design.
+5. Date - The user can choose date in the calender. The testing proves that it works as per design.
+6. Time - The user can enter time to book the Reservation between 17:00 to 22:30 hours only. The testing proves that it works as per design.
+
 - [Reserve-Testing](assets/images/reserve-mobile-2.PNG)
 
 
