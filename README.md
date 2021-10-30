@@ -421,33 +421,40 @@ There is 1 testcase in Logout Page such as Sign Out button. The testing proves t
 
 6. #### Reserve Page
 There is 1 testcase in Reserve page such as Reserve a Table button. The button is called the Reserve a Table. I did validation in the Reservtion page.<br>
-1. Username - The Username is default which is taken from the Login page Username.
+- [Reserve-Testing](assets/images/reserve-mobile-2.PNG)
+#### Validation:
+1.  Username - The Username is default which is taken from the Login page Username.
 2. Name - The user can reserve the dining table option either for themself or others. The user must enter the name parameter, if the name parameter is not updated an error message will appear to remaind that the user must enter the name.The name parameter is tested and it works as per design.
 3. Phone Number - The user must enter 10digit phone number in the phone field. it works as per design.
 4. People - The user must enter only numbers maximum two digit numbers. The testing proves that it works as per design.
-5. Date - The user can choose date in the calender. The testing proves that it works as per design.
-6. Time - The user can enter time to book the Reservation between 17:00 to 22:30 hours only. The testing proves that it works as per design.
-
-- [Reserve-Testing](assets/images/reserve-mobile-2.PNG)
+5. Date - The user can choose date in the calender. It only allows current and future Date only. The testing proves that it works as per design.
+6. Time - The user is allowed to book between 17:00 to 22:30 hours only. The testing proves that it works as per design.
+7. When the user enters name and the booking date the system will compare these parameters with the existing booking list. if the name and date are same the system will feedback the error message stating "Booking already Exist".
 
 
 7. #### View Page
-There is 2 testcases for each reservation option in view page such as Edit and Delete Button.<br>
+There is 2 testcases for each reservation option in view page such as Edit and Delete Button.Both are working as per design.<br>
 - [View-Testing](assets/images/view-mobile-1.PNG)
+- When the booking is successful the success message will appear in the view page.
 
 8. #### Edit Page
-There is 1 testcase in Edit button such as Update button.<br>
+There is 1 testcase in Edit button such as Update button.User can edit Name, Phone number, number of people, date and time. But they cant edit username. This function proved as per design.<br>
 - [Edit-Testing](assets/images/edit-1.PNG)
 
 9. #### Delete Modal confirm box
 There is 2 testcases in Delete Modal confirm box such as yes or no for delete option.
-- Yes to Delete 
-- No to navigate to view page
+- Yes to Delete - Proved
+- No to navigate to view page -Proved
 - [Delete-Testing](assets/images/delete-modal-1.PNG)
+- The user delete the reservation, cancellation message will appear in the view page.
 
 10. #### Contact-Us Page
-There is one testcase in contact us page such as Send button.<br>
+There is one testcase in contact us page such as Send button. It is working as per design.<br>
 - [Contact Us-Testing](assets/images/contact-us-desktop.PNG)
+#### Validation:
+1. Name: The user must enter the name parameter, if the name parameter is not updated an error message will appear to remaind that the user must enter the name.The name parameter is tested and it works as per design.
+2. Email Address: The user must enter the Email address, if the email parameter is not updated an error message will appear to remaind that the user must enter the email address.The email address parameter is tested and it works as per design.
+3. Message: Enquiries must enter the message box. If the message box is not updated an error message will appear to remaind that the user must enter the message box.The Message is tested and it works as per design.
 
 ### Bugs
 1. I have alot of difficulties to change sqlite to postgres in Heroku. With the help of tutor support i manage to resolve the problem.
@@ -533,7 +540,7 @@ git push
 - I would like to thank my mentor Rohit Sharma and my tutors Kasia for their helpfulness, constructive feedback and guidance when needed.
 - I would like to thank the staff,students and my peers of Code Institute for their help.
 - I also like to thank Slack Community for sharing the open discussion from various students.
-- I search lots of information from Google, W3 School and Youtube for this project.  
+- I search lots of information from Google, W3 School and Youtube for this project.
 - Thanks for reading my README.md file.
 
 
