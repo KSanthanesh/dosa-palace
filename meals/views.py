@@ -6,6 +6,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Meals, Booking
 from .forms import ReserveForm
+from django.contrib.auth.decorators import login_required
 
 
 def home(request):
@@ -56,7 +57,7 @@ def contact_reply(request):
     """
     return render(request, 'meals/contact_reply.html')
 
-
+@login_required()
 def add_reserve(request):
     """
     User can reserve a Table for dining.
@@ -78,7 +79,7 @@ def add_reserve(request):
 
     return render(request, 'meals/add_reserve.html', context)
 
-
+@login_required()
 def view_reserve(request):
     """
     User can view the reservation page, once they reserve a table for dining.

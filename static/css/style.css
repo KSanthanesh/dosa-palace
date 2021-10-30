@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
 html {
     overflow-x: hidden;
 }
@@ -68,7 +75,10 @@ a {
     background-color: #e0f0f5;
     padding: 20px 0;
     margin-top: 15px;
+    margin-bottom: 0;
 }
+
+
 
 .footer a {
     color: #000;
@@ -174,7 +184,7 @@ label {
     color: #fff;
     list-style-type: none;
 }
-
+/*-----------------------------------------------Signup page*/
 .signup input {
     display: block;
     border: 1px solid black;
