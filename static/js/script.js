@@ -1,3 +1,5 @@
+let emailjs;
+
 // date pick for add reserve
 function dt() {
     var dtToday = new Date();
@@ -14,17 +16,13 @@ function dt() {
     $('#date').attr('min', maxDate);
 }
 
-
 // Delete Modal box
 function myid(a) {
 
-    document.getElementById("my_id").value = a
+    document.getElementById("my_id").value = a;
 }
-// document.getElementById('yesBtn').addEventListener('click', function () {
-//     window.location.href = "/delete/" + document.getElementById('my_id').value
-// })
 function deleteBooking() {
-    window.location.href = "/delete/" + document.getElementById('my_id').value
+    window.location.href = "/delete/" + document.getElementById('my_id').value;
 }
 
 //  Contact Page-Send mail
@@ -36,11 +34,11 @@ function sendMail(contactForm) {
         })
         .then(
             function (response) {
-                window.location.href = "/contact_reply/"
-                console.log("Success", response)
+                window.location.href = "/contact_reply/";
+                console.log("Success", response);
             },
             function (error) {
-                console.log("Failed", error)
+                console.log("Failed", error);
             });
-    return false
+    return false;
 }

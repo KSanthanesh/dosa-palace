@@ -201,7 +201,7 @@
 
 ### Future Features
 1. Currently the booking is reset manually in the admin page. In future i like to automate this operation.
-2. Currently the table reservation is done by restaurant people, i like to automate the table booking through online.
+2. Currently the table number reservation is done by restaurant people, i like to automate the table number booking through online.
 3. I like to bring food delivery in the future.
 
 ## Structure
