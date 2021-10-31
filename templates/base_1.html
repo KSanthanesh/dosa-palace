@@ -17,6 +17,12 @@
   <link rel='shortcut icon' type='image/x-icon' href="{% static 'favicon.ico' %}" />
 
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+  <script>
+    (function() {
+        emailjs.init("user_OTE3aVNOeX1glz8n2gwZ0");
+    })();
+</script>
 
 </head>
 
@@ -93,6 +99,9 @@
       <p> copyright&copy; dosapalace 2021</p>
     </div>
   </footer>
+  <script src="{% static 'js/script.js' %}">
+
+  </script>
 
 </body>
 

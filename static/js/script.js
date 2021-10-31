@@ -1,5 +1,4 @@
-let emailjs;
-
+var emailjs;
 // date pick for add reserve
 function dt() {
     var dtToday = new Date();
