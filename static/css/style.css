@@ -213,9 +213,6 @@ input {
     .message ul li {
         width: 40%;
     }
-    .signup input {
-        width: 60%;
-    }
 }
 
 /* For  medium screens sizes from 700px wide and down */

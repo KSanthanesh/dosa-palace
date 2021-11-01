@@ -14,6 +14,7 @@ function dt() {
     var maxDate = year + '-' + month + '-' + day;
     $('#date').attr('min', maxDate);
 }
+dt();
 
 // Delete Modal box
 function myid(a) {
@@ -41,3 +42,4 @@ function sendMail(contactForm) {
             });
     return false;
 }
+sendMail();

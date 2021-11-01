@@ -373,10 +373,14 @@ I attached the results for Python Unittest.
 </p>
 
 ### Code validation
-- W3 Markup Validation Service- To validate HTML document, i used Validate by direct URL, some errors shown, and then i fixed the errors. W3 HTML Validation Result:
-Document checking completed. No errors or warnings to show.
-- W3 CSS Validation Service- To validate HTML document, i used validate by direct input, no errors shown in the W3 validation page. W3 CSS validation Result: Congratulations! No Error Found.
-- pep8 Online Validator- To validate python document, i used validate by direct input, no errors shown pep8 online validator.
+- W3 Markup Validation Service- To validate HTML document, i used Validate by direct URL, some errors shown, and then i fixed the errors. W3 HTML Validation Result for all pages:<br>
+<b>Document checking completed. No errors or warnings to show.</b>
+
+- W3 CSS Validation Service- To validate HTML document, i used validate by direct input, no errors shown in the W3 validation page. W3 CSS validation Result: <br><b>Congratulations! No Error Found.</b>
+- pep8 Online Validator- To validate python document, i used validate by direct input, <b>no errors shown pep8 online validator.</b><br>
+But in the Gitpod workspace terminal it is showing some pylint errors and warnings. I attached the result.<br>
+[Pylint](assets/images/pylint.PNG)
+- Jshint JavaScript Validation - To validate Java Script file. no errors or Warning are shown in the script.js file in JShint validation Page. But jshint identified a two unused variables in the script.js file. But these variables are used in view_reserve.html Restart onClick buttons.
 
 
 ### Features Testing
