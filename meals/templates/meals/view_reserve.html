@@ -24,7 +24,7 @@
                 <tbody>
 
                     {% for meal in reserves %}
-                    
+
                     {% if user == meal.user_name %}
                     <tr class="col-8 small">
                         <td class="col-8 small">
@@ -48,12 +48,13 @@
                             </a>
                         </td>
                         <td class="col-8 small">
-                                <button class="btn btn-dark text-light small" onclick="return myid('{{ meal.id }}')" type="button" data-toggle="modal" data-target="#myModal">Delete</button>
-                                <input type="hidden" name="my_id" id="my_id"/>
+                            <button class="btn btn-dark text-light small" onclick="return myid('{{ meal.id }}')"
+                                type="button" data-toggle="modal" data-target="#myModal">Delete</button>
+                            <input type="hidden" name="my_id" id="my_id" />
                         </td>
                     </tr>
 
-                    
+
                     <!-- Modal -->
                     <div id="myModal" class="modal fade" role="dialog">
                         <div class="modal-dialog">
@@ -73,17 +74,14 @@
                                         data-dismiss="modal">No</button>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
                     {% endif %}
 
                     {% endfor %}
 
                 </tbody>
             </table>
-
         </div>
     </div>
 </div>

@@ -7,16 +7,14 @@
   <h2 class="contact-us">Update a Table</h2>
   <form method="POST" class="form">
 
-    
+
     {% csrf_token %}
     {{ form.as_p }}
 
     <button type="submit" class="btn btn-info text-dark">Update</button>
-    
+
 
   </form>
-
-
 </div>
 {% endif %}
 

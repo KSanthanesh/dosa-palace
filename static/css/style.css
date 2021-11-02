@@ -79,8 +79,6 @@ a {
     margin-bottom: 0;
 }
 
-
-
 .footer a {
     color: #000;
     font-size: 40px;
@@ -104,7 +102,7 @@ a {
     padding: 10px;
     margin-bottom: 2px;
 }
-  
+
 .testimonial {
     margin-bottom: 30px;
     text-decoration: underline;
@@ -189,6 +187,7 @@ label {
     color: #fff;
     list-style-type: none;
 }
+
 /*-----------------------------------------------Signup page*/
 .signup input {
     display: block;
@@ -196,6 +195,7 @@ label {
     border: 1px solid black;
     border-radius: 5px;
 }
+
 input {
     border: 1px solid black;
 }
@@ -221,7 +221,7 @@ input {
         width: 250px;
         height: 250px;
         margin: 10px;
-}
+    }
 }
 
 @media screen and (max-width: 700px) {
