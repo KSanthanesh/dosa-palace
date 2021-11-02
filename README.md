@@ -375,6 +375,7 @@ I attached the results for Python Unittest.
 <b>Document checking completed. No errors or warnings to show.</b>
 
 - W3 CSS Validation Service- To validate HTML document, i used validate by direct input, no errors shown in the W3 validation page. W3 CSS validation Result: <br><b>Congratulations! No Error Found.</b>
+But When i had the console error with tutor support i wrote the script tag in sepeate html page, after written the script tag in html file then i deployed to heroku. Then i check html url validator i have this message appeared <b>Document checking not completed. The result cannot be determined due to a non-document-error.</b>
 - pep8 Online Validator- To validate python document, i used validate by direct input, <b>no errors shown pep8 online validator.</b><br>
 But in the Gitpod workspace terminal it is showing some pylint errors and warnings. I attached the result.<br>
 [Pylint](assets/images/pylint.PNG)
@@ -467,7 +468,8 @@ Dosa Palace heading and Home Navigation are designed to bring the user back to t
 1. I have alot of difficulties to change sqlite to postgres in Heroku. With the help of tutor support i manage to resolve the problem.
 2. When i updated the model, the change did not update in the Heroku, With the help of tutor support i manage to resolve the problem by resetting postgres in Heroku.
 3. I have difficulties in understanding  how to render the templates. Manage to resolve the problem by reviewing the walkthroughs multiple times.
-4. I had two errors in the console Uncaught TypeError: emailjs is undefined and Uncaught ReferenceError: $ is not defined. It is fixed with Tutor Support.
+4. I had two errors in the console Uncaught TypeError: emailjs is undefined and Uncaught ReferenceError: $ is not defined. It is fixed with Tutor Support.<br>
+But When i had the console error with tutor support i wrote the script tag in sepeate html page, after written the script tag in html file then i deployed to heroku. Then i check html url validator i have this message appeared <b>Document checking not completed. The result cannot be determined due to a non-document-error.</b>
 
 ## Deployment
   First we need to go to github website to create a new repositary using code Institute Template. Followed by giving a new name of the website.Then need to click the create repositary button. After click the button it will bring us to go to another page, which contains the green button labelled as Gitpod.Click the Gitpod button will bring us to the Gitpod Workspace for coding screen.
