@@ -547,6 +547,7 @@ git push
 - I would like to thank the staff,students and my peers of Code Institute for their help.
 - I also like to thank Slack Community for sharing the open discussion from various students.
 - I search lots of information from Google, W3 School and Youtube for this project.
+- The images on this site have been taken from Google Search, and used only for education purpose to complete this project.
 - Thanks for reading my README.md file.
 
 
