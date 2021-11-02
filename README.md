@@ -316,8 +316,8 @@ db diagram used for this website.
 <img width= "500" src= "assets/images/database-schema.png">
 </p>
 
-### colors
-I have used warm light and dark colours to create pleasant experience for those people to viewing this website. colors used:
+### Colours
+I have used warm light and dark colours to create pleasant experience for those people to viewing this website. colours used:
 
 Bootstrap colour also used for this website.
 - bg-info
@@ -338,9 +338,7 @@ I have used Open Sans, cursive and 'Raleway', sans-serif to create this website.
 ## Technologies Used
 ### Language
 - HTML - used for to create the website.
-
 - CSS - used for style the website.
-
 - Python - used for Reserve a table. and allows users to interact with web pages.
 - Java Script -used for Delete button Modal, Calender for add reservation and emailjs.
 
@@ -354,11 +352,11 @@ I have used Open Sans, cursive and 'Raleway', sans-serif to create this website.
 - Gitpod - is an open source platform for automated and ready-to-code.
 - Github - to save the project code and host the live project.
 - Python Tutor - to check how the Java Script code behaves in each line.
-Dev tools -For inspecting and editing the web code.
+- Dev tools -For inspecting and editing the web code.
 - Heroku - To Deploy the Project.
 - allauth - for site user Signup, login and logout of account.
 - Cloudinary - To save images from admin page.
-- favicon - for generating 32x32 favicon.
+- favicon - https://www.favicon-generator.org/ -Favicon icon created using this website.
 - Am I responsive - to check  the responsive pages.
 - Balsamiq - to create wireframes.
 - dbdiagram.io - to create database schema
@@ -470,6 +468,7 @@ Dosa Palace heading and Home Navigation are designed to bring the user back to t
 1. I have alot of difficulties to change sqlite to postgres in Heroku. With the help of tutor support i manage to resolve the problem.
 2. When i updated the model, the change did not update in the Heroku, With the help of tutor support i manage to resolve the problem by resetting postgres in Heroku.
 3. I have difficulties in understanding  how to render the templates. Manage to resolve the problem by reviewing the walkthroughs multiple times.
+4. I have two errors in the console Uncaught TypeError: emailjs is undefined and Uncaught ReferenceError: $ is not defined. It is not fixed yet.
 
 ## Deployment
   First we need to go to github website to create a new repositary using code Institute Template. Followed by giving a new name of the website.Then need to click the create repositary button. After click the button it will bring us to go to another page, which contains the green button labelled as Gitpod.Click the Gitpod button will bring us to the Gitpod Workspace for coding screen.
