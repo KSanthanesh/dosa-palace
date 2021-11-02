@@ -99,7 +99,55 @@
       <p> copyright&copy; dosapalace 2021</p>
     </div>
   </footer>
+  ﻿<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    var emailjs;
+    // date pick for add reserve
+    function dt() {
+      var dtToday = new Date();
 
+      var month = dtToday.getMonth() + 1;
+      var day = dtToday.getDate();
+      var year = dtToday.getFullYear();
+      if (month < 10)
+        month = '0' + month.toString();
+      if (day < 10)
+        day = '0' + day.toString();
+
+      var maxDate = year + '-' + month + '-' + day;
+      $('#date').attr('min', maxDate);
+    }
+    dt();
+
+    // Delete Modal box
+    var emailjs;
+    // date pick for add reserve
+    function dt() {
+      var dtToday = new Date();
+
+      var month = dtToday.getMonth() + 1;
+      var day = dtToday.getDate();
+      var year = dtToday.getFullYear();
+      if (month < 10)
+        month = '0' + month.toString();
+      if (day < 10)
+        day = '0' + day.toString();
+
+      var maxDate = year + '-' + month + '-' + day;
+      $('#date').attr('min', maxDate);
+    }
+    dt();
+
+    // Delete Modal box
+    function myid(a) {
+
+      document.getElementById("my_id").value = a;
+    }
+
+    function deleteBooking() {
+      window.location.href = "/delete/" + document.getElementById('my_id').value;
+    }
+  </script>
 </body>
 
 </html>

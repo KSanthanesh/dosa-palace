@@ -378,8 +378,7 @@ I attached the results for Python Unittest.
 - pep8 Online Validator- To validate python document, i used validate by direct input, <b>no errors shown pep8 online validator.</b><br>
 But in the Gitpod workspace terminal it is showing some pylint errors and warnings. I attached the result.<br>
 [Pylint](assets/images/pylint.PNG)
-- Jshint JavaScript Validation - To validate Java Script file. no errors or Warning are shown in the script.js file in JShint validation Page. But jshint identified a two unused variables in the script.js file. But these variables are used in view_reserve.html Restart onClick buttons.
-
+- Jshint JavaScript Validation - To validate Java Script file. no errors are shown in the script.js file in JShint validation Page. But jshint identified a Four unused variables in the script.js file. But these variables are used in view_reserve,add_reserve and contact.html pages.and 1 warning also appeared that is 	'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
 
 ### Features Testing
 1. #### Home Page
@@ -468,7 +467,7 @@ Dosa Palace heading and Home Navigation are designed to bring the user back to t
 1. I have alot of difficulties to change sqlite to postgres in Heroku. With the help of tutor support i manage to resolve the problem.
 2. When i updated the model, the change did not update in the Heroku, With the help of tutor support i manage to resolve the problem by resetting postgres in Heroku.
 3. I have difficulties in understanding  how to render the templates. Manage to resolve the problem by reviewing the walkthroughs multiple times.
-4. I have two errors in the console Uncaught TypeError: emailjs is undefined and Uncaught ReferenceError: $ is not defined. It is not fixed yet.
+4. I had two errors in the console Uncaught TypeError: emailjs is undefined and Uncaught ReferenceError: $ is not defined. It is fixed with Tutor Support.
 
 ## Deployment
   First we need to go to github website to create a new repositary using code Institute Template. Followed by giving a new name of the website.Then need to click the create repositary button. After click the button it will bring us to go to another page, which contains the green button labelled as Gitpod.Click the Gitpod button will bring us to the Gitpod Workspace for coding screen.

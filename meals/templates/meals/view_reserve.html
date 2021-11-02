@@ -85,6 +85,17 @@
         </div>
     </div>
 </div>
+
+<script>
+    // Delete Modal box
+function myid(a) {
+
+document.getElementById("my_id").value = a;
+}
+function deleteBooking() {
+window.location.href = "/delete/" + document.getElementById('my_id').value;
+}
+</script>
 {% endif %}
 
 {% endblock %}
